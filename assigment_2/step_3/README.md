@@ -1,4 +1,4 @@
-## Step 3, Topic Modeling, generación y enriquecimiento del KG
+## Step 3, Topic Modeling, similarities de papers y generación y enriquecimiento del KG
 
 Este Step consta de tres pasos fundamentales para el proyecto:
 
