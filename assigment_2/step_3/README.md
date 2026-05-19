@@ -11,6 +11,13 @@ Embedding: Vector numérico que representa significado que sirve Comparar simili
 3. Enriquecimiento del KG local a partir de los KG públicos declarados en las fuentes (`/assigment_2/step_1/docs/fuentes.md`)
 
 
+Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de nuestra ontología:
+
+
+![Ontología NER](assigment_2/images/ontologia-ner-topics.png)
+
+
+
 ## Problemas encontrados
 1. Alguna fecha de los papers no venía con formato Date, por lo que se modificó la ontología para que su tipo sea string en vez de date
 
