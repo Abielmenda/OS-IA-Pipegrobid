@@ -14,7 +14,7 @@ Embedding: Vector numérico que representa significado que sirve Comparar simili
 Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de nuestra ontología:
 
 
-![Ontología NER](/images/ontologia-ner-topics.png)
+![Ontología NER-TOPICS](/images/ontologia-ner-topics.png)
 
 
 
