@@ -18,6 +18,8 @@ Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de n
 
 
 
+
+
 ## Problemas encontrados
 1. Alguna fecha de los papers no venía con formato Date, por lo que se modificó la ontología para que su tipo sea string en vez de date
 
