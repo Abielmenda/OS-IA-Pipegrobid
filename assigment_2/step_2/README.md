@@ -12,4 +12,4 @@ Este Step consta de 3 pasos fundamentales para el proyecto:
 Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de nuestra ontología:
 
 
-![Ontología NER](assigment_2/images/ontologia-ner.png)
+![Ontología NER](/images/ontologia-ner.png)
