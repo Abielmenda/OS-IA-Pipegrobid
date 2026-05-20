@@ -3,7 +3,7 @@ import json
 import xml.etree.ElementTree as et
 from natsort import natsorted
 
-from auxiliar import parse_acknowledgements, parse_paper, parse_people, parse_keywords
+from initial_parse import parse_acknowledgements, parse_paper, parse_people, parse_keywords
 
 # Namespace de TEI
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
@@ -64,7 +64,7 @@ def parse_xml(xml_path: Path, output_file: Path) -> Path:
 # parseo de todos los xmls
 def parse_all():
     xmls_dir = ROOT_DIR / "outputs" / "xmls"
-    output_dir = ROOT_DIR / "outputs" / "parsed_xmls"
+    output_dir = ROOT_DIR / "assigment_2" / "step_2"/"outputs"/"parsed_xmls"
 
     # Comprobamos que la carpeta de XMLs exista
     if not xmls_dir.exists():

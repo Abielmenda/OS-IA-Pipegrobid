@@ -2,7 +2,8 @@ from pathlib import Path
 
 ROOT_PATH = Path(__file__).resolve().parents[4] 
 
-PARSED_JSONS_PATH = ROOT_PATH / "outputs" / "parsed_xmls"
+PARSED_JSONS_PATH = ROOT_PATH / "assigment_2" / "step_2"/"outputs"/"parsed_xmls"
+
 
 GROQ_KEY_PATH = Path(__file__).resolve().parents[2] / "ner_evaluation" / ".env"
 

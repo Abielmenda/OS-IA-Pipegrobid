@@ -32,12 +32,6 @@ def first_text(root, paths):
 
 
 def parse_paper(root, xml_path):
-    '''
-    Paper:
-    - title
-    - abstract
-    - published_date
-    '''
     
     # 1º id interno del paper 
     xml_path = Path(xml_path)
@@ -77,11 +71,6 @@ def parse_paper(root, xml_path):
     
             
 def parse_people(bibl):
-    """
-    Person:
-    - authors
-    - author name
-    """
 
     people = []
 

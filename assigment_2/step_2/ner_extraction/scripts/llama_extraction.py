@@ -123,7 +123,7 @@ def feed_json(llama_result: dict,json_data: dict):
 def main():
     
     # creacion de carpeta y truncado
-    jsons_dir = ROOT_PATH / "outputs" / "extrated_acknowledgements_parsed_xmls"
+    jsons_dir = ROOT_PATH / "assigment_2" /"step_2"/"outputs"/ "extrated_acknowledgements_parsed_xmls"
 
     if jsons_dir.exists():
         shutil.rmtree(jsons_dir)
