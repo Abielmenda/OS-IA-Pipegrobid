@@ -1,10 +1,4 @@
-# README PROVISIONAL — Online Enrichment
-
-> Este README es provisional para que los compañeros entiendan qué hace este módulo y puedan validarlo.
-
----
-
-## ¿Qué hace este módulo?
+# README PROVISIONAL 
 
 Coge los JSONs que genera `enrich_jsons.py` del topic_modeling (que ya tienen topics y similarities) y los enriquece con datos de tres fuentes externas:
 
@@ -13,14 +7,6 @@ Coge los JSONs que genera `enrich_jsons.py` del topic_modeling (que ya tienen to
 - **ORCID** → datos de personas (identificador único, afiliación)
 
 Los JSONs de entrada están en `outputs/topics/enriched_jsons/` y los resultados se guardan en `outputs/topics/kg_enriched/` (carpeta nueva, no sobreescribe nada).
-
----
-
-## Flujo
-
-```
-enrich_jsons.py  →  enriched_jsons/  →  enrich_online.py  →  kg_enriched/  →  local_kg.py
-```
 
 ---
 
@@ -36,8 +22,6 @@ OpenAIRE devuelve un JSON del que extraemos título, fechas y cantidad financiad
 
 Si no encuentra el proyecto devuelve `None` y ese proyecto se queda sin enriquecer. Esto pasa principalmente con proyectos no europeos.
 
-**Validación**: probado con el proyecto `851173` del paper_13 → devuelve correctamente título, fechas 2020-2026 y 1.498.210 EUR.
-
 ---
 
 ### wikidata.py
@@ -45,8 +29,6 @@ Si no encuentra el proyecto devuelve `None` y ese proyecto se queda sin enriquec
 Consulta Wikidata usando **SPARQL** (el lenguaje de consulta estándar para bases de datos de grafos). Busca la organización por su nombre en inglés y obtiene su país usando la propiedad `P17` (que en Wikidata significa "país").
 
 Wikidata exige identificarse con un `User-Agent` en la cabecera de la petición o devuelve error 403.
-
-**Validación**: probado con `"European Research Council"` → devuelve identificador `Q1377836` y país `Belgium`.
 
 ---
 
@@ -63,8 +45,6 @@ ORCID necesita la cabecera `Accept: application/json` o devuelve XML en vez de J
 
 Solo funciona con nombres completos. Las iniciales (`S.G.`, `CJP`) o pseudónimos (`xlr8harder`) no se pueden buscar.
 
-**Validación**: probado con `"Anne-Florence Bitbol"` del paper_13 → devuelve ORCID `0000-0003-1020-494X` y afiliación `École Polytechnique Fédérale de Lausanne`.
-
 ---
 
 ### enrich_online.py
@@ -75,9 +55,9 @@ Hay dos cosas importantes que hace antes de llamar a las APIs:
 
 **1. Limpiar identificadores de proyectos**
 
-El LLM a veces devuelve los códigos con texto de más, por ejemplo `"grant agreement No. 851173"`. Usamos patrones (regex) para extraer solo el código real. Un patrón es una expresión que describe la forma de un texto. Por ejemplo `\b\d{5,}\b` significa "busca 5 o más dígitos seguidos" y extrae `851173` de ese texto sucio.
+El LLM a veces devuelve los códigos con texto de más, por ejemplo `"grant agreement No. 851173"`. Usamos patrones (regex) para extraer solo el código real.
 
-Los nombres de programas como `"Horizon 2020"` no encajan en ningún patrón y se descartan porque no son códigos reales de proyectos.
+Los nombres de programas que no encajan en ningún patrón y se descartan porque no son códigos reales de proyectos.
 
 **2. Limpiar nombres de organizaciones**
 
