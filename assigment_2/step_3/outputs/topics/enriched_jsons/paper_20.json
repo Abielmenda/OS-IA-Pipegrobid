@@ -132,7 +132,56 @@
     }
   ],
   "countries": [],
-  "topics": [],
+  "topics": [
+    {
+      "topic_id": 1,
+      "name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.9176779121216938,
+      "representative_document": false,
+      "keywords": [
+        {
+          "word": "dynamics",
+          "score": 0.03940654282666327
+        },
+        {
+          "word": "antimicrobial",
+          "score": 0.038181879992889085
+        },
+        {
+          "word": "household",
+          "score": 0.034168896279813496
+        },
+        {
+          "word": "selection",
+          "score": 0.030228786568471028
+        },
+        {
+          "word": "susceptible",
+          "score": 0.03003966795460695
+        },
+        {
+          "word": "size",
+          "score": 0.02928762538269728
+        },
+        {
+          "word": "diversity",
+          "score": 0.028636409994666812
+        },
+        {
+          "word": "bacterial",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "infected",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "household size",
+          "score": 0.025774553999381264
+        }
+      ]
+    }
+  ],
   "acknowledgements": [
     {
       "text": "Acknowledgements We thank the Priesemann group for the exciting discussions and their valuable input. Authors with affiliation \"1\" received support from the Max-Planck-Society. SC, PD, VP, and TK were funded by the German Federal Ministry for Education and Research for the RESPINOW project (031L0298G), and SC, VP, and JW by the infoXpand project (031L0300A). VP was supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy -EXC 2067/1-390729940. VP also acknowledges the support of the Ministry of Science and Culture of Lower Saxony through funds from the program zukunft.niedersachsen of the Volkswagen Foundation for the 'CAIMed -Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine' project (grant no. ZN4257), \"Niedersächsisches Vorab\", and the Niedersachsen-Profil-Professur. TK acknowledges support from the Government of Saxony through the SaxoCOV grant. Grammarly Pro AI has been used for grammar checks.",
@@ -160,5 +209,6 @@
       "author_name": "Joel Wagner",
       "mention": "JW"
     }
-  ]
+  ],
+  "similar_papers": []
 }

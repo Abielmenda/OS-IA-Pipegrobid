@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Gold Standard for NER on Acknowledgements",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Ground truth annotations for NER evaluation on acknowledgements of scientific papers.",
     "annotation_methodology": "Manual annotation following strict literal text principle. Two annotators worked in consensus session.",
     "categories": {
@@ -9,7 +9,7 @@
       "ORG": "Organizations: funders, institutions, foundations, centers, framework programmes, collaborations, programs, initiatives.",
       "PROJ": "Alphanumeric identifiers of grants, awards, or contracts only."
     },
-    "annotation_principle": "Literal text annotation. Entities are annotated as they appear in the text, without expansion of initials (e.g. 'CJP', 'A.-F. B.', 'S.G.') or inference of implicit entities. Software names are not annotated.",
+    "annotation_principle": "Literal text annotation, with two scoped post-processing rules applied at annotation time: (1) academic titles (e.g. 'Prof.', 'Dr.') are stripped from person spans even when written inline; (2) leading determiners and surrounding grant-related keywords are stripped from all spans. Initials are NOT expanded (e.g. 'CJP', 'A.-F. B.', 'S.G.'). Implicit entities are not inferred. Software names are not annotated.",
     "total_documents": 8,
     "language": "en"
   },
@@ -45,7 +45,7 @@
       "paper_id": "paper_11",
       "text": "Acknowledgements: SS acknowledges the funding support from Dana Farber Cancer Institute (Prof. C.Z. Zhang), and LM thanks the Simons Foundation and the Henri Seydoux Fund for partial financial support. Code Availability: The custom FEniCS code has been hosted on GitHub at the following LINK.",
       "entities": {
-        "PER": ["SS", "Prof. C.Z. Zhang", "LM"],
+        "PER": ["SS", "C.Z. Zhang", "LM"],
         "ORG": ["Dana Farber Cancer Institute", "Simons Foundation", "Henri Seydoux Fund"],
         "PROJ": []
       }

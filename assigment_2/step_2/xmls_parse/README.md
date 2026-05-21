@@ -1,6 +1,6 @@
 # Parseo de xmls generado por grobid
 ## Introducción
-Este es el primer paso a llevar a cabo. Consiste en la extracción de la información estructurada de los xmls.
+Este es el primer paso a llevar a cabo. Consiste en la extracción de la información estructurada de los xmls dejándo la extracción en formato json en `/assigment_2/step_2/outputs/parsed_xmls`.
 
 
 
@@ -15,6 +15,13 @@ A partir de bibliotecas relacionadas con xmls se pueden recorrer los nodos de di
 
 2. Autores del paper:
     - nombre
+
+
+## Replicación de la extracción
+Primero debes haber ejecutado el pipegrobid para generar los xmls (desde `/` ejecutar `docker compose up -d`)
+
+
+Posteriormente, desde el directorio `/assigment_2/step_2/xmls_parse` instalar el entorno poetry con `poetry install --no-root ` y ejecutar el mandato `poetry run python ./parse_grobid_xml.py` para obtener los jsons nutridos.
 
 ## Declaración de uso de IA
 Se usó IA generativa para:

@@ -2,12 +2,12 @@
   "groq/llama-3.3-70b-versatile": {
     "per_category": {
       "PER": {
-        "tp": 33,
-        "fp": 1,
-        "fn": 2,
-        "precision": 0.9706,
-        "recall": 0.9429,
-        "f1": 0.9565
+        "tp": 34,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9714,
+        "f1": 0.9855
       },
       "ORG": {
         "tp": 23,
@@ -27,12 +27,12 @@
       }
     },
     "overall": {
-      "tp": 65,
-      "fp": 3,
-      "fn": 4,
-      "precision": 0.9559,
-      "recall": 0.942,
-      "f1": 0.9489
+      "tp": 66,
+      "fp": 2,
+      "fn": 3,
+      "precision": 0.9706,
+      "recall": 0.9565,
+      "f1": 0.9635
     },
     "per_paper": [
       {
@@ -151,19 +151,16 @@
         "paper_id": "paper_11",
         "categories": {
           "PER": {
-            "tp": 2,
-            "fp": 1,
-            "fn": 1,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
             "tp_entities": [
+              "C.Z. Zhang",
               "LM",
               "SS"
             ],
-            "fp_entities": [
-              "C.Z. Zhang"
-            ],
-            "fn_entities": [
-              "Prof. C.Z. Zhang"
-            ]
+            "fp_entities": [],
+            "fn_entities": []
           },
           "ORG": {
             "tp": 3,
@@ -371,12 +368,12 @@
   "hf/Qwen/Qwen2.5-7B-Instruct": {
     "per_category": {
       "PER": {
-        "tp": 33,
+        "tp": 21,
         "fp": 1,
-        "fn": 2,
-        "precision": 0.9706,
-        "recall": 0.9429,
-        "f1": 0.9565
+        "fn": 14,
+        "precision": 0.9545,
+        "recall": 0.6,
+        "f1": 0.7368
       },
       "ORG": {
         "tp": 20,
@@ -396,12 +393,12 @@
       }
     },
     "overall": {
-      "tp": 62,
+      "tp": 50,
       "fp": 6,
-      "fn": 7,
-      "precision": 0.9118,
-      "recall": 0.8986,
-      "f1": 0.9051
+      "fn": 19,
+      "precision": 0.8929,
+      "recall": 0.7246,
+      "f1": 0.8
     },
     "per_paper": [
       {
@@ -458,16 +455,15 @@
             "fn_entities": []
           },
           "ORG": {
-            "tp": 1,
+            "tp": 2,
             "fp": 0,
-            "fn": 1,
+            "fn": 0,
             "tp_entities": [
-              "Czech Science Foundation"
+              "Czech Science Foundation",
+              "Prime Intellect"
             ],
             "fp_entities": [],
-            "fn_entities": [
-              "Prime Intellect"
-            ]
+            "fn_entities": []
           },
           "PROJ": {
             "tp": 1,
@@ -523,27 +519,30 @@
             "fp": 1,
             "fn": 1,
             "tp_entities": [
-              "Prof. C.Z. Zhang",
+              "C.Z. Zhang",
               "SS"
             ],
             "fp_entities": [
-              "J.K."
+              "Henri Seydoux"
             ],
             "fn_entities": [
               "LM"
             ]
           },
           "ORG": {
-            "tp": 3,
-            "fp": 0,
-            "fn": 0,
+            "tp": 2,
+            "fp": 1,
+            "fn": 1,
             "tp_entities": [
               "Dana Farber Cancer Institute",
-              "Henri Seydoux Fund",
               "Simons Foundation"
             ],
-            "fp_entities": [],
-            "fn_entities": []
+            "fp_entities": [
+              "GitHub"
+            ],
+            "fn_entities": [
+              "Henri Seydoux Fund"
+            ]
           },
           "PROJ": {
             "tp": 0,
@@ -569,17 +568,18 @@
             "fn_entities": []
           },
           "ORG": {
-            "tp": 4,
+            "tp": 3,
             "fp": 0,
-            "fn": 0,
+            "fn": 1,
             "tp_entities": [
-              "ERC",
               "European Research Council",
               "European Union",
               "Horizon 2020"
             ],
             "fp_entities": [],
-            "fn_entities": []
+            "fn_entities": [
+              "ERC"
+            ]
           },
           "PROJ": {
             "tp": 1,
@@ -647,20 +647,19 @@
             ]
           },
           "ORG": {
-            "tp": 2,
-            "fp": 2,
-            "fn": 3,
+            "tp": 3,
+            "fp": 1,
+            "fn": 2,
             "tp_entities": [
               "NEI",
-              "National Eye Institute"
+              "National Eye Institute",
+              "Simons Foundation Collaboration on the Physics of Learning and Neural Computation"
             ],
             "fp_entities": [
-              "Simons Foundation",
               "Stanford Medicine"
             ],
             "fn_entities": [
               "Schmidt Sciences Polymath Award",
-              "Simons Foundation Collaboration on the Physics of Learning and Neural Computation",
               "Stanford Medicine Post-Baccalaureate Experience In Research program"
             ]
           },
@@ -686,20 +685,23 @@
         "paper_id": "paper_28",
         "categories": {
           "PER": {
-            "tp": 19,
+            "tp": 7,
             "fp": 0,
-            "fn": 0,
+            "fn": 12,
             "tp_entities": [
-              "Boyu Qie",
               "C. Lawrence Zitnick",
               "Daniel S. Levine",
               "Ishan Amin",
-              "Kai Nelson",
               "Luis Barroso-Luque",
               "Meng Gao",
-              "Michael Psenka",
               "Misko Dzamba",
-              "Muhammed Shuaibi",
+              "Muhammed Shuaibi"
+            ],
+            "fp_entities": [],
+            "fn_entities": [
+              "Boyu Qie",
+              "Kai Nelson",
+              "Michael Psenka",
               "Nithin Chalapathi",
               "Rasmus Hoegh",
               "Ritwik Gupta",
@@ -709,9 +711,7 @@
               "Tobias Kreiman",
               "Yiheng Du",
               "Yue Jian"
-            ],
-            "fp_entities": [],
-            "fn_entities": []
+            ]
           },
           "ORG": {
             "tp": 5,
@@ -744,12 +744,12 @@
   "Jean-Baptiste/roberta-large-ner-english": {
     "per_category": {
       "PER": {
-        "tp": 24,
-        "fp": 11,
-        "fn": 11,
-        "precision": 0.6857,
-        "recall": 0.6857,
-        "f1": 0.6857
+        "tp": 25,
+        "fp": 10,
+        "fn": 10,
+        "precision": 0.7143,
+        "recall": 0.7143,
+        "f1": 0.7143
       },
       "ORG": {
         "tp": 17,
@@ -769,12 +769,12 @@
       }
     },
     "overall": {
-      "tp": 41,
-      "fp": 24,
-      "fn": 28,
-      "precision": 0.6308,
-      "recall": 0.5942,
-      "f1": 0.6119
+      "tp": 42,
+      "fp": 23,
+      "fn": 27,
+      "precision": 0.6462,
+      "recall": 0.6087,
+      "f1": 0.6269
     },
     "per_paper": [
       {
@@ -897,17 +897,17 @@
         "paper_id": "paper_11",
         "categories": {
           "PER": {
-            "tp": 0,
-            "fp": 2,
-            "fn": 3,
-            "tp_entities": [],
-            "fp_entities": [
-              ".",
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "tp_entities": [
               "C.Z. Zhang"
+            ],
+            "fp_entities": [
+              "."
             ],
             "fn_entities": [
               "LM",
-              "Prof. C.Z. Zhang",
               "SS"
             ]
           },
@@ -1147,12 +1147,12 @@
   "kalawinka/flair-ner-acknowledgments": {
     "per_category": {
       "PER": {
-        "tp": 25,
-        "fp": 3,
-        "fn": 10,
-        "precision": 0.8929,
-        "recall": 0.7143,
-        "f1": 0.7937
+        "tp": 26,
+        "fp": 2,
+        "fn": 9,
+        "precision": 0.9286,
+        "recall": 0.7429,
+        "f1": 0.8254
       },
       "ORG": {
         "tp": 13,
@@ -1172,12 +1172,12 @@
       }
     },
     "overall": {
-      "tp": 47,
-      "fp": 10,
-      "fn": 22,
-      "precision": 0.8246,
-      "recall": 0.6812,
-      "f1": 0.746
+      "tp": 48,
+      "fp": 9,
+      "fn": 21,
+      "precision": 0.8421,
+      "recall": 0.6957,
+      "f1": 0.7619
     },
     "per_paper": [
       {
@@ -1296,16 +1296,15 @@
         "paper_id": "paper_11",
         "categories": {
           "PER": {
-            "tp": 0,
-            "fp": 1,
-            "fn": 3,
-            "tp_entities": [],
-            "fp_entities": [
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "tp_entities": [
               "C.Z. Zhang"
             ],
+            "fp_entities": [],
             "fn_entities": [
               "LM",
-              "Prof. C.Z. Zhang",
               "SS"
             ]
           },

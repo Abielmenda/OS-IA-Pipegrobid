@@ -29,12 +29,70 @@
   ],
   "projects": [],
   "countries": [],
-  "topics": [],
+  "topics": [
+    {
+      "topic_id": 2,
+      "name": "2_peptide_protein_instabilities_peptide cyclization",
+      "probability": 1.0,
+      "representative_document": true,
+      "keywords": [
+        {
+          "word": "peptide",
+          "score": 0.05120127513800536
+        },
+        {
+          "word": "protein",
+          "score": 0.04581992976538924
+        },
+        {
+          "word": "instabilities",
+          "score": 0.03456325437949816
+        },
+        {
+          "word": "peptide cyclization",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "muco",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "interface",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "passive",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "conformations",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "cyclization",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "field",
+          "score": 0.027650603503598527
+        }
+      ]
+    }
+  ],
   "acknowledgements": [
     {
       "text": "ACKNOWLEDGMENTS We thank Prof. Yan-Hong Qin (Xinjiang University) for inspiration and foundational guidance that motivated this work.",
       "needs_llm_extraction": true
     }
   ],
-  "authors_mentions": []
+  "authors_mentions": [],
+  "similar_papers": [
+    {
+      "paper_id": "paper12",
+      "similarity_score": 0.5057919025421143,
+      "source_topic_id": 2,
+      "target_topic_id": 2,
+      "same_topic": true
+    }
+  ]
 }

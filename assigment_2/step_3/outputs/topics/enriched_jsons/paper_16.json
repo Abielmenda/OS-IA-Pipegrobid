@@ -90,7 +90,56 @@
     }
   ],
   "countries": [],
-  "topics": [],
+  "topics": [
+    {
+      "topic_id": 1,
+      "name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.5907782538427951,
+      "representative_document": false,
+      "keywords": [
+        {
+          "word": "dynamics",
+          "score": 0.03940654282666327
+        },
+        {
+          "word": "antimicrobial",
+          "score": 0.038181879992889085
+        },
+        {
+          "word": "household",
+          "score": 0.034168896279813496
+        },
+        {
+          "word": "selection",
+          "score": 0.030228786568471028
+        },
+        {
+          "word": "susceptible",
+          "score": 0.03003966795460695
+        },
+        {
+          "word": "size",
+          "score": 0.02928762538269728
+        },
+        {
+          "word": "diversity",
+          "score": 0.028636409994666812
+        },
+        {
+          "word": "bacterial",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "infected",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "household size",
+          "score": 0.025774553999381264
+        }
+      ]
+    }
+  ],
   "acknowledgements": [
     {
       "text": "Acknowledgments. We are grateful to Yizhou Liu for an early derivation of Eq. ( 12 ) in the weaklyinteracting case. We thank Thibaut Arnoulx de Pirey, Jiliang Hu, and Julien Tailleur for helpful discussions. A.A. acknowledges the support of the Tushar Shah and Sarah Zion Physics Fellowship, as well as a grant from the Institute for Complex Adaptive Matter (ICAM). M.K. was supported by the NSF through Grant No. DMR-2218849.",
@@ -105,6 +154,15 @@
     {
       "author_name": "Mehran Kardar",
       "mention": "M.K."
+    }
+  ],
+  "similar_papers": [
+    {
+      "paper_id": "paper19",
+      "similarity_score": 0.5028839111328125,
+      "source_topic_id": 1,
+      "target_topic_id": 1,
+      "same_topic": true
     }
   ]
 }

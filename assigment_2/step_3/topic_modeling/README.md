@@ -3,7 +3,7 @@
 Para nutrir nuestro KG con los Topics y similaridades entre papers, se realizó un topic_modeling usando la herramienta `BERTopic` y Embeddings.
 
 ## Explicación
-Primero se realiza el topic modeling. Cargando los jsons enriquecidos dentro de `/outputs/extrated_acknowledgements_parsed_xmls`, ya que se realizará a partir de sus campos `title`, `text` y `keywords`.
+Primero se realiza el topic modeling. Cargando los jsons enriquecidos dentro de `/assigment_2/step_2/outputs/extrated_acknowledgements_parsed_xmls`, ya que se realizará a partir de sus campos `title`, `text` y `keywords`.
 
 Tras ello, se inicializa `BERTopic` usando un Embedding llamado `all-MiniLM-L6-v2`(rápido, ligero y eficiente para este tipo de problemas) y con una configuración de HDBSCAN(usado para el clustering de los papers) y Umap(reducción de la dimensionalidad del Embedding) aceptable para el problema. A su vez, se usó un modelo de vectorización para eliminar las stopwords en inglés ya que son redundantes y aparecen en cantdidad, y configurar el uso de n-gramas de 1 o 2 palabras para mayor fiabilidad de pertenencia a los topics.
 
@@ -18,6 +18,7 @@ Con esta información se genera el fichero ``/assigment_2/step_3/outputs/topics/
 
 ## Replicación 
 1. Se debe haber ejecutado el step_2 completo y tener el `HF_TOKEN` guardado en el .env de dicho step
+2. instalar entorno poetry en `/assigment_2/step_3/topic_modeling` con el mandato `poetry install -no--root`
 2. ejecutar desde el directorio `/assigment_2/step_3/topic_modeling` el mandato `poetry run python ./scripts/topic_modeling.py`
 3. ejecutar desde el mismo directorio `poetry run python ./scripts/enrich_jsons.py`
 
@@ -26,6 +27,6 @@ Con esta información se genera el fichero ``/assigment_2/step_3/outputs/topics/
 ## DECLARACIÓN DE USO DE IA
 Se usó IA generativa para :
 
-- entender cómo funciona `BERTopic`, sus funciones y obtener una configuración óptima de HDBSCAN y UMAP. La configuraciónse ajustó al tamaño reducido del corpus, compuesto por 30 papers. En UMAP se empleó un número bajo de vecinos para capturar relaciones locales entre documentos, una distancia coseno adecuada para embeddings semánticos y una distancia mínima baja para favorecer la formación de grupos compactos. En HDBSCAN se redujo el tamaño mínimo de cluster y el número mínimo de muestras para permitir la detección de topics pequeños y evitar que demasiados documentos fueran clasificados como outliers. Esta configuración permite obtener una agrupación más flexible y adecuada para un conjunto documental reducido.
+- entender cómo funciona `BERTopic`, sus funciones y obtener una configuración óptima de HDBSCAN y UMAP.
 
 - En relación al topic modeling únicamente se usó para ayudar a entender y generar las similaridades entre papers.

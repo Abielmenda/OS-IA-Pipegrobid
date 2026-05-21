@@ -9,7 +9,7 @@
       "response_format": "json_object",
       "prompt": "shared one-shot prompt (see prompt_ner.py)"
     },
-    "execution_date": "2026-05-16T11:47:44.523522+00:00",
+    "execution_date": "2026-05-21T16:36:27.707940+00:00",
     "categories": [
       "PER",
       "ORG",
@@ -46,6 +46,7 @@
           "xlr8harder"
         ],
         "ORG": [
+          "Prime Intellect",
           "Czech Science Foundation"
         ],
         "PROJ": [
@@ -73,13 +74,13 @@
       "entities": {
         "PER": [
           "SS",
-          "J.K.",
-          "Prof. C.Z. Zhang"
+          "C.Z. Zhang",
+          "Henri Seydoux"
         ],
         "ORG": [
           "Dana Farber Cancer Institute",
           "Simons Foundation",
-          "Henri Seydoux Fund"
+          "GitHub"
         ],
         "PROJ": []
       }
@@ -93,9 +94,9 @@
         ],
         "ORG": [
           "European Research Council",
-          "ERC",
           "European Union",
-          "Horizon 2020"
+          "Horizon 2020",
+          "European Union"
         ],
         "PROJ": [
           "851173"
@@ -128,7 +129,7 @@
         "ORG": [
           "National Eye Institute",
           "NEI",
-          "Simons Foundation",
+          "Simons Foundation Collaboration on the Physics of Learning and Neural Computation",
           "Stanford Medicine"
         ],
         "PROJ": [
@@ -147,18 +148,6 @@
       "entities": {
         "PER": [
           "Ishan Amin",
-          "Tobias Kreiman",
-          "Sam Blau",
-          "Ryan Liu",
-          "Ritwik Gupta",
-          "Sanjeev Raja",
-          "Nithin Chalapathi",
-          "Yue Jian",
-          "Yiheng Du",
-          "Michael Psenka",
-          "Boyu Qie",
-          "Kai Nelson",
-          "Rasmus Hoegh",
           "C. Lawrence Zitnick",
           "Misko Dzamba",
           "Meng Gao",
@@ -167,11 +156,11 @@
           "Luis Barroso-Luque"
         ],
         "ORG": [
+          "Research Corporation for Science Advancement",
+          "Arnold and Mabel Beckman Foundation",
           "UC Berkeley",
           "LBNL",
-          "FAIR Chemistry group",
-          "Research Corporation for Science Advancement",
-          "Arnold and Mabel Beckman Foundation"
+          "FAIR Chemistry group"
         ],
         "PROJ": [
           "SA-AUT-2024-015b"

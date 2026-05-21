@@ -7,7 +7,7 @@ Para ello, se ha generado un entorno poetry con las dependencias necesarias para
 - python-dotenv
 
 ## Explicación
-Con la ejecución del script `llama_extraction.py` se realiza la extracción de los acknowledgements de los ficheros jsons contenidos en el directorio `/outputs/parsed_xmls`, se usa el modelo para reconocer entidades y se nutren los datos con dichas entidades reconocidas.
+Con la ejecución del script `llama_extraction.py` se realiza la extracción de los acknowledgements de los ficheros jsons contenidos en el directorio `/assigment_2/step_2/outputs/parsed_xmls`, se usa el modelo para reconocer entidades y se nutren los datos con dichas entidades reconocidas.
 
 
 Se nutren de manera que:
@@ -17,15 +17,16 @@ Se nutren de manera que:
 
 Si no hay acknowledgements en el paper el json no sufre cambios.
 
-Por último, se generan los jsons nutridos en el directorio `/outputs/extrated_acknowledgements_parsed_xmls`
+Por último, se generan los jsons nutridos en el directorio `/assigment_2/step_2/outputs/extrated_acknowledgements_parsed_xmls`
 
 ## Replicación de la extracción
-Para llevar a cabo la replicación, es necesario haber generado anteriormente los jsons parseados ejecutando el mandato desde la raíz del repositorio `poetry run python ./src/pipegrobid/flow/parse_grobid_xml.py`.
+Para llevar a cabo la replicación, es necesario haber generado anteriormente los jsons parseados desde `/assigment_2/step_2/xmls_parse` (explicación ahí)
 
 También es necesario generar tu token Groq y escribirlo en un .env dentro `/assigment_2/step_2/ner_evaluation/` siguiendo las indicaciones del `.env.example`
 
-Posteriormente, desde el directorio `/assigment_2/step_2/ner_extraction` ejecutar el mandato `poetry run python ./scripts/llama_extraction.py` para obtener los jsons nutridos.
+Posteriormente, desde el directorio `/assigment_2/step_2/ner_extraction` instalar el entorno poetry con `poetry install --no-root ` y ejecutar el mandato `poetry run python ./scripts/llama_extraction.py` para obtener los jsons nutridos.
 
 
 ## DECLARACIÓN DE USO DE IA
-No se usó ningún tipo de IA generativa para buscar el mejor prompt que enviarle al LLM, revisado y aprobado por el Grupo 4 de OpenScience.
+Se usó IA generativa para:
+- ayudar a revisar y estructurar los scripts relacionados con la extracción NER
