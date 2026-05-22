@@ -2,10 +2,18 @@
 /ignore
 /.vscode
 
+.env
+.env.*
+!.env.example
+
 **/.venv
 
 **/__pycache__
 **/.pytest_cache
+**/.cache
+*.log
+*.sqlite
+*.sqlite-*
 
 /generated_files/*
 !generated_files/.gitkeep
@@ -18,4 +26,16 @@
 
 /ro-crate.py
 
-#outputs
+# Root generated outputs
+/outputs/
+
+# Assignment generated outputs
+/assigment_2/**/outputs/
+
+# Docker/n8n/Fuseki runtime state and dependency caches
+/containers/fuseki_container/fuseki_data/
+/containers/n8n_container/n8n_data/
+/containers/n8n_container/poetry_cache/
+/containers/n8n_container/poetry_venvs/
+/containers/python_container/poetry_cache/
+/containers/python_container/poetry_venvs/

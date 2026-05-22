@@ -35,15 +35,15 @@ def main():
     for relation in paper_topics:
         paper_id = relation["paper_id"]
         topic_id = relation["topic_id"]
-
-        topic = topics_by_id[topic_id]
+        
+        topic = topics_by_id.get(topic_id)
 
         paper_topics_by_id[paper_id] = {
             "topic_id": topic_id,
             "name": relation["topic_name"],
             "probability": relation["probability"],
             "representative_document": relation["representative_document"],
-            "keywords": topic["keywords"]
+            "keywords": topic["keywords"] if topic else []
         }
 
     # paper_id -> papers similares
@@ -96,12 +96,6 @@ def main():
 
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-
-        print(
-            f"{paper_id} enriquecido | "
-            f"topics: {len(data['topics'])} | "
-            f"similar_papers: {len(data['similar_papers'])}"
-        )
 
     print(f"\nJSONs enriquecidos guardados en: {ENRICHED_DIR}")
 

@@ -29,25 +29,21 @@
   ],
   "organizations": [
     {
-      "name": "European Research Council",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "ERC",
+      "name": "European Research Council (ERC)",
       "type": "acknowledged_organization"
     },
     {
       "name": "European Union",
       "type": "acknowledged_organization"
-    },
-    {
-      "name": "Horizon 2020",
-      "type": "acknowledged_organization"
     }
   ],
   "projects": [
     {
-      "identifier": "851173",
+      "identifier": "Horizon 2020",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "grant agreement No. 851173",
       "type": "acknowledged_project"
     }
   ],
@@ -55,8 +51,8 @@
   "topics": [
     {
       "topic_id": 2,
-      "name": "2_peptide_protein_instabilities_peptide cyclization",
-      "probability": 0.329777092064468,
+      "name": "2_peptide_protein_instabilities_interface",
+      "probability": 1.0,
       "representative_document": false,
       "keywords": [
         {
@@ -72,19 +68,19 @@
           "score": 0.03456325437949816
         },
         {
-          "word": "peptide cyclization",
-          "score": 0.02862452840400626
-        },
-        {
-          "word": "muco",
-          "score": 0.02862452840400626
-        },
-        {
           "word": "interface",
           "score": 0.02862452840400626
         },
         {
+          "word": "peptide cyclization",
+          "score": 0.02862452840400626
+        },
+        {
           "word": "passive",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "muco",
           "score": 0.02862452840400626
         },
         {

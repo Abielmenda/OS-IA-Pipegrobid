@@ -29,25 +29,21 @@
   ],
   "organizations": [
     {
-      "name": "European Research Council",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "ERC",
+      "name": "European Research Council (ERC)",
       "type": "acknowledged_organization"
     },
     {
       "name": "European Union",
       "type": "acknowledged_organization"
-    },
-    {
-      "name": "Horizon 2020",
-      "type": "acknowledged_organization"
     }
   ],
   "projects": [
     {
-      "identifier": "851173",
+      "identifier": "Horizon 2020",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "grant agreement No. 851173",
       "type": "acknowledged_project"
     }
   ],

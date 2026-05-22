@@ -70,7 +70,7 @@ def get_bertopic():
 
     # hdsbscan realiza el clustering de topics a partir de los embedings reducidos
     hdbscan_model = HDBSCAN(
-        min_cluster_size=2,
+        min_cluster_size=3,
         min_samples=1,
         metric="euclidean",
         cluster_selection_method="eom",

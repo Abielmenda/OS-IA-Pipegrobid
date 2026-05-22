@@ -39,37 +39,25 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "Horizon 2020",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "Marie Skłodowska-Curie",
-      "type": "acknowledged_organization"
-    },
-    {
       "name": "NWO Gravitation",
       "type": "acknowledged_organization"
     },
     {
-      "name": "NETWORKS",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "GNAMPA-INdAM",
+      "name": "Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni (GNAMPA-INdAM)",
       "type": "acknowledged_organization"
     }
   ],
   "projects": [
     {
-      "identifier": "101034253",
+      "identifier": "Horizon 2020",
       "type": "acknowledged_project"
     },
     {
-      "identifier": "024.002.003",
+      "identifier": "Marie Skłodowska-Curie grant agreement no. 101034253",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "NETWORKS under grant no. 024.002.003",
       "type": "acknowledged_project"
     }
   ],
@@ -110,15 +98,15 @@
           "score": 0.028636409994666812
         },
         {
-          "word": "bacterial",
-          "score": 0.025774553999381264
-        },
-        {
           "word": "infected",
           "score": 0.025774553999381264
         },
         {
-          "word": "household size",
+          "word": "vertices",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "bacterial",
           "score": 0.025774553999381264
         }
       ]
@@ -139,7 +127,7 @@
   "similar_papers": [
     {
       "paper_id": "paper19",
-      "similarity_score": 0.5169640183448792,
+      "similarity_score": 0.5169641375541687,
       "source_topic_id": 1,
       "target_topic_id": 1,
       "same_topic": true

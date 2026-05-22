@@ -6,15 +6,18 @@ Este Step consta de tres pasos fundamentales para el proyecto:
 
 Embedding: Vector numérico que representa significado que sirve Comparar similitud semántica, búsqueda, clustering, recomendación
 
-2. Creación del KG local a partir de la ontología formada y los datos obtenidos en los anteriores pasos.
 
-3. Enriquecimiento del KG local a partir de los KG públicos declarados en las fuentes (`/assigment_2/step_1/docs/fuentes.md`)
+2. Enriquecimiento de los jsons a partir de los KG públicos declarados en las fuentes (`/assigment_2/step_1/docs/fuentes.md`)
 
 
 Con este Step podemos nutrir nuestro grafo de conocimiento con estas partes de nuestra ontología:
 
-
+con el paso 1:
 ![Ontología NER-TOPICS](/images/ontologia-ner-topics.png)
+
+
+con el paso 2:
+*añadir foto con todo verde*
 
 
 

@@ -34,7 +34,7 @@
     {
       "topic_id": 1,
       "name": "1_dynamics_antimicrobial_household_selection",
-      "probability": 0.5412647136237663,
+      "probability": 0.5525055389640852,
       "representative_document": false,
       "keywords": [
         {
@@ -66,15 +66,15 @@
           "score": 0.028636409994666812
         },
         {
-          "word": "bacterial",
-          "score": 0.025774553999381264
-        },
-        {
           "word": "infected",
           "score": 0.025774553999381264
         },
         {
-          "word": "household size",
+          "word": "vertices",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "bacterial",
           "score": 0.025774553999381264
         }
       ]

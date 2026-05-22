@@ -71,11 +71,7 @@
   ],
   "organizations": [
     {
-      "name": "Institute for Complex Adaptive Matter",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "ICAM",
+      "name": "Institute for Complex Adaptive Matter (ICAM)",
       "type": "acknowledged_organization"
     },
     {
@@ -85,7 +81,11 @@
   ],
   "projects": [
     {
-      "identifier": "DMR-2218849",
+      "identifier": "Grant No. DMR-2218849",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Tushar Shah and Sarah Zion Physics Fellowship",
       "type": "acknowledged_project"
     }
   ],
@@ -94,7 +94,7 @@
     {
       "topic_id": 1,
       "name": "1_dynamics_antimicrobial_household_selection",
-      "probability": 0.5907782538427951,
+      "probability": 0.9318542929308845,
       "representative_document": false,
       "keywords": [
         {
@@ -126,15 +126,15 @@
           "score": 0.028636409994666812
         },
         {
-          "word": "bacterial",
-          "score": 0.025774553999381264
-        },
-        {
           "word": "infected",
           "score": 0.025774553999381264
         },
         {
-          "word": "household size",
+          "word": "vertices",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "bacterial",
           "score": 0.025774553999381264
         }
       ]
@@ -159,7 +159,7 @@
   "similar_papers": [
     {
       "paper_id": "paper19",
-      "similarity_score": 0.5028839111328125,
+      "similarity_score": 0.5028837323188782,
       "source_topic_id": 1,
       "target_topic_id": 1,
       "same_topic": true

@@ -77,17 +77,17 @@
   ],
   "organizations": [
     {
-      "name": "Czech Science Foundation",
+      "name": "Prime Intellect",
       "type": "acknowledged_organization"
     },
     {
-      "name": "Prime Intellect",
+      "name": "Czech Science Foundation",
       "type": "acknowledged_organization"
     }
   ],
   "projects": [
     {
-      "identifier": "26-23955S",
+      "identifier": "grant No. 26-23955S",
       "type": "acknowledged_project"
     }
   ],
@@ -132,11 +132,11 @@
           "score": 0.015739287341013593
         },
         {
-          "word": "causal",
+          "word": "llm",
           "score": 0.013286241643272804
         },
         {
-          "word": "llm",
+          "word": "causal",
           "score": 0.013286241643272804
         }
       ]

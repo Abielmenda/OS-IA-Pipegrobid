@@ -61,7 +61,7 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "HKBU CSD Departmental Incentive Scheme",
+      "name": "HKBU",
       "type": "acknowledged_organization"
     },
     {
@@ -132,11 +132,11 @@
           "score": 0.015739287341013593
         },
         {
-          "word": "causal",
+          "word": "llm",
           "score": 0.013286241643272804
         },
         {
-          "word": "llm",
+          "word": "causal",
           "score": 0.013286241643272804
         }
       ]
@@ -173,14 +173,14 @@
   "similar_papers": [
     {
       "paper_id": "paper02",
-      "similarity_score": 0.6886314153671265,
+      "similarity_score": 0.6886314749717712,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper04",
-      "similarity_score": 0.5439873337745667,
+      "similarity_score": 0.5439873933792114,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -194,21 +194,21 @@
     },
     {
       "paper_id": "paper25",
-      "similarity_score": 0.6002785563468933,
+      "similarity_score": 0.6002786159515381,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper28",
-      "similarity_score": 0.5371800661087036,
+      "similarity_score": 0.5371799468994141,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper29",
-      "similarity_score": 0.5556103587150574,
+      "similarity_score": 0.5556105375289917,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true

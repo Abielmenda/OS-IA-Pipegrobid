@@ -175,10 +175,6 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "Scialog",
-      "type": "acknowledged_organization"
-    },
-    {
       "name": "UC Berkeley",
       "type": "acknowledged_organization"
     },
@@ -187,13 +183,13 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "FAIR Chemistry group",
+      "name": "FAIR Chemistry",
       "type": "acknowledged_organization"
     }
   ],
   "projects": [
     {
-      "identifier": "SA-AUT-2024-015b",
+      "identifier": "Scialog grant #SA-AUT-2024-015b",
       "type": "acknowledged_project"
     }
   ],
@@ -205,18 +201,5 @@
       "needs_llm_extraction": true
     }
   ],
-  "authors_mentions": [
-    {
-      "author_name": "Fair At Meta",
-      "mention": "FAIR"
-    },
-    {
-      "author_name": "U C Berkeley",
-      "mention": "UC Berkeley"
-    },
-    {
-      "author_name": "Lbnl",
-      "mention": "LBNL"
-    }
-  ]
+  "authors_mentions": []
 }

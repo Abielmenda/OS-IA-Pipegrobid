@@ -32,7 +32,7 @@
   "topics": [
     {
       "topic_id": 2,
-      "name": "2_peptide_protein_instabilities_peptide cyclization",
+      "name": "2_peptide_protein_instabilities_interface",
       "probability": 1.0,
       "representative_document": true,
       "keywords": [
@@ -49,19 +49,19 @@
           "score": 0.03456325437949816
         },
         {
-          "word": "peptide cyclization",
-          "score": 0.02862452840400626
-        },
-        {
-          "word": "muco",
-          "score": 0.02862452840400626
-        },
-        {
           "word": "interface",
           "score": 0.02862452840400626
         },
         {
+          "word": "peptide cyclization",
+          "score": 0.02862452840400626
+        },
+        {
           "word": "passive",
+          "score": 0.02862452840400626
+        },
+        {
+          "word": "muco",
           "score": 0.02862452840400626
         },
         {
@@ -89,7 +89,7 @@
   "similar_papers": [
     {
       "paper_id": "paper12",
-      "similarity_score": 0.5057919025421143,
+      "similarity_score": 0.5057920813560486,
       "source_topic_id": 2,
       "target_topic_id": 2,
       "same_topic": true

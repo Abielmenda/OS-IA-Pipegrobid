@@ -43,7 +43,7 @@
     {
       "topic_id": 1,
       "name": "1_dynamics_antimicrobial_household_selection",
-      "probability": 1.0,
+      "probability": 0.9318542929308845,
       "representative_document": true,
       "keywords": [
         {
@@ -75,15 +75,15 @@
           "score": 0.028636409994666812
         },
         {
-          "word": "bacterial",
-          "score": 0.025774553999381264
-        },
-        {
           "word": "infected",
           "score": 0.025774553999381264
         },
         {
-          "word": "household size",
+          "word": "vertices",
+          "score": 0.025774553999381264
+        },
+        {
+          "word": "bacterial",
           "score": 0.025774553999381264
         }
       ]
@@ -104,14 +104,14 @@
   "similar_papers": [
     {
       "paper_id": "paper16",
-      "similarity_score": 0.5028839111328125,
+      "similarity_score": 0.5028837323188782,
       "source_topic_id": 1,
       "target_topic_id": 1,
       "same_topic": true
     },
     {
       "paper_id": "paper17",
-      "similarity_score": 0.5169640183448792,
+      "similarity_score": 0.5169641375541687,
       "source_topic_id": 1,
       "target_topic_id": 1,
       "same_topic": true

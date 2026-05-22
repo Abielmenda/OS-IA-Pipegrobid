@@ -175,10 +175,6 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "Scialog",
-      "type": "acknowledged_organization"
-    },
-    {
       "name": "UC Berkeley",
       "type": "acknowledged_organization"
     },
@@ -187,13 +183,13 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "FAIR Chemistry group",
+      "name": "FAIR Chemistry",
       "type": "acknowledged_organization"
     }
   ],
   "projects": [
     {
-      "identifier": "SA-AUT-2024-015b",
+      "identifier": "Scialog grant #SA-AUT-2024-015b",
       "type": "acknowledged_project"
     }
   ],
@@ -238,11 +234,11 @@
           "score": 0.015739287341013593
         },
         {
-          "word": "causal",
+          "word": "llm",
           "score": 0.013286241643272804
         },
         {
-          "word": "llm",
+          "word": "causal",
           "score": 0.013286241643272804
         }
       ]
@@ -254,31 +250,18 @@
       "needs_llm_extraction": true
     }
   ],
-  "authors_mentions": [
-    {
-      "author_name": "Fair At Meta",
-      "mention": "FAIR"
-    },
-    {
-      "author_name": "U C Berkeley",
-      "mention": "UC Berkeley"
-    },
-    {
-      "author_name": "Lbnl",
-      "mention": "LBNL"
-    }
-  ],
+  "authors_mentions": [],
   "similar_papers": [
     {
       "paper_id": "paper21",
-      "similarity_score": 0.5371800661087036,
+      "similarity_score": 0.5371799468994141,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper25",
-      "similarity_score": 0.5044946074485779,
+      "similarity_score": 0.5044944882392883,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true

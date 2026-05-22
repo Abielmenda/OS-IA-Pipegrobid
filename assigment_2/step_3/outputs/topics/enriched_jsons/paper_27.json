@@ -41,23 +41,15 @@
   ],
   "organizations": [
     {
-      "name": "National Eye Institute",
+      "name": "National Eye Institute (NEI)",
       "type": "acknowledged_organization"
     },
     {
-      "name": "NEI",
+      "name": "Simons Foundation",
       "type": "acknowledged_organization"
     },
     {
-      "name": "Simons Foundation Collaboration on the Physics of Learning and Neural Computation",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "Schmidt Sciences Polymath Award",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "Stanford Medicine Post-Baccalaureate Experience In Research",
+      "name": "Stanford Medicine",
       "type": "acknowledged_organization"
     }
   ],
@@ -72,6 +64,14 @@
     },
     {
       "identifier": "P30EY026877",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Schmidt Sciences Polymath Award",
+      "type": "acknowledged_project"
+    },
+    {
+      "identifier": "Stanford Medicine Post-Baccalaureate Experience In Research program",
       "type": "acknowledged_project"
     }
   ],
@@ -116,11 +116,11 @@
           "score": 0.015739287341013593
         },
         {
-          "word": "causal",
+          "word": "llm",
           "score": 0.013286241643272804
         },
         {
-          "word": "llm",
+          "word": "causal",
           "score": 0.013286241643272804
         }
       ]
@@ -134,12 +134,12 @@
   ],
   "authors_mentions": [
     {
-      "author_name": "Surya Ganguli",
-      "mention": "S.G."
-    },
-    {
       "author_name": "Stephen A Baccus",
       "mention": "SAB"
+    },
+    {
+      "author_name": "Surya Ganguli",
+      "mention": "S.G."
     },
     {
       "author_name": "Zaki Alaoui",

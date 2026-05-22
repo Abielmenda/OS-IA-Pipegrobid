@@ -94,11 +94,11 @@
           "score": 0.015739287341013593
         },
         {
-          "word": "causal",
+          "word": "llm",
           "score": 0.013286241643272804
         },
         {
-          "word": "llm",
+          "word": "causal",
           "score": 0.013286241643272804
         }
       ]
@@ -108,35 +108,35 @@
   "similar_papers": [
     {
       "paper_id": "paper04",
-      "similarity_score": 0.5453762412071228,
+      "similarity_score": 0.5453763008117676,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper10",
-      "similarity_score": 0.568034291267395,
+      "similarity_score": 0.5680342316627502,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper21",
-      "similarity_score": 0.6886314153671265,
+      "similarity_score": 0.6886314749717712,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper24",
-      "similarity_score": 0.5003077387809753,
+      "similarity_score": 0.5003078579902649,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
     },
     {
       "paper_id": "paper25",
-      "similarity_score": 0.5161267518997192,
+      "similarity_score": 0.5161265730857849,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
