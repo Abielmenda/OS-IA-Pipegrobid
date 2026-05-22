@@ -9,8 +9,8 @@ Más documentacion en: https://pipegrobid-software.readthedocs.io/es/latest/
 El objetivo de este proyecto es construir un pipeline automatizado para:
 - Procesar documentos científicos en formato PDF mediante GROBID
 - Extraer información estructurada (abstract, figuras y enlaces)
-- Aplicar técnicas básicas de NLP sobre los abstracts
 - Generar visualizaciones y archivos resumen a partir de la información extraída
+
 
 Para la realización del proyecto, se utiliza GROBID debido a que convierte documentos PDF científicos en formato TEI XML estructurado, lo cual permite realizar extracción automática de información mediante procesamiento de nodos
 
