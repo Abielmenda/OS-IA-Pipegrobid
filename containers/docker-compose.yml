@@ -60,7 +60,9 @@ services:
 
 
   python_runner:
-    build: ./python_container
+    build: 
+      context: ..
+      dockerfile: containers/python_container/Dockerfile
     container_name: python_runner
     volumes:
       - ..:/workspace
