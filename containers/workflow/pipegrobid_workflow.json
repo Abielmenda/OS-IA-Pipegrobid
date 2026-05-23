@@ -1,0 +1,169 @@
+{
+  "name": "pipegrobid_workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        144,
+        64
+      ],
+      "id": "72b4c51c-a50b-4b78-b91e-9c3f85cd077e",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "http://fuseki:3030/kg/data?default",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Basic YWRtaW46YWRtaW4="
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/turtle"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1296,
+        64
+      ],
+      "id": "cda7cd23-ee12-4f77-bead-c5f855b430fe",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "command": "docker exec python_runner bash -lc \"cd /workspace/assigment_2/step_2 && python main.py\""
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        416,
+        64
+      ],
+      "id": "3082af12-4c30-4e41-8423-225b664d876c",
+      "name": "step_2"
+    },
+    {
+      "parameters": {
+        "command": "docker exec python_runner bash -lc \"cd /workspace/assigment_2/step_3/&& python main.py\""
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        656,
+        64
+      ],
+      "id": "96f338f9-77d0-410d-86b1-2d763029c7ec",
+      "name": "step_3"
+    },
+    {
+      "parameters": {
+        "command": "docker exec python_runner bash -lc \"cd /workspace/assigment_2/step_4/&& python main.py\""
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        864,
+        64
+      ],
+      "id": "195f702b-eca6-45df-adb5-d1bf5bf4d34f",
+      "name": "step_4"
+    },
+    {
+      "parameters": {
+        "fileSelector": "/workspace/assigment_2/step_4/outputs/local_kg.ttl",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        1088,
+        64
+      ],
+      "id": "671c8f1d-9767-4228-ba90-21f0f3f0638f",
+      "name": "Read/Write Files from Disk"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "step_2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "step_2": {
+      "main": [
+        [
+          {
+            "node": "step_3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "step_4": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "step_3": {
+      "main": [
+        [
+          {
+            "node": "step_4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "d05c3872-3ac8-4e6a-83ec-cfdf7f17cfaf",
+  "meta": {
+    "instanceId": "3230561f7ab69213df48b9b744613634e4552ef5abbff6cd1681640bf0b59517"
+  },
+  "id": "a8gDKSInywkho6hk",
+  "tags": []
+}

@@ -28,13 +28,15 @@ WORKDIR /workspace
 COPY assigment_2/step_2/xmls_parse/pyproject.toml assigment_2/step_2/xmls_parse/poetry.lock /workspace/assigment_2/step_2/xmls_parse/
 COPY assigment_2/step_2/ner_extraction/pyproject.toml assigment_2/step_2/ner_extraction/poetry.lock /workspace/assigment_2/step_2/ner_extraction/
 COPY assigment_2/step_3/topic_modeling/pyproject.toml assigment_2/step_3/topic_modeling/poetry.lock /workspace/assigment_2/step_3/topic_modeling/
+COPY assigment_2/step_4/gen_local_kg/pyproject.toml assigment_2/step_4/gen_local_kg/poetry.lock /workspace/assigment_2/step_4/gen_local_kg/
 
 # Instalamos dependencias una vez, durante el build de la imagen
 RUN set -e; \
     cd /workspace/assigment_2/step_2/xmls_parse && poetry install --no-root; \
     cd /workspace/assigment_2/step_2/ner_extraction && poetry install --no-root; \
-    cd /workspace/assigment_2/step_3/topic_modeling && poetry install --no-root
+    cd /workspace/assigment_2/step_3/topic_modeling && poetry install --no-root; \
+    cd /workspace/assigment_2/step_4/gen_local_kg && poetry install --no-root
 
 WORKDIR /workspace
 
-CMD ["tail", "-f", "/dev/null"]
+CMD ["tail", "-f", "/dev/null"] 
