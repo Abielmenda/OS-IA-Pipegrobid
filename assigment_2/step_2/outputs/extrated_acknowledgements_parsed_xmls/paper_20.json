@@ -77,6 +77,10 @@
   ],
   "organizations": [
     {
+      "name": "Priesemann group",
+      "type": "acknowledged_organization"
+    },
+    {
       "name": "Max-Planck-Society",
       "type": "acknowledged_organization"
     },
@@ -86,6 +90,14 @@
     },
     {
       "name": "Deutsche Forschungsgemeinschaft",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "DFG",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "German Research Foundation",
       "type": "acknowledged_organization"
     },
     {
@@ -107,11 +119,11 @@
   ],
   "projects": [
     {
-      "identifier": "RESPINOW project (031L0298G)",
+      "identifier": "031L0298G",
       "type": "acknowledged_project"
     },
     {
-      "identifier": "infoXpand project (031L0300A)",
+      "identifier": "031L0300A",
       "type": "acknowledged_project"
     },
     {
@@ -119,23 +131,11 @@
       "type": "acknowledged_project"
     },
     {
-      "identifier": "CAIMed -Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine",
+      "identifier": "ZN4257",
       "type": "acknowledged_project"
     },
     {
-      "identifier": "grant no. ZN4257",
-      "type": "acknowledged_project"
-    },
-    {
-      "identifier": "Niedersächsisches Vorab",
-      "type": "acknowledged_project"
-    },
-    {
-      "identifier": "Niedersachsen-Profil-Professur",
-      "type": "acknowledged_project"
-    },
-    {
-      "identifier": "SaxoCOV grant",
+      "identifier": "SaxoCOV",
       "type": "acknowledged_project"
     }
   ],

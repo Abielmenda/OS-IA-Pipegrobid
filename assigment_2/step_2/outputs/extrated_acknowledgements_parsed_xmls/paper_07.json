@@ -77,17 +77,17 @@
   ],
   "organizations": [
     {
-      "name": "Prime Intellect",
+      "name": "Czech Science Foundation",
       "type": "acknowledged_organization"
     },
     {
-      "name": "Czech Science Foundation",
+      "name": "Prime Intellect",
       "type": "acknowledged_organization"
     }
   ],
   "projects": [
     {
-      "identifier": "grant No. 26-23955S",
+      "identifier": "26-23955S",
       "type": "acknowledged_project"
     }
   ],

@@ -61,7 +61,7 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "HKBU",
+      "name": "HKBU CSD Departmental Incentive Scheme",
       "type": "acknowledged_organization"
     },
     {
@@ -113,12 +113,12 @@
       "mention": "ZZL"
     },
     {
-      "author_name": "Bo Han",
-      "mention": "BH"
-    },
-    {
       "author_name": "Jiangchao Yao",
       "mention": "JCY"
+    },
+    {
+      "author_name": "Bo Han",
+      "mention": "BH"
     }
   ]
 }

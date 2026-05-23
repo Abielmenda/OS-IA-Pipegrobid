@@ -71,7 +71,11 @@
   ],
   "organizations": [
     {
-      "name": "Institute for Complex Adaptive Matter (ICAM)",
+      "name": "Institute for Complex Adaptive Matter",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "ICAM",
       "type": "acknowledged_organization"
     },
     {
@@ -81,11 +85,7 @@
   ],
   "projects": [
     {
-      "identifier": "Grant No. DMR-2218849",
-      "type": "acknowledged_project"
-    },
-    {
-      "identifier": "Tushar Shah and Sarah Zion Physics Fellowship",
+      "identifier": "DMR-2218849",
       "type": "acknowledged_project"
     }
   ],

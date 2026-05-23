@@ -6,7 +6,7 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        144,
+        208,
         64
       ],
       "id": "72b4c51c-a50b-4b78-b91e-9c3f85cd077e",
@@ -58,19 +58,6 @@
     },
     {
       "parameters": {
-        "command": "docker exec python_runner bash -lc \"cd /workspace/assigment_2/step_3/&& python main.py\""
-      },
-      "type": "n8n-nodes-base.executeCommand",
-      "typeVersion": 1,
-      "position": [
-        656,
-        64
-      ],
-      "id": "96f338f9-77d0-410d-86b1-2d763029c7ec",
-      "name": "step_3"
-    },
-    {
-      "parameters": {
         "command": "docker exec python_runner bash -lc \"cd /workspace/assigment_2/step_4/&& python main.py\""
       },
       "type": "n8n-nodes-base.executeCommand",
@@ -95,6 +82,19 @@
       ],
       "id": "671c8f1d-9767-4228-ba90-21f0f3f0638f",
       "name": "Read/Write Files from Disk"
+    },
+    {
+      "parameters": {
+        "command": "docker exec python_runner bash -lc \"cd /workspace/assigment_2/step_3/ && python main.py\""
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        656,
+        64
+      ],
+      "id": "96f338f9-77d0-410d-86b1-2d763029c7ec",
+      "name": "step_3"
     }
   ],
   "pinData": {},
@@ -160,7 +160,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "d05c3872-3ac8-4e6a-83ec-cfdf7f17cfaf",
+  "versionId": "27fbd9b8-7046-4ae5-863f-924f038f0727",
   "meta": {
     "instanceId": "3230561f7ab69213df48b9b744613634e4552ef5abbff6cd1681640bf0b59517"
   },

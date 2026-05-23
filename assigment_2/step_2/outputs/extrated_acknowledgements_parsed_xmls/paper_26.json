@@ -83,31 +83,27 @@
   ],
   "projects": [
     {
-      "identifier": "Expeditions CCF-1918770",
+      "identifier": "CCF-1918770",
       "type": "acknowledged_project"
     },
     {
-      "identifier": "CAREER IIS-2028586",
+      "identifier": "IIS-2028586",
       "type": "acknowledged_project"
     },
     {
-      "identifier": "Medium IIS-1955883",
+      "identifier": "IIS-1955883",
       "type": "acknowledged_project"
     },
     {
-      "identifier": "Medium IIS-2403240",
+      "identifier": "IIS-2403240",
       "type": "acknowledged_project"
     },
     {
-      "identifier": "Medium IIS-2106961",
+      "identifier": "IIS-2106961",
       "type": "acknowledged_project"
     },
     {
       "identifier": "1R01HL184139",
-      "type": "acknowledged_project"
-    },
-    {
-      "identifier": "CDC MInD program",
       "type": "acknowledged_project"
     }
   ],

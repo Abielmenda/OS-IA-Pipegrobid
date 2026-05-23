@@ -31,6 +31,10 @@
       "type": "acknowledged_organization"
     },
     {
+      "name": "UKRI",
+      "type": "acknowledged_organization"
+    },
+    {
       "name": "UKRI Centre for Doctoral Training in Safe and Trusted Artificial Intelligence",
       "type": "acknowledged_organization"
     }
