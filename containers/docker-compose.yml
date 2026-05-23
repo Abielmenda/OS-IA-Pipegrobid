@@ -11,10 +11,6 @@ services:
       - ./n8n_container/n8n_data:/home/node/.n8n
       - /var/run/docker.sock:/var/run/docker.sock
       - ..:/workspace
-
-      # Cachear entornos Poetry
-      - ./n8n_container/poetry_venvs:/opt/poetry-venvs
-      - ./n8n_container/poetry_cache:/opt/poetry-cache
     networks:
       - net
     group_add:
@@ -33,11 +29,6 @@ services:
       # Para imports desde /workspace
       - PYTHONPATH=/workspace
       - N8N_RESTRICT_FILE_ACCESS_TO=/workspace;/root/.n8n-files
-
-      # Para que Poetry no use .venv de Windows
-      - POETRY_VIRTUALENVS_IN_PROJECT=false
-      - POETRY_VIRTUALENVS_PATH=/opt/poetry-venvs
-      - POETRY_CACHE_DIR=/opt/poetry-cache
 
   fuseki:
     image: stain/jena-fuseki
@@ -66,7 +57,6 @@ services:
     container_name: python_runner
     volumes:
       - ..:/workspace
-      - ./python_container/poetry_venvs:/opt/poetry-venvs
       - ./python_container/poetry_cache:/opt/poetry-cache
     networks:
       - net
@@ -75,6 +65,8 @@ services:
       - POETRY_VIRTUALENVS_IN_PROJECT=false
       - POETRY_VIRTUALENVS_PATH=/opt/poetry-venvs
       - POETRY_CACHE_DIR=/opt/poetry-cache
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - HF_TOKEN=${HF_TOKEN:-}
 
 
   research_api:
@@ -88,6 +80,8 @@ services:
       FUSEKI_QUERY_URL: "http://fuseki:3030/kg/query"
     volumes:
       - ./research_api/app:/app
+    networks:
+      - net
     restart: unless-stopped
     
 networks:

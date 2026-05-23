@@ -72,72 +72,72 @@
     },
     {
       "paper_id": "paper11",
-      "topic_id": 2,
-      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
-      "probability": 0.7623743792115857,
-      "representative_document": true
+      "topic_id": 1,
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "probability": 1.0,
+      "representative_document": false
     },
     {
       "paper_id": "paper12",
-      "topic_id": 2,
-      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
+      "topic_id": 1,
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
       "probability": 1.0,
-      "representative_document": true
+      "representative_document": false
     },
     {
       "paper_id": "paper13",
-      "topic_id": 2,
-      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
+      "topic_id": 1,
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
       "probability": 1.0,
       "representative_document": false
     },
     {
       "paper_id": "paper14",
       "topic_id": 1,
-      "topic_name": "1_dynamics_antimicrobial_household_selection",
-      "probability": 0.8440772840438966,
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "probability": 0.9176482909088747,
       "representative_document": false
     },
     {
       "paper_id": "paper15",
-      "topic_id": 2,
-      "topic_name": "2_peptide_protein_instabilities_peptide cyclization",
+      "topic_id": 1,
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
       "probability": 1.0,
       "representative_document": true
     },
     {
       "paper_id": "paper16",
       "topic_id": 1,
-      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
       "probability": 1.0,
       "representative_document": false
     },
     {
       "paper_id": "paper17",
       "topic_id": 1,
-      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
       "probability": 1.0,
       "representative_document": true
     },
     {
       "paper_id": "paper18",
       "topic_id": 1,
-      "topic_name": "1_dynamics_antimicrobial_household_selection",
-      "probability": 0.8943247450857383,
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "probability": 1.0,
       "representative_document": true
     },
     {
       "paper_id": "paper19",
       "topic_id": 1,
-      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
       "probability": 1.0,
-      "representative_document": true
+      "representative_document": false
     },
     {
       "paper_id": "paper20",
       "topic_id": 1,
-      "topic_name": "1_dynamics_antimicrobial_household_selection",
-      "probability": 0.8943247450857383,
+      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "probability": 1.0,
       "representative_document": false
     },
     {

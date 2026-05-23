@@ -3,7 +3,7 @@
     {
       "source_paper_id": "paper02",
       "target_paper_id": "paper04",
-      "similarity_score": 0.5453761219978333,
+      "similarity_score": 0.5453760623931885,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -11,7 +11,7 @@
     {
       "source_paper_id": "paper02",
       "target_paper_id": "paper10",
-      "similarity_score": 0.5680340528488159,
+      "similarity_score": 0.568034291267395,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -19,7 +19,7 @@
     {
       "source_paper_id": "paper02",
       "target_paper_id": "paper21",
-      "similarity_score": 0.6886314153671265,
+      "similarity_score": 0.6886312365531921,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -27,7 +27,7 @@
     {
       "source_paper_id": "paper02",
       "target_paper_id": "paper24",
-      "similarity_score": 0.5003077983856201,
+      "similarity_score": 0.5003078579902649,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -35,7 +35,7 @@
     {
       "source_paper_id": "paper02",
       "target_paper_id": "paper25",
-      "similarity_score": 0.5161266922950745,
+      "similarity_score": 0.5161266326904297,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -43,7 +43,7 @@
     {
       "source_paper_id": "paper02",
       "target_paper_id": "paper29",
-      "similarity_score": 0.5457677841186523,
+      "similarity_score": 0.5457679629325867,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -51,7 +51,7 @@
     {
       "source_paper_id": "paper03",
       "target_paper_id": "paper10",
-      "similarity_score": 0.5136635899543762,
+      "similarity_score": 0.5136634707450867,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -59,7 +59,7 @@
     {
       "source_paper_id": "paper04",
       "target_paper_id": "paper10",
-      "similarity_score": 0.5234242677688599,
+      "similarity_score": 0.5234242081642151,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -67,7 +67,7 @@
     {
       "source_paper_id": "paper04",
       "target_paper_id": "paper21",
-      "similarity_score": 0.5439873933792114,
+      "similarity_score": 0.5439874529838562,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -75,7 +75,7 @@
     {
       "source_paper_id": "paper04",
       "target_paper_id": "paper25",
-      "similarity_score": 0.5116398930549622,
+      "similarity_score": 0.5116401314735413,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -83,7 +83,7 @@
     {
       "source_paper_id": "paper04",
       "target_paper_id": "paper29",
-      "similarity_score": 0.5222616195678711,
+      "similarity_score": 0.5222617387771606,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -99,15 +99,15 @@
     {
       "source_paper_id": "paper12",
       "target_paper_id": "paper15",
-      "similarity_score": 0.5057920217514038,
-      "source_topic_id": 2,
-      "target_topic_id": 2,
+      "similarity_score": 0.505791962146759,
+      "source_topic_id": 1,
+      "target_topic_id": 1,
       "same_topic": true
     },
     {
       "source_paper_id": "paper16",
       "target_paper_id": "paper19",
-      "similarity_score": 0.502883791923523,
+      "similarity_score": 0.5028838515281677,
       "source_topic_id": 1,
       "target_topic_id": 1,
       "same_topic": true
@@ -115,7 +115,7 @@
     {
       "source_paper_id": "paper17",
       "target_paper_id": "paper19",
-      "similarity_score": 0.516964316368103,
+      "similarity_score": 0.5169640779495239,
       "source_topic_id": 1,
       "target_topic_id": 1,
       "same_topic": true
@@ -123,7 +123,7 @@
     {
       "source_paper_id": "paper21",
       "target_paper_id": "paper24",
-      "similarity_score": 0.5126655697822571,
+      "similarity_score": 0.5126657485961914,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -131,7 +131,7 @@
     {
       "source_paper_id": "paper21",
       "target_paper_id": "paper25",
-      "similarity_score": 0.6002786755561829,
+      "similarity_score": 0.6002787351608276,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -139,7 +139,7 @@
     {
       "source_paper_id": "paper21",
       "target_paper_id": "paper28",
-      "similarity_score": 0.5371800661087036,
+      "similarity_score": 0.5371801257133484,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -147,7 +147,7 @@
     {
       "source_paper_id": "paper21",
       "target_paper_id": "paper29",
-      "similarity_score": 0.5556103587150574,
+      "similarity_score": 0.5556105375289917,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -155,7 +155,7 @@
     {
       "source_paper_id": "paper24",
       "target_paper_id": "paper25",
-      "similarity_score": 0.5822093486785889,
+      "similarity_score": 0.5822094678878784,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -163,7 +163,7 @@
     {
       "source_paper_id": "paper25",
       "target_paper_id": "paper28",
-      "similarity_score": 0.5044946670532227,
+      "similarity_score": 0.5044945478439331,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
@@ -171,7 +171,7 @@
     {
       "source_paper_id": "paper25",
       "target_paper_id": "paper29",
-      "similarity_score": 0.6605963706970215,
+      "similarity_score": 0.660596489906311,
       "source_topic_id": 0,
       "target_topic_id": 0,
       "same_topic": true
