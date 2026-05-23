@@ -9,7 +9,7 @@ from rdflib.namespace import RDF, RDFS, XSD, FOAF, DCTERMS, DC
 # =========================
 
 def slugify(text: str) -> str:
-    text = text.lower().strip()
+    text = str(text).lower().strip()
     text = re.sub(r"[^\w\s-]", "", text)
     text = re.sub(r"\s+", "_", text)
     return text
@@ -17,6 +17,27 @@ def slugify(text: str) -> str:
 
 def obtain_json_files():
     return list(INPUT_DIR.glob("*.json"))
+
+
+def remove_same_as_triples(g: Graph):
+    """
+    Elimina schema:sameAs del KG generado.
+
+    Lo hacemos porque, aunque el script no genere sameAs,
+    si la ontología todavía contiene esa propiedad, al parsearla
+    aparecería igualmente en la salida final.
+    """
+
+    same_as = SCHEMA.sameAs
+
+    for triple in list(g.triples((same_as, None, None))):
+        g.remove(triple)
+
+    for triple in list(g.triples((None, same_as, None))):
+        g.remove(triple)
+
+    for triple in list(g.triples((None, None, same_as))):
+        g.remove(triple)
 
 
 def create_graph(ontology_file):
@@ -32,7 +53,33 @@ def create_graph(ontology_file):
     g.bind("dcterms", DCTERMS)
     g.bind("rdfs", RDFS)
 
+    remove_same_as_triples(g)
+
     return g
+
+
+def get_value_from_string_or_dict(data, key: str = "name"):
+    """
+    Permite leer datos que puedan venir como string o como dict.
+
+    Ejemplo:
+    "United States"
+
+    o:
+
+    {
+      "name": "United States",
+      "identifier": "Q30"
+    }
+    """
+
+    if isinstance(data, str):
+        return data
+
+    if isinstance(data, dict):
+        return data.get(key)
+
+    return None
 
 
 # =========================
@@ -53,6 +100,16 @@ def organization_uri(name: str) -> URIRef:
 
 def project_uri(name: str) -> URIRef:
     return BASE[f"project_{slugify(name)}"]
+
+
+def country_uri(name: str = None, identifier: str = None) -> URIRef:
+    """
+    Si tenemos identificador externo tipo Wikidata Q30,
+    lo usamos para que la URI local sea más estable.
+    """
+
+    value = identifier if identifier else name
+    return BASE[f"country_{slugify(value)}"]
 
 
 def topic_uri(topic_id: int) -> URIRef:
@@ -97,45 +154,146 @@ def add_paper(g: Graph, paper_id: str, paper_data: dict) -> URIRef:
     return paper
 
 
-def add_person(g: Graph, name: str) -> URIRef:
+def add_person(g: Graph, person_data: dict) -> URIRef | None:
+    name = person_data.get("name")
+
+    if not name:
+        return None
+
     person = person_uri(name)
 
     g.add((person, RDF.type, FOAF.Person))
     g.add((person, SCHEMA.name, Literal(name)))
 
+    identifier = person_data.get("identifier")
+
+    if identifier:
+        g.add((person, SCHEMA.identifier, Literal(identifier)))
+
     return person
 
 
-def add_organization(g: Graph, name: str) -> URIRef:
+def add_organization(
+    g: Graph,
+    name: str,
+    identifier: str = None,
+    description: str = None
+) -> URIRef | None:
+    if not name:
+        return None
+
     org = organization_uri(name)
 
     g.add((org, RDF.type, SCHEMA.Organization))
     g.add((org, SCHEMA.name, Literal(name)))
 
+    if identifier:
+        g.add((org, SCHEMA.identifier, Literal(identifier)))
+
+    if description:
+        g.add((org, SCHEMA.description, Literal(description)))
+
     return org
 
 
-def add_project(g: Graph, name: str) -> URIRef:
+def add_project(g: Graph, project_data: dict) -> URIRef | None:
+    """
+    Crea un proyecto.
+
+    En los JSON enriquecidos normalmente viene:
+    {
+      "identifier": "IIS-2229876",
+      "type": "acknowledged_project"
+    }
+
+    Como no siempre hay name, usamos identifier como nombre local.
+    """
+
+    identifier = project_data.get("identifier")
+    name = project_data.get("name") or identifier
+
+    if not name:
+        return None
+
     project = project_uri(name)
 
     g.add((project, RDF.type, SCHEMA.Project))
     g.add((project, SCHEMA.name, Literal(name)))
 
+    if identifier:
+        g.add((project, SCHEMA.identifier, Literal(identifier)))
+
+    description = project_data.get("description")
+    start_date = project_data.get("start_date")
+    end_date = project_data.get("end_date")
+    funding_amount = project_data.get("funding_amount")
+
+    if description:
+        g.add((project, SCHEMA.description, Literal(description)))
+
+    if start_date:
+        g.add((project, SCHEMA.startDate, Literal(start_date, datatype=XSD.date)))
+
+    if end_date:
+        g.add((project, SCHEMA.endDate, Literal(end_date, datatype=XSD.date)))
+
+    if funding_amount:
+        g.add((project, BASE.fundingAmount, Literal(float(funding_amount), datatype=XSD.decimal)))
+
     return project
+
+
+def add_country(g: Graph, country_data) -> URIRef | None:
+    """
+    Crea país a partir de dict o string.
+
+    Dict esperado:
+    {
+      "name": "United States",
+      "identifier": "Q30"
+    }
+    """
+
+    if isinstance(country_data, str):
+        name = country_data
+        identifier = None
+
+    elif isinstance(country_data, dict):
+        name = country_data.get("name")
+        identifier = country_data.get("identifier")
+
+    else:
+        return None
+
+    if not name:
+        return None
+
+    country = country_uri(name=name, identifier=identifier)
+
+    g.add((country, RDF.type, SCHEMA.Country))
+    g.add((country, SCHEMA.name, Literal(name)))
+
+    if identifier:
+        g.add((country, SCHEMA.identifier, Literal(identifier)))
+
+    return country
 
 
 def add_topic(g: Graph, topic_data: dict) -> URIRef:
     topic_id = topic_data["topic_id"]
     topic = topic_uri(topic_id)
 
-    keywords = topic_data["keywords"]
-    keywords_text = ", ".join([kw["word"] for kw in keywords])
+    keywords = topic_data.get("keywords", [])
+    keywords_text = ", ".join([kw["word"] for kw in keywords if kw.get("word")])
 
     g.add((topic, RDF.type, BASE.Topic))
-    g.add((topic, SCHEMA.name, Literal(topic_data["name"])))
-    g.add((topic, SCHEMA.keywords, Literal(keywords_text)))
 
-    # Guardamos los keywords con sus scores como string JSON
+    if topic_data.get("name"):
+        g.add((topic, SCHEMA.name, Literal(topic_data["name"])))
+
+    if keywords_text:
+        g.add((topic, SCHEMA.keywords, Literal(keywords_text)))
+
     g.add((
         topic,
         BASE.keywordVector,
@@ -153,6 +311,10 @@ def link_paper_author(g: Graph, paper: URIRef, person: URIRef):
     g.add((paper, SCHEMA.author, person))
 
 
+def link_person_affiliation(g: Graph, person: URIRef, organization: URIRef):
+    g.add((person, SCHEMA.affiliation, organization))
+
+
 def link_acknowledged_entity(g: Graph, paper: URIRef, entity: URIRef):
     g.add((paper, BASE.acknowledges, entity))
 
@@ -165,6 +327,10 @@ def link_project_funder(g: Graph, project: URIRef, org: URIRef):
     g.add((project, SCHEMA.funder, org))
 
 
+def link_organization_country(g: Graph, org: URIRef, country: URIRef):
+    g.add((org, SCHEMA.location, country))
+
+
 def add_paper_topic_similarity(g: Graph, paper: URIRef, paper_id: str, topic_data: dict):
     topic_id = topic_data["topic_id"]
 
@@ -172,15 +338,22 @@ def add_paper_topic_similarity(g: Graph, paper: URIRef, paper_id: str, topic_dat
 
     relation = paper_topic_similarity_uri(paper_id, topic_id)
 
+    probability = topic_data.get("probability")
+
     g.add((relation, RDF.type, BASE.PaperTopicSimilarity))
     g.add((relation, BASE.paper, paper))
     g.add((relation, BASE.topic, topic))
-    g.add((relation, BASE.score, Literal(float(topic_data["probability"]), datatype=XSD.float)))
     g.add((relation, BASE.algorihtm, Literal("BERTopic")))
+
+    if probability is not None:
+        g.add((relation, BASE.score, Literal(float(probability), datatype=XSD.float)))
 
 
 def add_paper_similarity(g: Graph, source_paper_id: str, similarity_data: dict):
-    target_paper_id = similarity_data["paper_id"]
+    target_paper_id = similarity_data.get("paper_id")
+
+    if not target_paper_id:
+        return
 
     paper_a, paper_b = sorted([source_paper_id, target_paper_id])
 
@@ -189,7 +362,12 @@ def add_paper_similarity(g: Graph, source_paper_id: str, similarity_data: dict):
     g.add((relation, RDF.type, BASE.PaperSimilarity))
     g.add((relation, BASE.paper1, paper_uri(paper_a)))
     g.add((relation, BASE.paper2, paper_uri(paper_b)))
-    g.add((relation, BASE.score, Literal(float(similarity_data["similarity_score"]), datatype=XSD.float)))
+
+    similarity_score = similarity_data.get("similarity_score")
+
+    if similarity_score is not None:
+        g.add((relation, BASE.score, Literal(float(similarity_score), datatype=XSD.float)))
+
     g.add((relation, BASE.algorihtm, Literal("all-MiniLM-L6-v2 + cosine_similarity")))
 
 
@@ -214,34 +392,84 @@ def build_kg_from_jsons(json_files):
         paper = add_paper(g, paper_id, paper_data)
 
         # -----------------------------
+        # Países
+        # -----------------------------
+        countries = data.get("countries", [])
+        country_by_name = {}
+
+        for country_data in countries:
+            country = add_country(g, country_data)
+            country_name = get_value_from_string_or_dict(country_data, "name")
+
+            if country and country_name:
+                country_by_name[country_name] = country
+
+        # -----------------------------
         # Personas
         # -----------------------------
         people = data.get("people", [])
 
         for person_data in people:
-            name = person_data.get("name")
+            person = add_person(g, person_data)
 
-            if person_data.get("type") == "author":
-                if name:
-                    person = add_person(g, name)
-                    link_paper_author(g, paper, person)
+            if not person:
+                continue
 
-            elif person_data.get("type") == "acknowledged_person":
-                if name:
-                    person = add_person(g, name)
-                    link_acknowledged_entity(g, paper, person)
+            person_type = person_data.get("type")
+
+            if person_type == "author":
+                link_paper_author(g, paper, person)
+
+            elif person_type == "acknowledged_person":
+                link_acknowledged_entity(g, paper, person)
+
+            # Afiliación del autor/persona
+            affiliation = person_data.get("affiliation")
+
+            if affiliation:
+                affiliation_name = get_value_from_string_or_dict(affiliation, "name")
+
+                if affiliation_name:
+                    affiliation_org = add_organization(g, affiliation_name)
+                    link_person_affiliation(g, person, affiliation_org)
 
         # -----------------------------
         # Organizaciones
         # -----------------------------
         organizations = data.get("organizations", [])
+        acknowledged_organizations = []
 
         for org_data in organizations:
             org_name = org_data.get("name")
 
-            if org_name:
-                org = add_organization(g, org_name)
-                link_acknowledged_entity(g, paper, org)
+            if not org_name:
+                continue
+
+            org = add_organization(
+                g,
+                name=org_name,
+                identifier=org_data.get("identifier"),
+                description=org_data.get("description")
+            )
+
+            if not org:
+                continue
+
+            acknowledged_organizations.append(org)
+            link_acknowledged_entity(g, paper, org)
+
+            # País de la organización
+            country_name = org_data.get("country")
+
+            if country_name:
+                country = country_by_name.get(country_name)
+
+                if not country:
+                    country = add_country(g, {"name": country_name})
+                    country_by_name[country_name] = country
+
+                if country:
+                    link_organization_country(g, org, country)
 
         # -----------------------------
         # Proyectos
@@ -249,15 +477,19 @@ def build_kg_from_jsons(json_files):
         projects = data.get("projects", [])
 
         for project_data in projects:
-            project_identifier = project_data.get("identifier")
+            project = add_project(g, project_data)
 
-            if project_identifier:
-                project = add_project(g, project_identifier)
+            if not project:
+                continue
 
-                link_paper_project(g, paper, project)
-                link_acknowledged_entity(g, paper, project)
+            link_paper_project(g, paper, project)
+            link_acknowledged_entity(g, paper, project)
 
-                g.add((project, SCHEMA.identifier, Literal(project_identifier)))
+            # Si el paper tiene organizaciones reconocidas y proyectos,
+            # asumimos que esas organizaciones son funders de esos proyectos.
+            # Esto permite completar schema:funder con la información disponible.
+            for org in acknowledged_organizations:
+                link_project_funder(g, project, org)
 
         # -----------------------------
         # Topics del paper

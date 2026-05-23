@@ -11,7 +11,7 @@ router = APIRouter()
 
 
 
-@router.get("/kg/info")
+@router.get("/info")
 def kg_info():
     """
     Devuelve información básica sobre el Knowledge Graph.
@@ -26,7 +26,7 @@ def kg_info():
     }
 
 
-@router.post("/kg/query", response_model=FusekiQueryResponse)
+@router.post("/query", response_model=FusekiQueryResponse)
 def send_query_to_fuseki(query_request: FusekiQueryRequest):
     """
     Recibe una consulta SPARQL y la envía a Fuseki.

@@ -10,7 +10,7 @@ from orcid import enrich_person
 # y guardamos los JSONs enriquecidos en una carpeta nueva kg_enriched
 ROOT = Path(__file__).resolve().parents[4]
 INPUT_DIR = ROOT / "assigment_2" / "step_3" / "outputs" / "topics" / "enriched_jsons"
-OUTPUT_DIR = ROOT / "assigment_2" / "step_3" / "outputs" / "topics" / "kg_enriched"
+OUTPUT_DIR = ROOT / "assigment_2" / "step_4" / "outputs" 
 
 def limpiar_grant_id(texto):
     # Extraemos el código real del identificador del proyecto.

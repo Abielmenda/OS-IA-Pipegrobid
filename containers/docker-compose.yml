@@ -74,6 +74,20 @@ services:
       - POETRY_VIRTUALENVS_PATH=/opt/poetry-venvs
       - POETRY_CACHE_DIR=/opt/poetry-cache
 
+
+  research_api:
+    build:
+      context: ./research_api/app
+      dockerfile: Dockerfile
+    container_name: research_api
+    ports:
+      - "8000:8000"
+    environment:
+      FUSEKI_QUERY_URL: "http://fuseki:3030/kg/query"
+    volumes:
+      - ./research_api/app:/app
+    restart: unless-stopped
+    
 networks:
   net:
     driver: bridge
