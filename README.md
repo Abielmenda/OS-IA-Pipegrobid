@@ -4,7 +4,29 @@
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 # Software para procesamiento de documentos científicos mediante el software GROBID (PipeGrobid)
 Más documentacion en: https://pipegrobid-software.readthedocs.io/es/latest/
-## Objetivo del proyecto
+
+## Aplicación realizada (FASE 2)
+
+En `assigment_2` se desarrolla una aplicación basada en un Knowledge Graph para analizar la financiación científica de un conjunto de papers.
+A partir de PDFs procesados con GROBID, se extraen metadatos, autores, acknowledgements y entidades relevantes.
+Después se reconocen personas, organizaciones y proyectos, se enriquecen con fuentes externas y se añaden topics y similaridades entre papers.
+El KG permite relacionar publicaciones con autores, entidades financiadoras y países de origen de la financiación.
+Con ello se pueden estudiar patrones como los principales organismos financiadores, la distribución por país y posibles colaboraciones internacionales.
+
+## Índice de pasos realizados
+
+- [Step 1: creación de la ontología y caso de uso](assigment_2/step_1/README.md)
+- [Step 2: acknowledgements NER](assigment_2/step_2/README.md)
+  - [Parseo de XMLs generados por GROBID](assigment_2/step_2/xmls_parse/README.md)
+  - [Evaluación de modelos NER](assigment_2/step_2/ner_evaluation/README.md)
+  - [Extracción NER con LLM](assigment_2/step_2/ner_extraction/README.md)
+- [Step 3: topic modeling y similaridades entre papers](assigment_2/step_3/README.md)
+  - [Topic modeling y paper similarities](assigment_2/step_3/topic_modeling/README.md)
+- [Step 4: generación y despliegue del KG](assigment_2/step_4/README.md)
+  - [Enriquecimiento online](assigment_2/step_4/online_enrichment/README.md)
+  - [Generación del KG local](assigment_2/step_4/gen_local_kg/README.md)
+
+## Objetivo del proyecto (FASE 1)
 
 El objetivo de este proyecto es construir un pipeline automatizado para:
 - Procesar documentos científicos en formato PDF mediante GROBID

@@ -1,36 +1,40 @@
-# Workflow con n8n
+# Contenedores de generación del KG y APP
 
+Este directorio contiene el `docker-compose.yml` usado para levantar el entorno completo para ejecución del workflow y levantamiento de la aplicación.
+
+## Contenedores
+
+- `n8n`: gestiona y ejecuta el workflow `pipegrobid_workflow`, parseando en XML con GROBID los pdfs y llamando a los scripts necesarios de cada step.
+- `python_runner`: sirve únicamente para correr los scripts Python llamados desde n8n, con las dependencias necesarias ya instaladas.
+- `fuseki`: mantiene el grafo de conocimiento en un triplestore para poder hacer consultas SPARQL.
+- `research_api`: expone una API que consulta Fuseki y permite usar el KG desde nuestra app.
+- `pipegrobid` y `GROBID` de la fase 1 (explicación en README.md de la raíz del proyecto)
 ## Prerrequisitos
 
-Antes de levantar los contenedores, prepara estos ficheros:
+Antes de levantar los contenedores:
 
-1. Copia `containers/.env.example` a `containers/.env` y rellena `GROQ_API_KEY`.
-2. Coloca los XML TEI de entrada en `outputs/xmls/`.
-   - Deben terminar en `.tei.xml`.
-   - Ejemplo: `outputs/xmls/paper01.tei.xml`.
+- Copia `containers/.env.example` a `containers/.env` y rellena `GROQ_API_KEY` y `HF_TOKEN`.
 
-Los XMLs son datos de entrada del pipeline. Si ya estan en el repo al clonarlo,
-no hace falta copiarlos de nuevo.
 
-## Ejecucion
+## Ejecución
 
-Desde `containers/`:
+Desde `containers/`, la primera vez se debe construir y levantar todo con:
 
 ```bash
-docker compose up -d --build
+docker compose up --build -d
 ```
 
-Despues abre n8n en `http://localhost:5678`, importa manualmente el workflow
-desde:
+En las siguientes ejecuciones, si no se han cambiado Dockerfiles o dependencias, basta con:
+
+```bash
+docker compose up -d
+```
+
+Después se abre n8n en `http://localhost:5678` y se importa manualmente el workflow desde:
 
 ```text
 containers/workflow/pipegrobid_workflow.json
 ```
 
-Una vez importado, entra en `pipegrobid_workflow` y ejecutalo manualmente.
+Una vez importado, se entra en `pipegrobid_workflow` y se ejecuta manualmente.
 
-## Si faltan XMLs
-
-El workflow fallara en `step_2` con un error indicando que no existen XMLs
-`.tei.xml` en `outputs/xmls/`. En ese caso, copia los XMLs a esa carpeta y
-vuelve a ejecutar el workflow.

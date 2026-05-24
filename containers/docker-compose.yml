@@ -30,6 +30,28 @@ services:
       - PYTHONPATH=/workspace
       - N8N_RESTRICT_FILE_ACCESS_TO=/workspace;/root/.n8n-files
 
+  grobid:
+    image: grobid/grobid:0.7.2
+    networks:
+      - net
+
+  pipegrobid:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: pipegrobid
+    depends_on:
+      - grobid
+    command: tail -f /dev/null
+    environment:
+      - GROBID_URL=http://grobid:8070
+    volumes:
+      - ../pdfs:/app/pdfs
+      - ../outputs/xmls:/app/xmls
+      - ../outputs/generated_files:/app/generated_files
+    networks:
+      - net
+
   fuseki:
     image: stain/jena-fuseki
     container_name: fuseki

@@ -9,8 +9,7 @@ COPY --from=alpine /lib/ld-musl-*.so.1 /lib/
 COPY --from=alpine /usr/lib/libapk.so* /usr/lib/
 
 # instalar docker CLI para poder hacer docker run desde n8n
-RUN apk add --no-cache docker-cli
-
+RUN apk add --no-cache docker-cli docker-cli-compose
 
 
 # añadir usuario node al grupo docker

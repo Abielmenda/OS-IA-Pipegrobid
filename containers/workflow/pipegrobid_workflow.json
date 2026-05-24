@@ -6,7 +6,7 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        208,
+        80,
         64
       ],
       "id": "72b4c51c-a50b-4b78-b91e-9c3f85cd077e",
@@ -50,7 +50,7 @@
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
       "position": [
-        416,
+        464,
         64
       ],
       "id": "3082af12-4c30-4e41-8423-225b664d876c",
@@ -90,11 +90,24 @@
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
       "position": [
-        656,
+        672,
         64
       ],
       "id": "96f338f9-77d0-410d-86b1-2d763029c7ec",
       "name": "step_3"
+    },
+    {
+      "parameters": {
+        "command": "docker exec pipegrobid pipegrobid"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        288,
+        64
+      ],
+      "id": "a73c97cf-6cb3-428f-ac68-b88ec95eff5f",
+      "name": "xml extraction"
     }
   ],
   "pinData": {},
@@ -103,7 +116,7 @@
       "main": [
         [
           {
-            "node": "step_2",
+            "node": "xml extraction",
             "type": "main",
             "index": 0
           }
@@ -153,6 +166,17 @@
           }
         ]
       ]
+    },
+    "xml extraction": {
+      "main": [
+        [
+          {
+            "node": "step_2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -160,7 +184,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "27fbd9b8-7046-4ae5-863f-924f038f0727",
+  "versionId": "ce8a4a27-b98f-4537-868e-75559aeea529",
   "meta": {
     "instanceId": "3230561f7ab69213df48b9b744613634e4552ef5abbff6cd1681640bf0b59517"
   },
