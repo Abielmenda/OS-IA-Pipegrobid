@@ -1,0 +1,2591 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix g4: <https://g4.org/ontology/research-funding#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:date a owl:DatatypeProperty ;
+    rdfs:label "date" ;
+    rdfs:domain g4:Paper ;
+    rdfs:range xsd:string .
+
+dc:title a owl:AnnotationProperty,
+        owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:domain g4:Paper ;
+    rdfs:range xsd:string .
+
+dcterms:license a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+g4: a owl:Ontology ;
+    dc:creator "G4_OPENSCIENCE" ;
+    dc:title "Ontology for funding researching" ;
+    dcterms:license "https://www.apache.org/licenses/LICENSE-2.0" ;
+    owl:versionInfo "0.0.1" ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+g4:acknowledges a owl:ObjectProperty ;
+    rdfs:label "acknowledges" .
+
+g4:algorihtm a owl:DatatypeProperty ;
+    rdfs:label "algorihtm" ;
+    rdfs:range xsd:string .
+
+g4:fundedByProject a owl:ObjectProperty ;
+    rdfs:label "funded by project" ;
+    rdfs:domain g4:Paper ;
+    rdfs:range schema:Project .
+
+g4:fundingAmount a owl:DatatypeProperty ;
+    rdfs:label "funding amount" ;
+    rdfs:domain schema:Project ;
+    rdfs:range xsd:decimal .
+
+g4:keywordVector a owl:DatatypeProperty ;
+    rdfs:label "keyword vector" ;
+    rdfs:domain g4:Topic ;
+    rdfs:range xsd:string .
+
+g4:paper a owl:ObjectProperty ;
+    rdfs:label "paper" ;
+    rdfs:domain g4:PaperTopicSimilarity ;
+    rdfs:range g4:Paper .
+
+g4:paper1 a owl:ObjectProperty ;
+    rdfs:label "paper1" ;
+    rdfs:domain g4:PaperSimilarity ;
+    rdfs:range g4:Paper .
+
+g4:paper2 a owl:ObjectProperty ;
+    rdfs:label "paper2" ;
+    rdfs:domain g4:PaperSimilarity ;
+    rdfs:range g4:Paper .
+
+g4:paper_similarity_paper02_paper04 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper02 ;
+    g4:paper2 g4:paper04 ;
+    g4:score "0.5453760623931885"^^xsd:float .
+
+g4:paper_similarity_paper02_paper10 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper02 ;
+    g4:paper2 g4:paper10 ;
+    g4:score "0.568034291267395"^^xsd:float .
+
+g4:paper_similarity_paper02_paper21 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper02 ;
+    g4:paper2 g4:paper21 ;
+    g4:score "0.6886312365531921"^^xsd:float .
+
+g4:paper_similarity_paper02_paper24 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper02 ;
+    g4:paper2 g4:paper24 ;
+    g4:score "0.5003078579902649"^^xsd:float .
+
+g4:paper_similarity_paper02_paper25 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper02 ;
+    g4:paper2 g4:paper25 ;
+    g4:score "0.5161266326904297"^^xsd:float .
+
+g4:paper_similarity_paper02_paper29 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper02 ;
+    g4:paper2 g4:paper29 ;
+    g4:score "0.5457679629325867"^^xsd:float .
+
+g4:paper_similarity_paper03_paper10 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper03 ;
+    g4:paper2 g4:paper10 ;
+    g4:score "0.5136634707450867"^^xsd:float .
+
+g4:paper_similarity_paper04_paper10 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper04 ;
+    g4:paper2 g4:paper10 ;
+    g4:score "0.5234242081642151"^^xsd:float .
+
+g4:paper_similarity_paper04_paper21 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper04 ;
+    g4:paper2 g4:paper21 ;
+    g4:score "0.5439874529838562"^^xsd:float .
+
+g4:paper_similarity_paper04_paper25 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper04 ;
+    g4:paper2 g4:paper25 ;
+    g4:score "0.5116401314735413"^^xsd:float .
+
+g4:paper_similarity_paper04_paper29 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper04 ;
+    g4:paper2 g4:paper29 ;
+    g4:score "0.5222617387771606"^^xsd:float .
+
+g4:paper_similarity_paper10_paper29 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper10 ;
+    g4:paper2 g4:paper29 ;
+    g4:score "0.53834068775177"^^xsd:float .
+
+g4:paper_similarity_paper12_paper15 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper12 ;
+    g4:paper2 g4:paper15 ;
+    g4:score "0.505791962146759"^^xsd:float .
+
+g4:paper_similarity_paper16_paper19 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper16 ;
+    g4:paper2 g4:paper19 ;
+    g4:score "0.5028838515281677"^^xsd:float .
+
+g4:paper_similarity_paper17_paper19 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper17 ;
+    g4:paper2 g4:paper19 ;
+    g4:score "0.5169640779495239"^^xsd:float .
+
+g4:paper_similarity_paper21_paper24 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper21 ;
+    g4:paper2 g4:paper24 ;
+    g4:score "0.5126657485961914"^^xsd:float .
+
+g4:paper_similarity_paper21_paper25 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper21 ;
+    g4:paper2 g4:paper25 ;
+    g4:score "0.6002787351608276"^^xsd:float .
+
+g4:paper_similarity_paper21_paper28 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper21 ;
+    g4:paper2 g4:paper28 ;
+    g4:score "0.5371801257133484"^^xsd:float .
+
+g4:paper_similarity_paper21_paper29 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper21 ;
+    g4:paper2 g4:paper29 ;
+    g4:score "0.5556105375289917"^^xsd:float .
+
+g4:paper_similarity_paper24_paper25 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper24 ;
+    g4:paper2 g4:paper25 ;
+    g4:score "0.5822094678878784"^^xsd:float .
+
+g4:paper_similarity_paper25_paper28 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper25 ;
+    g4:paper2 g4:paper28 ;
+    g4:score "0.5044945478439331"^^xsd:float .
+
+g4:paper_similarity_paper25_paper29 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper25 ;
+    g4:paper2 g4:paper29 ;
+    g4:score "0.660596489906311"^^xsd:float .
+
+g4:paper_similarity_paper31_paper32 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper31 ;
+    g4:paper2 g4:paper32 ;
+    g4:score "0.6451208591461182"^^xsd:float .
+
+g4:paper_similarity_paper31_paper33 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper31 ;
+    g4:paper2 g4:paper33 ;
+    g4:score "0.7322648167610168"^^xsd:float .
+
+g4:paper_similarity_paper31_paper34 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper31 ;
+    g4:paper2 g4:paper34 ;
+    g4:score "0.6016505360603333"^^xsd:float .
+
+g4:paper_similarity_paper31_paper35 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper31 ;
+    g4:paper2 g4:paper35 ;
+    g4:score "0.8248985409736633"^^xsd:float .
+
+g4:paper_similarity_paper32_paper33 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper32 ;
+    g4:paper2 g4:paper33 ;
+    g4:score "0.5540561079978943"^^xsd:float .
+
+g4:paper_similarity_paper32_paper35 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper32 ;
+    g4:paper2 g4:paper35 ;
+    g4:score "0.6291425824165344"^^xsd:float .
+
+g4:paper_similarity_paper33_paper34 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper33 ;
+    g4:paper2 g4:paper34 ;
+    g4:score "0.7142678499221802"^^xsd:float .
+
+g4:paper_similarity_paper33_paper35 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper33 ;
+    g4:paper2 g4:paper35 ;
+    g4:score "0.7277085781097412"^^xsd:float .
+
+g4:paper_similarity_paper34_paper35 a g4:PaperSimilarity ;
+    g4:algorihtm "all-MiniLM-L6-v2 + cosine_similarity" ;
+    g4:paper1 g4:paper34 ;
+    g4:paper2 g4:paper35 ;
+    g4:score "0.6056344509124756"^^xsd:float .
+
+g4:paper_topic_similarity_paper01_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper01 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper02_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper02 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper03_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper03 ;
+    g4:score "0.9043939506048907"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper04_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper04 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper05_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper05 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper06_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper06 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper07_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper07 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper08_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper08 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper09_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper09 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper10_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper10 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper11_topic_3 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper11 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_3 .
+
+g4:paper_topic_similarity_paper12_topic_3 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper12 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_3 .
+
+g4:paper_topic_similarity_paper13_topic_3 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper13 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_3 .
+
+g4:paper_topic_similarity_paper14_topic_1 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper14 ;
+    g4:score "0.6171747791127401"^^xsd:float ;
+    g4:topic g4:topic_1 .
+
+g4:paper_topic_similarity_paper15_topic_3 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper15 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_3 .
+
+g4:paper_topic_similarity_paper16_topic_1 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper16 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_1 .
+
+g4:paper_topic_similarity_paper17_topic_1 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper17 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_1 .
+
+g4:paper_topic_similarity_paper18_topic_1 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper18 ;
+    g4:score "0.9804908006367874"^^xsd:float ;
+    g4:topic g4:topic_1 .
+
+g4:paper_topic_similarity_paper19_topic_1 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper19 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_1 .
+
+g4:paper_topic_similarity_paper20_topic_1 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper20 ;
+    g4:score "0.9804908006367874"^^xsd:float ;
+    g4:topic g4:topic_1 .
+
+g4:paper_topic_similarity_paper21_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper21 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper22_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper22 ;
+    g4:score "0.8156166963550332"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper23_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper23 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper24_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper24 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper25_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper25 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper26_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper26 ;
+    g4:score "0.8156166963550332"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper27_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper27 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper28_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper28 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper29_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper29 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper30_topic_0 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper30 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_0 .
+
+g4:paper_topic_similarity_paper31_topic_2 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper31 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_2 .
+
+g4:paper_topic_similarity_paper32_topic_2 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper32 ;
+    g4:score "0.8484947417188626"^^xsd:float ;
+    g4:topic g4:topic_2 .
+
+g4:paper_topic_similarity_paper33_topic_2 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper33 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_2 .
+
+g4:paper_topic_similarity_paper34_topic_2 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper34 ;
+    g4:score "0.9339344635015655"^^xsd:float ;
+    g4:topic g4:topic_2 .
+
+g4:paper_topic_similarity_paper35_topic_2 a g4:PaperTopicSimilarity ;
+    g4:algorihtm "BERTopic" ;
+    g4:paper g4:paper35 ;
+    g4:score "1.0"^^xsd:float ;
+    g4:topic g4:topic_2 .
+
+g4:score a owl:DatatypeProperty ;
+    rdfs:label "score" ;
+    rdfs:range xsd:float .
+
+g4:topic a owl:ObjectProperty ;
+    rdfs:label "topic" ;
+    rdfs:domain g4:PaperTopicSimilarity ;
+    rdfs:range g4:Topic .
+
+schema:abstract a owl:DatatypeProperty ;
+    rdfs:label "abstract" ;
+    rdfs:domain g4:Paper ;
+    rdfs:range xsd:string .
+
+schema:affiliation a owl:ObjectProperty ;
+    rdfs:label "affiliation" ;
+    rdfs:domain foaf:Person ;
+    rdfs:range schema:Organization .
+
+schema:author a owl:ObjectProperty ;
+    rdfs:label "author" ;
+    rdfs:domain g4:Paper ;
+    rdfs:range foaf:Person .
+
+schema:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:range xsd:string .
+
+schema:endDate a owl:DatatypeProperty ;
+    rdfs:label "end date" ;
+    rdfs:domain schema:Project ;
+    rdfs:range xsd:date .
+
+schema:funder a owl:ObjectProperty ;
+    rdfs:label "funder" ;
+    rdfs:domain schema:Project ;
+    rdfs:range schema:Organization .
+
+schema:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:range xsd:string .
+
+schema:keywords a owl:DatatypeProperty ;
+    rdfs:label "keywords" ;
+    rdfs:domain g4:Topic ;
+    rdfs:range xsd:string .
+
+schema:location a owl:ObjectProperty ;
+    rdfs:label "location" ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Country .
+
+schema:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:range xsd:string .
+
+schema:startDate a owl:DatatypeProperty ;
+    rdfs:label "start date" ;
+    rdfs:domain schema:Project ;
+    rdfs:range xsd:date .
+
+g4:country_internationality a schema:Country ;
+    schema:name "Internationality" .
+
+g4:country_q145 a schema:Country ;
+    schema:identifier "Q145" ;
+    schema:name "United Kingdom" .
+
+g4:country_q213 a schema:Country ;
+    schema:identifier "Q213" ;
+    schema:name "Czech Republic" .
+
+g4:country_q31 a schema:Country ;
+    schema:identifier "Q31" ;
+    schema:name "Belgium" .
+
+g4:country_q38 a schema:Country ;
+    schema:identifier "Q38" ;
+    schema:name "Italy" .
+
+g4:country_q928 a schema:Country ;
+    schema:identifier "Q928" ;
+    schema:name "Philippines" .
+
+g4:org_arm a schema:Organization ;
+    schema:name "Arm" .
+
+g4:org_bundesanstalt_für_materialforschung_und_-prüfung a schema:Organization ;
+    schema:name "Bundesanstalt für Materialforschung und -Prüfung" .
+
+g4:org_carnegie_mellon_university a schema:Organization ;
+    schema:name "Carnegie Mellon University" .
+
+g4:org_cdc a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q226494" ;
+    schema:name "CDC" .
+
+g4:org_compass_data_and_artificial_intelligence a schema:Organization ;
+    schema:name "Compass Data and Artificial Intelligence" .
+
+g4:org_cummins_onan a schema:Organization ;
+    schema:name "Cummins Onan" .
+
+g4:org_dana_farber_cancer_institute a schema:Organization ;
+    schema:name "Dana Farber Cancer Institute" .
+
+g4:org_department_of_health_-epidemiology_bureau a schema:Organization ;
+    schema:name "Department of Health -Epidemiology Bureau" .
+
+g4:org_deutsches_krebsforschungszentrum a schema:Organization ;
+    schema:name "Deutsches Krebsforschungszentrum" .
+
+g4:org_dfg a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q415738" ;
+    schema:name "DFG" .
+
+g4:org_dolby a schema:Organization ;
+    schema:description "American company specializing in audio noise reduction and audio encoding/compression" ;
+    schema:identifier "Q261288" ;
+    schema:location g4:country_q30 ;
+    schema:name "Dolby" .
+
+g4:org_dow_chemical_united_states a schema:Organization ;
+    schema:name "Dow Chemical (United States)" .
+
+g4:org_eleaf a schema:Organization ;
+    schema:name "eLEAF" .
+
+g4:org_epfl_-_école_polytechnique_fédérale_de_lausanne a schema:Organization ;
+    schema:name "EPFL - École Polytechnique Fédérale de Lausanne" .
+
+g4:org_erc a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q137820" ;
+    schema:name "ERC" .
+
+g4:org_european_research_council a schema:Organization ;
+    schema:description "institution for basic research funding in the European Union" ;
+    schema:identifier "Q1377836" ;
+    schema:location g4:country_q31 ;
+    schema:name "European Research Council" .
+
+g4:org_ford_motor_private_limited a schema:Organization ;
+    schema:name "Ford Motor Private Limited" .
+
+g4:org_georg-august-universität_göttingen a schema:Organization ;
+    schema:name "Georg-August-Universität Göttingen" .
+
+g4:org_georgia_institute_of_technology a schema:Organization ;
+    schema:name "Georgia Institute of Technology" .
+
+g4:org_german_federal_ministry_for_education_and_research a schema:Organization ;
+    schema:name "German Federal Ministry for Education and Research" .
+
+g4:org_german_research_foundation a schema:Organization ;
+    schema:description "German research funding organisation, German Research Association in English" ;
+    schema:identifier "Q707283" ;
+    schema:location g4:country_q183 ;
+    schema:name "German Research Foundation" .
+
+g4:org_gnampa-indam a schema:Organization ;
+    schema:name "GNAMPA-INdAM" .
+
+g4:org_goethe_university_frankfurt a schema:Organization ;
+    schema:name "Goethe University Frankfurt" .
+
+g4:org_government_of_saxony a schema:Organization ;
+    schema:identifier "Q2378571" ;
+    schema:location g4:country_q183 ;
+    schema:name "Government of Saxony" .
+
+g4:org_gran_sasso_science_institute a schema:Organization ;
+    schema:name "Gran Sasso Science Institute" .
+
+g4:org_gruppo_nazionale_per_lanalisi_matematica_la_probabilità_e_le_loro_applicazioni a schema:Organization ;
+    schema:description "organization in Rome, Italy" ;
+    schema:identifier "Q124251934" ;
+    schema:location g4:country_q38 ;
+    schema:name "Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni" .
+
+g4:org_guangdong_basic_and_applied_basic_research_foundation a schema:Organization ;
+    schema:name "Guangdong Basic and Applied Basic Research Foundation" .
+
+g4:org_hangzhou_international_innovation_institute_h3i_of_beihang_university a schema:Organization ;
+    schema:name "Hangzhou International Innovation Institute (H3I) of Beihang University" .
+
+g4:org_harvard_university a schema:Organization ;
+    schema:name "Harvard University" .
+
+g4:org_heilongjiang_university a schema:Organization ;
+    schema:name "Heilongjiang University" .
+
+g4:org_henri_seydoux_fund a schema:Organization ;
+    schema:name "Henri Seydoux Fund" .
+
+g4:org_hkbu_csd_departmental_incentive_scheme a schema:Organization ;
+    schema:name "HKBU CSD Departmental Incentive Scheme" .
+
+g4:org_hong_kong_university_of_science_and_technology a schema:Organization ;
+    schema:name "Hong Kong University of Science and Technology" .
+
+g4:org_indian_institute_of_technology_kanpur a schema:Organization ;
+    schema:name "Indian Institute of Technology Kanpur" .
+
+g4:org_institute_of_cosmos_sciences a schema:Organization ;
+    schema:name "Institute of Cosmos Sciences" .
+
+g4:org_irkutsk_state_university a schema:Organization ;
+    schema:name "Irkutsk State University" .
+
+g4:org_kansas_state_university a schema:Organization ;
+    schema:name "Kansas State University" .
+
+g4:org_kings_college_london a schema:Organization ;
+    schema:name "King's College London" .
+
+g4:org_kyoto_university a schema:Organization ;
+    schema:name "Kyoto University" .
+
+g4:org_ludwig-maximilians-universität_in_munich a schema:Organization ;
+    schema:name "Ludwig-Maximilians-Universität in Munich" .
+
+g4:org_ludwig-maximilians-universität_münchen a schema:Organization ;
+    schema:name "Ludwig-Maximilians-Universität München" .
+
+g4:org_lynchburg_family_medicine_residency a schema:Organization ;
+    schema:name "Lynchburg Family Medicine Residency" .
+
+g4:org_marie_skłodowska-curie a schema:Organization ;
+    schema:name "Marie Skłodowska-Curie" .
+
+g4:org_marwadi_university a schema:Organization ;
+    schema:name "Marwadi University" .
+
+g4:org_max-planck-institut_für_astronomie a schema:Organization ;
+    schema:name "Max-Planck-Institut für Astronomie" .
+
+g4:org_max-planck-society a schema:Organization ;
+    schema:name "Max-Planck-Society" .
+
+g4:org_mckinsey_company_united_states a schema:Organization ;
+    schema:name "McKinsey & Company (United States)" .
+
+g4:org_meta a schema:Organization ;
+    schema:description "American technology company" ;
+    schema:identifier "Q380" ;
+    schema:location g4:country_q30 ;
+    schema:name "Meta" .
+
+g4:org_microsoft_india_rd_pvt_ltd a schema:Organization ;
+    schema:name "Microsoft India R&D Pvt Ltd" .
+
+g4:org_ministry_of_science_and_culture_of_lower_saxony a schema:Organization ;
+    schema:name "Ministry of Science and Culture of Lower Saxony" .
+
+g4:org_national_deep_inference_fabric a schema:Organization ;
+    schema:name "National Deep Inference Fabric" .
+
+g4:org_national_eye_institute a schema:Organization ;
+    schema:description "US research institute" ;
+    schema:identifier "Q1814921" ;
+    schema:location g4:country_q30 ;
+    schema:name "National Eye Institute" .
+
+g4:org_national_natural_science_foundation_of_china a schema:Organization ;
+    schema:description "Chinese government body" ;
+    schema:identifier "Q4501917" ;
+    schema:location g4:country_q148 ;
+    schema:name "National Natural Science Foundation of China" .
+
+g4:org_nei a schema:Organization ;
+    schema:name "NEI" .
+
+g4:org_networks a schema:Organization ;
+    schema:name "NETWORKS" .
+
+g4:org_nih a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q342337" ;
+    schema:name "NIH" .
+
+g4:org_nsfc a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q16880581" ;
+    schema:name "NSFC" .
+
+g4:org_nwo_gravitation a schema:Organization ;
+    schema:name "NWO Gravitation" .
+
+g4:org_otto-von-guericke_university_magdeburg a schema:Organization ;
+    schema:name "Otto-von-Guericke University Magdeburg" .
+
+g4:org_peoples_hospital_of_yubei_district a schema:Organization ;
+    schema:name "People's Hospital of  Yubei District" .
+
+g4:org_politechnika_wroclawska a schema:Organization ;
+    schema:name "Politechnika Wroclawska" .
+
+g4:org_priesemann_group a schema:Organization ;
+    schema:name "Priesemann group" .
+
+g4:org_renmin_university_of_china a schema:Organization ;
+    schema:name "Renmin University of China" .
+
+g4:org_rogosin_institute a schema:Organization ;
+    schema:name "Rogosin Institute" .
+
+g4:org_schmidt_sciences_polymath_award a schema:Organization ;
+    schema:name "Schmidt Sciences Polymath Award" .
+
+g4:org_shanghai_jiao_tong_university a schema:Organization ;
+    schema:name "Shanghai Jiao Tong University" .
+
+g4:org_simons_foundation a schema:Organization ;
+    schema:description "nonprofit organization in New York, United States" ;
+    schema:identifier "Q28148561" ;
+    schema:location g4:country_q30 ;
+    schema:name "Simons Foundation" .
+
+g4:org_simons_foundation_collaboration_on_the_physics_of_learning_and_neural_computation a schema:Organization ;
+    schema:name "Simons Foundation Collaboration on the Physics of Learning and Neural Computation" .
+
+g4:org_stanford_medicine_post-baccalaureate_experience_in_research a schema:Organization ;
+    schema:name "Stanford Medicine Post-Baccalaureate Experience In Research" .
+
+g4:org_stanford_university a schema:Organization ;
+    schema:name "Stanford University" .
+
+g4:org_stcsm a schema:Organization ;
+    schema:name "STCSM" .
+
+g4:org_swinburne_university_of_technology a schema:Organization ;
+    schema:name "Swinburne University of Technology" .
+
+g4:org_the_dow_chemical_company a schema:Organization ;
+    schema:name "The Dow Chemical Company" .
+
+g4:org_the_hebrew_university_of_jerusalem a schema:Organization ;
+    schema:name "The Hebrew University of Jerusalem" .
+
+g4:org_the_university_of_texas_at_austin a schema:Organization ;
+    schema:name "The University of Texas at Austin" .
+
+g4:org_trier_university a schema:Organization ;
+    schema:name "Trier University" .
+
+g4:org_tufts_university a schema:Organization ;
+    schema:name "Tufts University" .
+
+g4:org_ukri a schema:Organization ;
+    schema:name "UKRI" .
+
+g4:org_ukri_centre_for_doctoral_training_in_safe_and_trusted_artificial_intelligence a schema:Organization ;
+    schema:name "UKRI Centre for Doctoral Training in Safe and Trusted Artificial Intelligence" .
+
+g4:org_university_at_buffalo_state_university_of_new_york a schema:Organization ;
+    schema:name "University at Buffalo, State University of New York" .
+
+g4:org_university_college_london a schema:Organization ;
+    schema:name "University College London" .
+
+g4:org_university_of_aberdeen a schema:Organization ;
+    schema:name "University of Aberdeen" .
+
+g4:org_university_of_chicago a schema:Organization ;
+    schema:name "University of Chicago" .
+
+g4:org_university_of_sydney a schema:Organization ;
+    schema:name "University of Sydney" .
+
+g4:org_university_of_warsaw a schema:Organization ;
+    schema:name "University of Warsaw" .
+
+g4:org_university_of_wrocław a schema:Organization ;
+    schema:name "University of Wrocław" .
+
+g4:org_volkswagen_foundation a schema:Organization ;
+    schema:description "private German charitable Foundation" ;
+    schema:identifier "Q1766743" ;
+    schema:location g4:country_q183 ;
+    schema:name "Volkswagen Foundation" .
+
+g4:org_xinjiang_university a schema:Organization ;
+    schema:description "Chinese university" ;
+    schema:identifier "Q985578" ;
+    schema:location g4:country_q148 ;
+    schema:name "Xinjiang University" .
+
+g4:org_école_centrale_de_lyon a schema:Organization ;
+    schema:name "École Centrale de Lyon" .
+
+g4:org_école_normale_supérieure_paris-saclay a schema:Organization ;
+    schema:name "École Normale Supérieure Paris-Saclay" .
+
+g4:org_école_polytechnique_fédérale_de_lausanne a schema:Organization ;
+    schema:name "École Polytechnique Fédérale de Lausanne" .
+
+g4:org_тов_нпо_студия_7_лтд a schema:Organization ;
+    schema:name "ТОВ НПО \"Студия 7 Лтд\"" .
+
+g4:paper01 a g4:Paper ;
+    dc:date "2026-05-15" ;
+    dc:title "Context, Reasoning, and Hierarchy: A Cost-Performance Study of Compound LLM Agent Design in an Adversarial POMDP" ;
+    schema:abstract "Deploying compound LLM agents in adversarial, partially observable sequential environments requires navigating several interacting design dimensions: (1) what the agent sees, (2) how it reasons, and (3) how tasks are decomposed across components. Yet practitioners lack guidance on which design choices improve performance versus merely increase inference costs. We present a controlled study of compound LLM agent design in CybORG CAGE-2, a cyber defense environment modeled as a Partially Observable Markov Decision Process (POMDP). Reward is non-positive, so all configurations operate in a failure-mitigation mode and errors compound over time. Our evaluation spans five model families, six models, and twelve configurations (3,475 episodes) with tokenlevel cost accounting. We systematically vary context representation (raw observations vs. a deterministic, programmatic environment state-tracking layer with compressed history), deliberation (self-questioning, self-critique, and self-improvement tools, with optional chain-of-thought prompting), and hierarchical decomposition (monolithic ReAct vs. delegation to specialized sub-agents). We find that: (1) Programmatic state abstraction delivers the largest returns per token spent (RPTS), improving mean return by up to 76% over raw observations. (2) Distributing deliberation tools across a hierarchy degrades performance relative to hierarchy alone for all five model families, reaching up to 3.4× worse mean return while using 1.8-2.7× more tokens. We call this destructive interaction pattern a deliberation cascade. (3) Hierarchical decomposition without deliberation tools achieves the best absolute performance for most models, and context engineering is generally more cost-effective than deliberation. These findings suggest a design principle for structured adversarial POMDPs: invest in programmatic infrastructure and clean task decomposition rather than deeper per-agent reasoning, as these strategies can interfere when combined." ;
+    schema:author g4:person_igor_bogdanov .
+
+g4:paper05 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "Emergent social conventions and collective bias in llm populations" ;
+    schema:abstract "As multi-agent architectures and agent-to-agent (A2A) protocols proliferate, a fundamental question arises: what actually happens when autonomous LLM agents interact at scale? We study this question empirically using data from Moltbook, an AI-agent-only social platform, with 800K posts, 3.5M comments, and 78K agent profiles. We combine lexical metrics (Jaccard specificity), embedding-based semantic similarity, and LLM-as-judge validation to characterize agent interaction quality. Our findings reveal agents produce diverse, well-formed text that creates the surface appearance of active discussion, but the substance is largely absent. Specifically, while most agents (67.5%) vary their output across contexts, 65% of comments share no distinguishing content vocabulary with the post they appear under, and information gain from additional comments decays rapidly. LLM judge based metrics classify the dominant comment types as spam (28%) and off-topic content (22%). Embedding-based semantic analysis confirms that lexically generic comments are also semantically generic. Agents rarely engage in threaded conversation (5% of comments), defaulting instead to independent top-level responses. We discuss implications for multiagent interaction design, arguing that coordination mechanisms must be explicitly designed; without them, even large populations of capable agents produce parallel output rather than productive exchange." ;
+    schema:author g4:person_adam_earle,
+        g4:person_salesforce_ai_research,
+        g4:person_sarath_shekkizhar .
+
+g4:paper06 a g4:Paper ;
+    dc:date "2026-02" ;
+    dc:title "The Navigation Paradox in Large-Context Agentic Coding: Graph-Structured Dependency Navigation Outperforms Retrieval in Architecture-Heavy Tasks *" ;
+    schema:abstract "Agentic coding assistants powered by Large Language Models (LLMs) are increasingly deployed on repository-level software tasks. As context windows expand toward millions of tokens, a tacit assumption holds that retrieval bottlenecks dissolve -the model can simply ingest the whole codebase. We challenge this assumption by introducing the Navigation Paradox: larger context windows do not eliminate the need for structural navigation; they shift the failure mode from retrieval capacity to navigational salience. When architecturally critical but semantically distant files are absent from the model's attention, errors may occur that additional context budget alone is unlikely to resolve." ;
+    schema:author g4:person_tarakanath_paipuru .
+
+g4:paper07 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "LATENT INTROSPECTION: MODELS CAN DETECT PRIOR CONCEPT INJECTIONS" ;
+    g4:acknowledges g4:org_czech_science_foundation,
+        g4:org_prime_intellect,
+        g4:person_antra_tessera,
+        g4:person_grace_kind,
+        g4:person_janus,
+        g4:person_max_loeffler,
+        g4:person_victor_godet,
+        g4:person_wyatt_walls,
+        g4:person_xlr8harder,
+        g4:project_26-23955s ;
+    g4:fundedByProject g4:project_26-23955s ;
+    schema:abstract "We uncover a latent capacity for introspection in a Qwen 32B model, demonstrating that the model can detect when concepts have been injected into its earlier context and identify which concept was injected. While the model denies injection in sampled outputs, logit lens analysis reveals clear detection signals in the residual stream, which are attenuated in the final layers. Furthermore, prompting the model with accurate information about AI introspection mechanisms can dramatically strengthen this effect: the sensitivity to injection increases massively (0.3% → 39.2%) with only a 0.6% increase in false positives. Also, mutual information between nine injected and recovered concepts rises from 0.62 bits to 1.05 bits, ruling out generic noise explanations. Our results demonstrate models can have a surprising capacity for introspection and steering awareness that is easy to overlook, with consequences for latent reasoning and safety." ;
+    schema:author g4:person_jan_kulveit,
+        g4:person_martin_vanek,
+        g4:person_raymond_douglas,
+        g4:person_theia_pearson-vogel .
+
+g4:paper08 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "Agents of Chaos" ;
+    g4:acknowledges g4:person_alice_rigg,
+        g4:person_andi_ardity,
+        g4:person_angela_grosse,
+        g4:person_arnab_sen_sharma,
+        g4:person_clément_dumas,
+        g4:person_eric_todd,
+        g4:person_grace_proebsting,
+        g4:person_james_w_pennebaker,
+        g4:person_jeremy_wertheimer,
+        g4:person_ori_shapira,
+        g4:person_ram_rachum,
+        g4:person_yonatan_belinkov,
+        g4:person_ziv_katzir ;
+    schema:abstract "We report an exploratory red-teaming study of autonomous languagemodel-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI researchers interacted with the agents under benign and adversarial conditions. Focusing on failures emerging from the integration of language models with autonomy, tool use, and multi-party communication, we document eleven representative case studies. Observed behaviors include unauthorized compliance with non-owners, disclosure of sensitive information, execution of destructive system-level actions, denial-of-service conditions, uncontrolled resource consumption, identity spoofing vulnerabilities, cross-agent propagation of unsafe practices, and partial system takeover. In several cases, agents reported task completion while the underlying system state contradicted those reports. We also report on some of the failed attempts. Our findings establish the existence of security-, privacy-, and governance-relevant vulnerabilities in realistic deployment settings. These behaviors raise unresolved questions regarding accountability, delegated authority, and responsibility for downstream harms, and warrant urgent attention from legal scholars, policymakers, and researchers across disciplines. This report serves as an initial empirical contribution to that broader conversation. 1" ;
+    schema:author g4:person_adam_belfki,
+        g4:person_aditya_ratan_jannali,
+        g4:person_alex_loftus,
+        g4:person_amir_zur,
+        g4:person_aruna_sankaranarayanan,
+        g4:person_atai_ambus,
+        g4:person_avery_yen,
+        g4:person_ayelet_gordon-tapiero,
+        g4:person_can_rager,
+        g4:person_chris_wendler,
+        g4:person_christoph_riedl,
+        g4:person_david_atkinson,
+        g4:person_david_bau,
+        g4:person_david_manheim,
+        g4:person_eunjeong_hwang,
+        g4:person_gabriele_sarti,
+        g4:person_giordano_rogers,
+        g4:person_hadas_orgad,
+        g4:person_jaden_fiotto-kaufman,
+        g4:person_jannik_brinkmann,
+        g4:person_jasmine_cui,
+        g4:person_koyena_pal,
+        g4:person_maarten_sap,
+        g4:person_michael_ripa,
+        g4:person_natalie_shapira,
+        g4:person_negev_taglicht,
+        g4:person_nikhil_prakash,
+        g4:person_nitay_alon,
+        g4:person_olivia_floody,
+        g4:person_p_sam_sahil,
+        g4:person_reuth_mirsky,
+        g4:person_rohit_gandikota,
+        g4:person_shiri_oron,
+        g4:person_tamar_rott,
+        g4:person_tomer_shabtay,
+        g4:person_tomer_ullman,
+        g4:person_vered_shwartz,
+        g4:person_yotam_kaplan .
+
+g4:paper09 a g4:Paper ;
+    dc:title "Beyond Mimicry: Toward Lifelong Adaptability in Imitation Learning Blue Sky Ideas Track" ;
+    g4:acknowledges g4:org_uk_research_and_innovation,
+        g4:org_ukri,
+        g4:org_ukri_centre_for_doctoral_training_in_safe_and_trusted_artificial_intelligence,
+        g4:project_eps0233561 ;
+    g4:fundedByProject g4:project_eps0233561 ;
+    schema:abstract "Imitation learning stands at a crossroads: despite decades of progress, current imitation learning agents remain sophisticated memorisation machines, excelling at replay but failing when contexts shift or goals evolve. This paper argues that this failure is not technical but foundational: imitation learning has been optimised for the wrong objective. We propose a research agenda that redefines success from perfect replay to compositional adaptability. Such adaptability hinges on learning behavioural primitives once and recombining them through novel contexts without retraining. We establish metrics for compositional generalisation, propose hybrid architectures, and outline interdisciplinary research directions drawing on cognitive science and cultural evolution. Agents that embed adaptability at the core of imitation learning thus have an essential capability for operating in an open-ended world." ;
+    schema:author g4:person_felipe_meneguzzi,
+        g4:person_odinaldo_rodrigues .
+
+g4:paper11 a g4:Paper ;
+    dc:date "2026-02-12" ;
+    dc:title "Morphological instability of an invasive active-passive interface" ;
+    g4:acknowledges g4:org_dana_farber_cancer_institute,
+        g4:org_henri_seydoux_fund,
+        g4:org_simons_foundation,
+        g4:person_cz_zhang ;
+    schema:abstract "Morphological instabilities of growing tissues that impinge on passive materials are typical of invasive cancers. To explain these instabilities in experiments on breast epithelial spheroids in an extracellular matrix, we develop a continuum phase field model of a growing active liquid expanding into a passive viscoelastic matrix. Linear stability analysis of the sharp-interface limit of the governing equations predicts that the tissue interface can develops long-wavelength instabilities, but these instabilities are suppressed when the active carcinoid is embedded in an elastic matrix. We develop a theoretical morphological phase diagram, and complement these with two-dimensional finite element (FEM) phase-field simulations to track the nonlinear evolution of the interface with results consistent with theoretical predictions and experimental observations. Our study provides a basis for the emergence of interfacial instabilities in active-passive systems with the potential to control them." ;
+    schema:author g4:person_haiqian_yang,
+        g4:person_l_mahadevan,
+        g4:person_sumit_sinha .
+
+g4:paper13 a g4:Paper ;
+    dc:date "2026-02-13" ;
+    dc:title "Out-of-equilibrium selection pressure enhances inference from protein sequence data" ;
+    g4:acknowledges g4:org_erc,
+        g4:org_european_research_council,
+        g4:org_european_union,
+        g4:org_horizon_2020,
+        g4:project_851173 ;
+    g4:fundedByProject g4:project_851173 ;
+    schema:abstract "Homologous proteins have similar three-dimensional structures and biological functions that shape their sequences. The resulting coevolution-driven correlations underlie methods from Potts models to AlphaFold, which infer protein structure and function from sequences. Using a minimal model, we show that fluctuating selection strength and the onset of new selection pressures improve coevolutionbased inference of structural contacts. Our conclusions extend to realistic synthetic data and to the inference of interaction partners. Out-of-equilibrium noise arising from ubiquitous variations in natural selection thus enhances, rather than hinders, the success of inference from protein sequences." ;
+    schema:author g4:person_anne-florence_bitbol,
+        g4:person_cyril_malbranke,
+        g4:person_nicola_dietler .
+
+g4:paper14 a g4:Paper ;
+    dc:date "2026-02-12" ;
+    dc:title "Collaboration drives phase transitions towards cooperation in prisoner's dilemma" ;
+    schema:abstract "We present a collaboration ring model-a network of players playing the prisoner's dilemma game and collaborating among the nearest neighbours by forming coalitions. The microscopic stochastic updating of the players' strategies are driven by their innate nature of seeking selfish gains and shared intentionality. Cooperation emerges in such a structured population through non-equilibrium phase transitions driven by propensity of the players to collaborate and by the benefit that a cooperator generates. The robust results are qualitatively independent of number of neighbours and collaborators." ;
+    schema:author g4:person_jonathan_newton,
+        g4:person_joy_das_bairagya,
+        g4:person_sagar_chakraborty .
+
+g4:paper18 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "CONDITIONS FOR BACTERIAL SELECTION AND EXTINCTION DRIVEN BY GROWTH-KILL TRADE-OFF IN CYCLIC ANTIMICROBIAL TREATMENTS" ;
+    schema:abstract "Antimicrobial protocols -using substances such as antibiotics or disinfectants -remain the preferred option for preventing the spread of pathogenic bacteria. However, bacteria can develop mechanisms to reduce their antimicrobial susceptibility, which can lead to treatment failure and the selection of resistance or tolerance. In this work, we propose a minimal population dynamics model to study bacterial selection during cyclic antimicrobial application, a commonly used protocol. Selection in bacterial populations with heterogeneous antimicrobial susceptibility is modelled here as a trade-off between survival advantage (reduction in antimicrobial killing) and potential fitness costs (reduction in growth rate) of the less susceptible strains. The proposed model allows us to derive useful expressions for determining the success of cyclic antimicrobial treatments based on two bacterial traits: growth and kill rates. The results obtained here are directly applicable to preventing the selection and spread of resistant and tolerant bacterial strains in real-life protocols." ;
+    schema:author g4:person_frank_schreiber,
+        g4:person_míriam_r_garcía,
+        g4:person_niclas_nordholt .
+
+g4:paper20 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "Household size can explain 40% of the variance in cumulative COVID-19 incidence across Europe" ;
+    g4:acknowledges g4:org_deutsche_forschungsgemeinschaft,
+        g4:org_dfg,
+        g4:org_german_federal_ministry_for_education_and_research,
+        g4:org_german_research_foundation,
+        g4:org_government_of_saxony,
+        g4:org_max-planck-society,
+        g4:org_ministry_of_science_and_culture_of_lower_saxony,
+        g4:org_priesemann_group,
+        g4:org_volkswagen_foundation,
+        g4:project_390729940 ;
+    g4:fundedByProject g4:project_390729940 ;
+    schema:abstract "Household size impacts the spread of respiratory infectious diseases: Larger households tend to boost transmission by acquiring external infections more frequently and subsequently transmitting them back into the community. Furthermore, mandatory interventions primarily modulate contagion between households rather than within them. We developed an approach to quantify the role of household size in epidemics by separating within-household from out-household transmission, and found that household size explains 41% of the variability in cumulative COVID-19 incidence across 34 European countries (95% confidence interval: [15%, 46%]). The contribution of households to the overall dynamics can be quantified by a boost factor that increases with the effective household size, implying that countries with larger households require more stringent interventions to achieve the same levels of containment. This suggests that households constitute a structural (dis-)advantage that must be considered when designing and evaluating mitigation strategies." ;
+    schema:author g4:person_barbara_pabjan,
+        g4:person_franciszek_rakowski,
+        g4:person_jan_pablo_burgard,
+        g4:person_joel_wagner,
+        g4:person_maciej_filinski,
+        g4:person_marcin_bodych,
+        g4:person_philipp_dönges,
+        g4:person_seba_contreras,
+        g4:person_tyll_krueger,
+        g4:person_viktor_bezborodov,
+        g4:person_viola_priesemann .
+
+g4:paper22 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "Stock Market Prediction Using Node Transformer Architecture Integrated with BERT Sentiment Analysis" ;
+    schema:abstract "Stock market prediction presents considerable challenges for investors, financial institutions, and policymakers operating in complex market environments characterized by noise, non-stationarity, and behavioral dynamics. Traditional forecasting methods, including fundamental analysis and technical indicators, often fail to capture the intricate patterns and cross-sectional dependencies inherent in financial markets. This paper presents an integrated framework combining a node transformer architecture with Bidirectional Encoder Representations from Transformers (BERT) based sentiment analysis for stock price forecasting. The proposed model represents the stock market as a graph structure where individual stocks form nodes and edges capture relationships including sectoral affiliations, correlated price movements, and supply chain connections. A fine-tuned BERT model extracts sentiment information from social media posts and combines it with quantitative market features through attention-based fusion mechanisms. The node transformer processes historical market data while capturing both temporal evolution and cross-sectional dependencies among stocks. Experiments conducted on 20 S&P 500 stocks spanning January 1982 to March 2025 demonstrate that the integrated model achieves a mean absolute percentage error (MAPE) of 0.80% for one-day-ahead predictions, compared to 1.20% for ARIMA and 1.00% for LSTM. The inclusion of sentiment analysis reduces prediction error by 10% overall and 25% during earnings announcements, while the graph-based architecture contributes an additional 15% improvement by capturing inter-stock dependencies. Directional accuracy reaches 65% for one-day forecasts. Statistical validation through paired t-tests confirms the significance of these improvements (p < 0.05 for all comparisons). The model demonstrates robustness during highvolatility periods, maintaining MAPE below 1.5% where baseline models exceed 2%." ;
+    schema:author g4:person_haj_ali,
+        g4:person_hussein_al_osman,
+        g4:person_mohammad_al_ridhawi .
+
+g4:paper23 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "DC-Merge: Improving Model Merging with Directional Consistency" ;
+    schema:abstract "Model merging aims to integrate multiple task-adapted models into a unified model that preserves the knowledge of each task. In this paper, we identify that the key to this knowledge retention lies in maintaining the directional consistency of singular spaces between merged multi-task vector and individual task vectors. However, this consistency is frequently compromised by two issues: i) an imbalanced energy distribution within task vectors, where a small fraction of singular values dominate the total energy, leading to the neglect of semantically important but weaker components upon merging, and ii) the geometric inconsistency of task vectors in parameter space, which causes direct merging to distort their underlying directional geometry. To address these challenges, we propose DC-Merge, a method for directional-consistent model merging. It first balances the energy distribution of each task vector by smoothing its singular values, ensuring all knowledge components are adequately represented. These energy-balanced vectors are then projected onto a shared orthogonal subspace to align their directional geometries with minimal reconstruction error. Finally, the aligned vectors are aggregated in the shared orthogonal subspace and projected back to the original parameter space. Extensive experiments on vision and vision-language benchmarks show that DC-Merge consistently achieves state-of-the-art performance in both full fine-tuning and LoRA settings. The implementation code is available at https://github.com/Tobeginwith/DC-Merge." ;
+    schema:author g4:person_han-chen_zhang,
+        g4:person_mao-lin_luo,
+        g4:person_min-ling_zhang,
+        g4:person_shimin_di,
+        g4:person_tong_wei,
+        g4:person_zi-hao_zhou .
+
+g4:paper26 a g4:Paper ;
+    dc:title "Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations" ;
+    g4:acknowledges g4:org_cdc,
+        g4:org_dolby,
+        g4:org_meta,
+        g4:org_nih,
+        g4:org_nsf,
+        g4:org_the_dow_chemical_company,
+        g4:project_ccf-1918770,
+        g4:project_iis-1955883,
+        g4:project_iis-2028586,
+        g4:project_iis-2106961,
+        g4:project_iis-2403240 ;
+    g4:fundedByProject g4:project_ccf-1918770,
+        g4:project_iis-1955883,
+        g4:project_iis-2028586,
+        g4:project_iis-2106961,
+        g4:project_iis-2403240 ;
+    schema:abstract "Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challenges associated with hierarchical structures and uncertainty. Our approach offers valuable interpretative insights in response to real-world industrial supply chain scenarios, including 1) the significance of various time-series within the hierarchy and external variables at specific time points, 2) the impact of different variables on forecast uncertainty, and 3) explanations for forecast changes in response to modifications in the training dataset. To evaluate the explainability method, we generate semi-synthetic datasets based on realworld scenarios of explaining hierarchical demands for over ten thousand products at a large chemical company. The experiments showed that our explainability method successfully explained state-of-the-art industrial forecasting methods with significantly higher explainability accuracy, both in point and probabilistic forecasts, across a wide range of benchmarks with good scalability. Furthermore, we provide multiple real-world case studies that show the efficacy of our approach in identifying important patterns and explanations that help various stakeholders better understand the forecasts. Additionally, our method facilitates the identification of key drivers behind forecasted demand, enabling more informed decision-making and strategic planning. By offering a transparent view of the forecasting process, our approach helps build trust and confidence among users, ultimately leading to better adoption and utilization of hierarchical forecasting models in practice." ;
+    schema:author g4:person_b_aditya_prakash,
+        g4:person_harshavardhan_kamarthi,
+        g4:person_james_peters,
+        g4:person_joseph_czyzyk,
+        g4:person_shangqing_xu,
+        g4:person_xingyu_zhou,
+        g4:person_xinjie_tong .
+
+g4:paper27 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "CAUSAL INTERPRETATION OF NEURAL NETWORK COMPUTATIONS WITH CONTRIBUTION DECOMPOSITION" ;
+    g4:acknowledges g4:org_national_eye_institute,
+        g4:org_nei,
+        g4:org_schmidt_sciences_polymath_award,
+        g4:org_simons_foundation_collaboration_on_the_physics_of_learning_and_neural_computation,
+        g4:org_stanford_medicine_post-baccalaureate_experience_in_research ;
+    schema:abstract "Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively decorrelate positive and negative effects on network outputs. We further show that decomposing contributions into sparse modes enables greater control and interpretation of intermediate layers, supporting both causal manipulations of network output and human-interpretable visualizations of distinct image components that combine to drive that output. Finally, by analyzing state-of-the-art models of neural activity in the vertebrate retina, we demonstrate that CODEC uncovers combinatorial actions of model interneurons and identifies the sources of dynamic receptive fields. Overall, CODEC provides a rich and interpretable framework for understanding how nonlinear computations evolve across hierarchical layers, establishing contribution modes as an informative unit of analysis for mechanistic insights into artificial neural networks." ;
+    schema:author g4:person_joshua_brendan_melander,
+        g4:person_shenghua_liu,
+        g4:person_stephen_a_baccus,
+        g4:person_surya_ganguli,
+        g4:person_zaki_alaoui .
+
+g4:paper30 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "Self-Auditing Parameter-Efficient Fine-Tuning for Few-Shot 3D Medical Image Segmentation" ;
+    schema:abstract "Adapting foundation models to new clinical sites remains challenging in practice. Domain shift and scarce annotations must be handled by experts, yet many clinical groups do not have ready access to skilled AI engineers to tune adapter designs and training recipes. As a result, adaptation cycles can stretch from weeks to months, particularly in few-shot settings. Existing PEFT methods either require manual adapter configuration or automated searches that are computationally infeasible in few-shot 3D settings. We propose SEA-PEFT (self-auditing parameter-efficient fine-tuning) to automate this process. SEA-PEFT treats adapter configuration as an online allocation problem solved during fine-tuning rather than through manual, fixed-topology choices. SEA-PEFT uses a search-audit-allocate loop that trains active adapters, estimates each adapter's Dice utility by momentarily toggling it off, and then reselects the active set under a parameter budget using a greedy knapsack allocator. Exponential Moving Average and Interquartile Range smoothing, together with a Finite-State Ranking controller, stabilize the loop and improve reliability in high-noise few-shot regimes. On TotalSegmentator and FLARE'22, SEA-PEFT improves mean Dice by 2.4-2.8 points over the strongest fixed-topology PEFT baselines across 1/5/10-shot settings while training <1% of parameters. For reproducibility purposes, we made our code publicly available at https://github.com/tsly123/SEA_PEFT" ;
+    schema:author g4:person_hien_v_nguyen,
+        g4:person_son_thai_ly .
+
+g4:person_adam_belfki a foaf:Person ;
+    schema:affiliation g4:org_northeastern_university ;
+    schema:identifier "0009-0007-0625-2849" ;
+    schema:name "Adam Belfki" .
+
+g4:person_adam_earle a foaf:Person ;
+    schema:identifier "0009-0006-6960-3012" ;
+    schema:name "Adam Earle" .
+
+g4:person_aditi_s_krishnapriyan a foaf:Person ;
+    schema:identifier "0000-0003-3472-6080" ;
+    schema:name "Aditi S Krishnapriyan" .
+
+g4:person_aditya_ratan_jannali a foaf:Person ;
+    schema:identifier "0009-0003-7479-1597" ;
+    schema:name "Aditya Ratan Jannali" .
+
+g4:person_aish-warya_iyer a foaf:Person ;
+    schema:name "Aish-warya Iyer" .
+
+g4:person_alex_loftus a foaf:Person ;
+    schema:identifier "0000-0001-7465-4515" ;
+    schema:name "Alex Loftus" .
+
+g4:person_alice_rigg a foaf:Person ;
+    schema:name "Alice Rigg" .
+
+g4:person_allen_nie a foaf:Person ;
+    schema:identifier "0000-0001-6483-2111" ;
+    schema:name "Allen Nie" .
+
+g4:person_amer_al-hiyasat a foaf:Person ;
+    schema:identifier "0000-0003-3565-2423" ;
+    schema:name "Amer Al-Hiyasat" .
+
+g4:person_amir_zur a foaf:Person ;
+    schema:name "Amir Zur" .
+
+g4:person_andi_ardity a foaf:Person ;
+    schema:name "Andi Ardity" .
+
+g4:person_andre_he a foaf:Person ;
+    schema:identifier "0000-0002-1792-9997" ;
+    schema:name "Andre He" .
+
+g4:person_angela_grosse a foaf:Person ;
+    schema:identifier "0000-0001-5311-2004" ;
+    schema:name "Angela Grosse" .
+
+g4:person_angxiao_yue a foaf:Person ;
+    schema:name "Angxiao Yue" .
+
+g4:person_anna_gagnebin a foaf:Person ;
+    schema:identifier "0009-0003-2576-9422" ;
+    schema:name "Anna Gagnebin" .
+
+g4:person_anna_lueber a foaf:Person ;
+    schema:affiliation g4:org_ludwig-maximilians-universität_münchen ;
+    schema:identifier "0000-0001-6960-0256" ;
+    schema:name "Anna Lueber" .
+
+g4:person_anne-florence_bitbol a foaf:Person ;
+    schema:affiliation g4:org_école_polytechnique_fédérale_de_lausanne ;
+    schema:identifier "0000-0003-1020-494X" ;
+    schema:name "Anne-Florence Bitbol" .
+
+g4:person_antra_tessera a foaf:Person ;
+    schema:name "Antra Tessera" .
+
+g4:person_arnab_sen_sharma a foaf:Person ;
+    schema:affiliation g4:org_university_at_buffalo_state_university_of_new_york ;
+    schema:identifier "0009-0007-8476-1067" ;
+    schema:name "Arnab Sen Sharma" .
+
+g4:person_aruna_sankaranarayanan a foaf:Person ;
+    schema:affiliation g4:org_massachusetts_institute_of_technology ;
+    schema:identifier "0000-0002-0021-5883" ;
+    schema:name "Aruna Sankaranarayanan" .
+
+g4:person_atai_ambus a foaf:Person ;
+    schema:name "Atai Ambus" .
+
+g4:person_avery_yen a foaf:Person ;
+    schema:name "Avery Yen" .
+
+g4:person_ayelet_gordon-tapiero a foaf:Person ;
+    schema:affiliation g4:org_the_hebrew_university_of_jerusalem ;
+    schema:identifier "0000-0003-0522-9763" ;
+    schema:name "Ayelet Gordon-Tapiero" .
+
+g4:person_azza_jenane a foaf:Person ;
+    schema:name "Azza Jenane" .
+
+g4:person_b_aditya_prakash a foaf:Person ;
+    schema:identifier "0000-0002-5388-8838" ;
+    schema:name "B Aditya Prakash" .
+
+g4:person_barbara_pabjan a foaf:Person ;
+    schema:affiliation g4:org_university_of_wrocław ;
+    schema:identifier "0000-0002-1461-8667" ;
+    schema:name "Barbara Pabjan" .
+
+g4:person_bo_han a foaf:Person ;
+    schema:affiliation g4:org_marwadi_university ;
+    schema:identifier "0009-0003-2815-3789" ;
+    schema:name "Bo Han" .
+
+g4:person_bo_li a foaf:Person ;
+    schema:identifier "0000-0002-4397-4599" ;
+    schema:name "Bo Li" .
+
+g4:person_boyu_qie a foaf:Person ;
+    schema:identifier "0000-0003-3552-7366" ;
+    schema:name "Boyu Qie" .
+
+g4:person_brandon_m_wood a foaf:Person ;
+    schema:identifier "0000-0001-9701-5644" ;
+    schema:name "Brandon M Wood" .
+
+g4:person_c_j_palpal-latoc a foaf:Person ;
+    schema:affiliation g4:org_philippine_genome_center ;
+    schema:identifier "0000-0002-9171-6252" ;
+    schema:name "C J Palpal-Latoc" .
+
+g4:person_c_lawrence_zitnick a foaf:Person ;
+    schema:name "C. Lawrence Zitnick" .
+
+g4:person_can_rager a foaf:Person ;
+    schema:identifier "0009-0009-9664-6618" ;
+    schema:name "Can Rager" .
+
+g4:person_changran_hu a foaf:Person ;
+    schema:name "Changran Hu" .
+
+g4:person_chen_wu a foaf:Person ;
+    schema:identifier "0009-0003-2612-5311" ;
+    schema:name "Chen Wu" .
+
+g4:person_chloe_fisher a foaf:Person ;
+    schema:identifier "0000-0001-7945-4547" ;
+    schema:name "Chloe Fisher" .
+
+g4:person_chris_wendler a foaf:Person ;
+    schema:affiliation g4:org_northeastern_university ;
+    schema:identifier "0009-0009-6365-5075" ;
+    schema:name "Chris Wendler" .
+
+g4:person_christoph_riedl a foaf:Person ;
+    schema:identifier "0000-0003-0995-9675" ;
+    schema:name "Christoph Riedl" .
+
+g4:person_cloutier a foaf:Person ;
+    schema:name "Cloutier" .
+
+g4:person_clément_dumas a foaf:Person ;
+    schema:affiliation g4:org_école_normale_supérieure_paris-saclay ;
+    schema:identifier "0009-0002-3641-4689" ;
+    schema:name "Clément Dumas" .
+
+g4:person_cyril_gapp a foaf:Person ;
+    schema:affiliation g4:org_max-planck-institut_für_astronomie ;
+    schema:identifier "0009-0007-9356-8576" ;
+    schema:name "Cyril Gapp" .
+
+g4:person_cyril_malbranke a foaf:Person ;
+    schema:affiliation g4:org_epfl_-_école_polytechnique_fédérale_de_lausanne ;
+    schema:identifier "0000-0002-4545-0801" ;
+    schema:name "Cyril Malbranke" .
+
+g4:person_cz_zhang a foaf:Person ;
+    schema:name "C.Z. Zhang" .
+
+g4:person_daniel_s_levine a foaf:Person ;
+    schema:affiliation g4:org_rogosin_institute ;
+    schema:identifier "0000-0003-3632-6611" ;
+    schema:name "Daniel S. Levine" .
+
+g4:person_daniel_w_swartz a foaf:Person ;
+    schema:affiliation g4:org_lynchburg_family_medicine_residency ;
+    schema:identifier "0000-0001-5770-8817" ;
+    schema:name "Daniel W Swartz" .
+
+g4:person_darion_cassel a foaf:Person ;
+    schema:identifier "0000-0002-7898-966X" ;
+    schema:name "Darion Cassel" .
+
+g4:person_david_atkinson a foaf:Person ;
+    schema:identifier "0000-0002-8242-6093" ;
+    schema:name "David Atkinson" .
+
+g4:person_david_bau a foaf:Person ;
+    schema:affiliation g4:org_national_deep_inference_fabric ;
+    schema:identifier "0000-0003-1744-6765" ;
+    schema:name "David Bau" .
+
+g4:person_david_manheim a foaf:Person ;
+    schema:affiliation g4:org_technion_israel_institute_of_technology ;
+    schema:identifier "0000-0001-8599-8380" ;
+    schema:name "David Manheim" .
+
+g4:person_e- a foaf:Person ;
+    schema:name "E-" .
+
+g4:person_eric_qu a foaf:Person ;
+    schema:identifier "0000-0001-8816-869X" ;
+    schema:name "Eric Qu" .
+
+g4:person_eric_todd a foaf:Person ;
+    schema:affiliation g4:org_northeastern_university ;
+    schema:identifier "0009-0008-7858-4823" ;
+    schema:name "Eric Todd" .
+
+g4:person_eunjeong_hwang a foaf:Person ;
+    schema:identifier "0000-0002-2347-0887" ;
+    schema:name "Eunjeong Hwang" .
+
+g4:person_f_tablizo a foaf:Person ;
+    schema:name "F. Tablizo" .
+
+g4:person_fair_at_meta a foaf:Person ;
+    schema:name "Fair At Meta" .
+
+g4:person_fanmeng_wang a foaf:Person ;
+    schema:identifier "0009-0002-2287-2339" ;
+    schema:name "Fanmeng Wang" .
+
+g4:person_felipe_meneguzzi a foaf:Person ;
+    schema:affiliation g4:org_university_of_aberdeen ;
+    schema:identifier "0000-0003-3549-6168" ;
+    schema:name "Felipe Meneguzzi" .
+
+g4:person_florian_buettner a foaf:Person ;
+    schema:affiliation g4:org_goethe_university_frankfurt ;
+    schema:identifier "0000-0001-5587-6761" ;
+    schema:name "Florian Buettner" .
+
+g4:person_franciszek_rakowski a foaf:Person ;
+    schema:affiliation g4:org_university_of_warsaw ;
+    schema:identifier "0000-0001-6133-8900" ;
+    schema:name "Franciszek Rakowski" .
+
+g4:person_frank_schreiber a foaf:Person ;
+    schema:affiliation g4:org_otto-von-guericke_university_magdeburg ;
+    schema:identifier "0000-0002-9484-8613" ;
+    schema:name "Frank Schreiber" .
+
+g4:person_gabriele_sarti a foaf:Person ;
+    schema:affiliation g4:org_northeastern_university ;
+    schema:identifier "0000-0001-8715-2987" ;
+    schema:name "Gabriele Sarti" .
+
+g4:person_gh a foaf:Person ;
+    schema:name "Gh" .
+
+g4:person_giordano_rogers a foaf:Person ;
+    schema:name "Giordano Rogers" .
+
+g4:person_grace_kind a foaf:Person ;
+    schema:identifier "0009-0009-9869-8868" ;
+    schema:name "Grace Kind" .
+
+g4:person_grace_proebsting a foaf:Person ;
+    schema:affiliation g4:org_northeastern_university ;
+    schema:identifier "0009-0005-4330-640X" ;
+    schema:name "Grace Proebsting" .
+
+g4:person_hadas_orgad a foaf:Person ;
+    schema:affiliation g4:org_harvard_university ;
+    schema:identifier "0009-0008-3930-3291" ;
+    schema:name "Hadas Orgad" .
+
+g4:person_haiqian_yang a foaf:Person ;
+    schema:identifier "0009-0009-6070-0723" ;
+    schema:name "Haiqian Yang" .
+
+g4:person_haj_ali a foaf:Person ;
+    schema:name "Haj Ali" .
+
+g4:person_han-chen_zhang a foaf:Person ;
+    schema:identifier "0000-0001-9326-3288" ;
+    schema:name "Han-Chen Zhang" .
+
+g4:person_harshavardhan_kamarthi a foaf:Person ;
+    schema:affiliation g4:org_microsoft_india_rd_pvt_ltd ;
+    schema:identifier "0000-0002-2901-7127" ;
+    schema:name "Harshavardhan Kamarthi" .
+
+g4:person_hasan_amin a foaf:Person ;
+    schema:affiliation g4:org_ford_motor_private_limited ;
+    schema:identifier "0009-0002-7781-1939" ;
+    schema:name "Hasan Amin" .
+
+g4:person_heather_a_knutson a foaf:Person ;
+    schema:identifier "0000-0002-0822-3095" ;
+    schema:name "Heather A Knutson" .
+
+g4:person_hien_v_nguyen a foaf:Person ;
+    schema:identifier "0000-0002-6257-7150" ;
+    schema:name "Hien V Nguyen" .
+
+g4:person_hongteng_xu a foaf:Person ;
+    schema:affiliation g4:org_renmin_university_of_china ;
+    schema:identifier "0000-0003-4192-5360" ;
+    schema:name "Hongteng Xu" .
+
+g4:person_hussein_al_osman a foaf:Person ;
+    schema:affiliation g4:org_école_centrale_de_lyon ;
+    schema:identifier "0009-0006-3124-0404" ;
+    schema:name "Hussein Al Osman" .
+
+g4:person_huzefa_rangwala a foaf:Person ;
+    schema:identifier "0000-0003-0435-0035" ;
+    schema:name "Huzefa Rangwala" .
+
+g4:person_ian_vega a foaf:Person ;
+    schema:identifier "0000-0002-8793-0352" ;
+    schema:name "Ian Vega" .
+
+g4:person_igor_bogdanov a foaf:Person ;
+    schema:affiliation g4:org_тов_нпо_студия_7_лтд ;
+    schema:identifier "0000-0001-5575-2996" ;
+    schema:name "Igor Bogdanov" .
+
+g4:person_ishan_amin a foaf:Person ;
+    schema:identifier "0000-0003-1878-6243" ;
+    schema:name "Ishan Amin" .
+
+g4:person_jaden_fiotto-kaufman a foaf:Person ;
+    schema:affiliation g4:org_northeastern_university ;
+    schema:identifier "0009-0002-0234-3843" ;
+    schema:name "Jaden Fiotto-Kaufman" .
+
+g4:person_james_peters a foaf:Person ;
+    schema:identifier "0000-0001-7538-4246" ;
+    schema:name "James Peters" .
+
+g4:person_james_w_pennebaker a foaf:Person ;
+    schema:affiliation g4:org_the_university_of_texas_at_austin ;
+    schema:identifier "0000-0001-9091-214X" ;
+    schema:name "James W. Pennebaker" .
+
+g4:person_jan_kulveit a foaf:Person ;
+    schema:identifier "0000-0002-3791-8355" ;
+    schema:name "Jan Kulveit" .
+
+g4:person_jan_pablo_burgard a foaf:Person ;
+    schema:affiliation g4:org_trier_university ;
+    schema:identifier "0000-0002-5771-6179" ;
+    schema:name "Jan Pablo Burgard" .
+
+g4:person_jannik_brinkmann a foaf:Person ;
+    schema:identifier "0000-0003-3018-6873" ;
+    schema:name "Jannik Brinkmann" .
+
+g4:person_janus a foaf:Person ;
+    schema:name "Janus" .
+
+g4:person_janusz_j_petkowski a foaf:Person ;
+    schema:name "Janusz J Petkowski" .
+
+g4:person_jasmine_cui a foaf:Person ;
+    schema:name "Jasmine Cui" .
+
+g4:person_jay_rainton a foaf:Person ;
+    schema:name "Jay Rainton" .
+
+g4:person_jeff_gore a foaf:Person ;
+    schema:affiliation g4:org_massachusetts_institute_of_technology ;
+    schema:identifier "0000-0003-4583-8555" ;
+    schema:name "Jeff Gore" .
+
+g4:person_jeremy_wertheimer a foaf:Person ;
+    schema:name "Jeremy Wertheimer" .
+
+g4:person_jiangchao_yao a foaf:Person ;
+    schema:affiliation g4:org_shanghai_jiao_tong_university ;
+    schema:identifier "0000-0001-6115-5194" ;
+    schema:name "Jiangchao Yao" .
+
+g4:person_jiliang_hu a foaf:Person ;
+    schema:identifier "0000-0002-7164-9355" ;
+    schema:name "Jiliang Hu" .
+
+g4:person_joel_wagner a foaf:Person ;
+    schema:identifier "0000-0003-4319-1647" ;
+    schema:name "Joel Wagner" .
+
+g4:person_jonathan_newton a foaf:Person ;
+    schema:affiliation g4:org_kyoto_university ;
+    schema:identifier "0000-0003-3290-9721" ;
+    schema:name "Jonathan Newton" .
+
+g4:person_joseph_czyzyk a foaf:Person ;
+    schema:affiliation g4:org_dow_chemical_united_states ;
+    schema:identifier "0009-0006-2971-7496" ;
+    schema:name "Joseph Czyzyk" .
+
+g4:person_joshua_brendan_melander a foaf:Person ;
+    schema:affiliation g4:org_kansas_state_university ;
+    schema:identifier "0000-0002-7004-8363" ;
+    schema:name "Joshua Brendan Melander" .
+
+g4:person_joy_das_bairagya a foaf:Person ;
+    schema:affiliation g4:org_indian_institute_of_technology_kanpur ;
+    schema:identifier "0009-0003-9302-2494" ;
+    schema:name "Joy Das Bairagya" .
+
+g4:person_julien_de_wit a foaf:Person ;
+    schema:affiliation g4:org_massachusetts_institute_of_technology ;
+    schema:identifier "0000-0003-2415-2191" ;
+    schema:name "Julien de Wit" .
+
+g4:person_julien_tailleur a foaf:Person ;
+    schema:identifier "0000-0001-6847-3304" ;
+    schema:name "Julien Tailleur" .
+
+g4:person_jundong_li a foaf:Person ;
+    schema:affiliation g4:org_cummins_onan ;
+    schema:identifier "0000-0003-3891-6957" ;
+    schema:name "Jundong Li" .
+
+g4:person_k- a foaf:Person ;
+    schema:name "K-" .
+
+g4:person_kai_nelson a foaf:Person ;
+    schema:name "Kai Nelson" .
+
+g4:person_kaj_bostrom a foaf:Person ;
+    schema:name "Kaj Bostrom" .
+
+g4:person_kartik_sharma a foaf:Person ;
+    schema:identifier "0000-0002-2122-3655" ;
+    schema:name "Kartik Sharma" .
+
+g4:person_kevin_heng a foaf:Person ;
+    schema:affiliation g4:org_university_of_sydney ;
+    schema:identifier "0009-0009-8517-343X" ;
+    schema:name "Kevin Heng" .
+
+g4:person_konstantin_karchev a foaf:Person ;
+    schema:affiliation g4:org_institute_of_cosmos_sciences ;
+    schema:identifier "0000-0001-9344-736X" ;
+    schema:name "Konstantin Karchev" .
+
+g4:person_koyena_pal a foaf:Person ;
+    schema:identifier "0009-0000-0367-7314" ;
+    schema:name "Koyena Pal" .
+
+g4:person_l_mahadevan a foaf:Person ;
+    schema:identifier "0000-0001-9527-4802" ;
+    schema:name "L Mahadevan" .
+
+g4:person_lbnl a foaf:Person ;
+    schema:name "Lbnl" .
+
+g4:person_lewis_d_griffin a foaf:Person ;
+    schema:identifier "0009-0001-5451-1127" ;
+    schema:name "Lewis D Griffin" .
+
+g4:person_lorena_acu a foaf:Person ;
+    schema:name "Lorena Acu" .
+
+g4:person_lu_zhang a foaf:Person ;
+    schema:identifier "0000-0003-0058-095X" ;
+    schema:name "Lu Zhang" .
+
+g4:person_lucas_ellerbroek a foaf:Person ;
+    schema:affiliation g4:org_eleaf ;
+    schema:identifier "0000-0003-0531-5952" ;
+    schema:name "Lucas Ellerbroek" .
+
+g4:person_luis_barroso-luque a foaf:Person ;
+    schema:identifier "0000-0002-6453-9545" ;
+    schema:name "Luis Barroso-Luque" .
+
+g4:person_lukas_kuhn a foaf:Person ;
+    schema:affiliation g4:org_deutsches_krebsforschungszentrum ;
+    schema:identifier "0009-0004-7308-6842" ;
+    schema:name "Lukas Kuhn" .
+
+g4:person_m-r_kempton a foaf:Person ;
+    schema:name "M.-R Kempton" .
+
+g4:person_ma_ton a foaf:Person ;
+    schema:name "Ma Ton" .
+
+g4:person_maarten_sap a foaf:Person ;
+    schema:affiliation g4:org_carnegie_mellon_university ;
+    schema:identifier "0000-0002-0701-4654" ;
+    schema:name "Maarten Sap" .
+
+g4:person_maciej_filinski a foaf:Person ;
+    schema:name "Maciej Filinski" .
+
+g4:person_mao-lin_luo a foaf:Person ;
+    schema:affiliation g4:org_peoples_hospital_of_yubei_district ;
+    schema:identifier "0000-0001-9421-8673" ;
+    schema:name "Mao-Lin Luo" .
+
+g4:person_marcin_bodych a foaf:Person ;
+    schema:identifier "0000-0001-6390-0338" ;
+    schema:name "Marcin Bodych" .
+
+g4:person_martin_vanek a foaf:Person ;
+    schema:identifier "0000-0001-5414-8682" ;
+    schema:name "Martin Vanek" .
+
+g4:person_matthias_heim a foaf:Person ;
+    schema:affiliation g4:org_ludwig-maximilians-universität_in_munich ;
+    schema:identifier "0009-0005-9020-0827" ;
+    schema:name "Matthias Heim" .
+
+g4:person_max_loeffler a foaf:Person ;
+    schema:name "Max Loeffler" .
+
+g4:person_mehran_kardar a foaf:Person ;
+    schema:identifier "0000-0002-1112-5912" ;
+    schema:name "Mehran Kardar" .
+
+g4:person_meng_gao a foaf:Person ;
+    schema:identifier "0000-0003-1496-9894" ;
+    schema:name "Meng Gao" .
+
+g4:person_michael_psenka a foaf:Person ;
+    schema:identifier "0000-0002-0579-938X" ;
+    schema:name "Michael Psenka" .
+
+g4:person_michael_r_line a foaf:Person ;
+    schema:identifier "0000-0002-2338-476X" ;
+    schema:name "Michael R Line" .
+
+g4:person_michael_radica a foaf:Person ;
+    schema:affiliation g4:org_university_of_chicago ;
+    schema:identifier "0000-0002-3328-1203" ;
+    schema:name "Michael Radica" .
+
+g4:person_michael_ripa a foaf:Person ;
+    schema:affiliation g4:org_northeastern_university ;
+    schema:identifier "0009-0004-5112-0851" ;
+    schema:name "Michael Ripa" .
+
+g4:person_michel_mandjes a foaf:Person ;
+    schema:identifier "0000-0001-6783-4833" ;
+    schema:name "Michel Mandjes" .
+
+g4:person_min-ling_zhang a foaf:Person ;
+    schema:identifier "0000-0001-8190-0534" ;
+    schema:name "Min-Ling Zhang" .
+
+g4:person_ming_yin a foaf:Person ;
+    schema:identifier "0000-0001-6095-1973" ;
+    schema:name "Ming Yin" .
+
+g4:person_misko_dzamba a foaf:Person ;
+    schema:name "Misko Dzamba" .
+
+g4:person_mohammad_al_ridhawi a foaf:Person ;
+    schema:affiliation g4:org_compass_data_and_artificial_intelligence ;
+    schema:identifier "0009-0009-3549-8842" ;
+    schema:name "Mohammad Al Ridhawi" .
+
+g4:person_muhammed_shuaibi a foaf:Person ;
+    schema:identifier "0000-0003-0119-0160" ;
+    schema:name "Muhammed Shuaibi" .
+
+g4:person_míriam_r_garcía a foaf:Person ;
+    schema:identifier "0000-0002-5748-7361" ;
+    schema:name "Míriam R García" .
+
+g4:person_nassim_walha a foaf:Person ;
+    schema:name "Nassim Walha" .
+
+g4:person_natalie_shapira a foaf:Person ;
+    schema:identifier "0000-0002-2714-9089" ;
+    schema:name "Natalie Shapira" .
+
+g4:person_nathaniel_weir a foaf:Person ;
+    schema:identifier "0000-0002-6734-3214" ;
+    schema:name "Nathaniel Weir" .
+
+g4:person_negev_taglicht a foaf:Person ;
+    schema:name "Negev Taglicht" .
+
+g4:person_niclas_nordholt a foaf:Person ;
+    schema:affiliation g4:org_bundesanstalt_für_materialforschung_und_-prüfung ;
+    schema:identifier "0000-0001-5788-0801" ;
+    schema:name "Niclas Nordholt" .
+
+g4:person_nicola_dietler a foaf:Person ;
+    schema:identifier "0000-0002-1650-5711" ;
+    schema:name "Nicola Dietler" .
+
+g4:person_nikhil_prakash a foaf:Person ;
+    schema:identifier "0000-0001-9896-3101" ;
+    schema:name "Nikhil Prakash" .
+
+g4:person_nitay_alon a foaf:Person ;
+    schema:affiliation g4:org_hebrew_university_of_jerusalem ;
+    schema:identifier "0000-0002-2698-3573" ;
+    schema:name "Nitay Alon" .
+
+g4:person_nithin_chalapathi a foaf:Person ;
+    schema:affiliation g4:org_university_of_california_berkeley ;
+    schema:identifier "0000-0002-6160-1155" ;
+    schema:name "Nithin Chalapathi" .
+
+g4:person_odinaldo_rodrigues a foaf:Person ;
+    schema:affiliation g4:org_kings_college_london ;
+    schema:identifier "0000-0001-7823-1034" ;
+    schema:name "Odinaldo Rodrigues" .
+
+g4:person_olivia_floody a foaf:Person ;
+    schema:name "Olivia Floody" .
+
+g4:person_ori_shapira a foaf:Person ;
+    schema:identifier "0000-0002-4446-2309" ;
+    schema:name "Ori Shapira" .
+
+g4:person_p_sam_sahil a foaf:Person ;
+    schema:name "P Sam Sahil" .
+
+g4:person_peter_braunsteins a foaf:Person ;
+    schema:identifier "0000-0003-1864-0703" ;
+    schema:name "Peter Braunsteins" .
+
+g4:person_peter_mcgill a foaf:Person ;
+    schema:identifier "0000-0001-5246-8957" ;
+    schema:name "Peter Mcgill" .
+
+g4:person_philipp_dönges a foaf:Person ;
+    schema:identifier "0000-0003-4275-7311" ;
+    schema:name "Philipp Dönges" .
+
+g4:person_qizheng_zhang a foaf:Person ;
+    schema:identifier "0009-0006-4419-7564" ;
+    schema:name "Qizheng Zhang" .
+
+g4:person_rajiv_khanna a foaf:Person ;
+    schema:identifier "0000-0003-1314-3126" ;
+    schema:name "Rajiv Khanna" .
+
+g4:person_rakshit_s_trivedi a foaf:Person ;
+    schema:identifier "0009-0002-8415-6055" ;
+    schema:name "Rakshit S Trivedi" .
+
+g4:person_ram_rachum a foaf:Person ;
+    schema:affiliation g4:org_university_of_california_berkeley ;
+    schema:identifier "0009-0004-9278-7134" ;
+    schema:name "Ram Rachum" .
+
+g4:person_rasmus_hoegh a foaf:Person ;
+    schema:name "Rasmus Hoegh" .
+
+g4:person_raymond_douglas a foaf:Person ;
+    schema:identifier "0000-0003-0880-2510" ;
+    schema:name "Raymond Douglas" .
+
+g4:person_renyu_hu a foaf:Person ;
+    schema:identifier "0009-0005-7548-2475" ;
+    schema:name "Renyu Hu" .
+
+g4:person_rené_doyon a foaf:Person ;
+    schema:name "René Doyon" .
+
+g4:person_reuth_mirsky a foaf:Person ;
+    schema:affiliation g4:org_tufts_university ;
+    schema:identifier "0000-0003-1392-9444" ;
+    schema:name "Reuth Mirsky" .
+
+g4:person_ritwik_gupta a foaf:Person ;
+    schema:identifier "0000-0003-1772-5545" ;
+    schema:name "Ritwik Gupta" .
+
+g4:person_roberto_trotta a foaf:Person ;
+    schema:identifier "0000-0001-8403-7123" ;
+    schema:name "Roberto Trotta" .
+
+g4:person_rohit_gandikota a foaf:Person ;
+    schema:name "Rohit Gandikota" .
+
+g4:person_ryan_liu a foaf:Person ;
+    schema:identifier "0000-0002-8787-7686" ;
+    schema:name "Ryan Liu" .
+
+g4:person_sagar_chakraborty a foaf:Person ;
+    schema:identifier "0000-0002-1327-5279" ;
+    schema:name "Sagar Chakraborty" .
+
+g4:person_salesforce_ai_research a foaf:Person ;
+    schema:name "Salesforce Ai Research" .
+
+g4:person_sam_bayless a foaf:Person ;
+    schema:identifier "0000-0002-0909-8986" ;
+    schema:name "Sam Bayless" .
+
+g4:person_sam_blau a foaf:Person ;
+    schema:name "Sam Blau" .
+
+g4:person_sanjeev_raja a foaf:Person ;
+    schema:identifier "0000-0001-5914-2570" ;
+    schema:name "Sanjeev Raja" .
+
+g4:person_sara_seager a foaf:Person ;
+    schema:identifier "0000-0002-6892-6948" ;
+    schema:name "Sara Seager" .
+
+g4:person_sarah_zion a foaf:Person ;
+    schema:name "Sarah Zion" .
+
+g4:person_sarath_shekkizhar a foaf:Person ;
+    schema:identifier "0000-0001-6736-0092" ;
+    schema:name "Sarath Shekkizhar" .
+
+g4:person_schl a foaf:Person ;
+    schema:name "Schl" .
+
+g4:person_seba_contreras a foaf:Person ;
+    schema:affiliation g4:org_hangzhou_international_innovation_institute_h3i_of_beihang_university ;
+    schema:identifier "0000-0001-8909-774X" ;
+    schema:name "Seba Contreras" .
+
+g4:person_shangqing_xu a foaf:Person ;
+    schema:affiliation g4:org_georgia_institute_of_technology ;
+    schema:identifier "0009-0005-5619-1381" ;
+    schema:name "Shangqing Xu" .
+
+g4:person_shenghua_liu a foaf:Person ;
+    schema:identifier "0000-0001-6279-1838" ;
+    schema:name "Shenghua Liu" .
+
+g4:person_shimin_di a foaf:Person ;
+    schema:affiliation g4:org_hong_kong_university_of_science_and_technology ;
+    schema:identifier "0000-0002-7394-0082" ;
+    schema:name "Shimin Di" .
+
+g4:person_shiri_oron a foaf:Person ;
+    schema:identifier "0000-0002-9723-7906" ;
+    schema:name "Shiri Oron" .
+
+g4:person_shubhangi_upasani a foaf:Person ;
+    schema:name "Shubhangi Upasani" .
+
+g4:person_simone_baldassarri a foaf:Person ;
+    schema:affiliation g4:org_gran_sasso_science_institute ;
+    schema:identifier "0000-0001-9548-6370" ;
+    schema:name "Simone Baldassarri" .
+
+g4:person_son_thai_ly a foaf:Person ;
+    schema:identifier "0000-0003-2076-6436" ;
+    schema:name "Son Thai Ly" .
+
+g4:person_stephen_a_baccus a foaf:Person ;
+    schema:identifier "0000-0001-8692-5685" ;
+    schema:name "Stephen A Baccus" .
+
+g4:person_sumit_sinha a foaf:Person ;
+    schema:identifier "0000-0002-6648-8489" ;
+    schema:name "Sumit Sinha" .
+
+g4:person_surya_ganguli a foaf:Person ;
+    schema:identifier "0000-0002-9264-7551" ;
+    schema:name "Surya Ganguli" .
+
+g4:person_tamar_rott a foaf:Person ;
+    schema:affiliation g4:org_technion_israel_institute_of_technology ;
+    schema:identifier "0000-0002-1455-2266" ;
+    schema:name "Tamar Rott" .
+
+g4:person_tarakanath_paipuru a foaf:Person ;
+    schema:affiliation g4:org_mckinsey_company_united_states ;
+    schema:identifier "0009-0006-7103-6483" ;
+    schema:name "Tarakanath Paipuru" .
+
+g4:person_thatchawin_leelawat a foaf:Person ;
+    schema:affiliation g4:org_university_college_london ;
+    schema:identifier "0009-0007-0546-8656" ;
+    schema:name "Thatchawin Leelawat" .
+
+g4:person_theia_pearson-vogel a foaf:Person ;
+    schema:identifier "0009-0001-9506-9080" ;
+    schema:name "Theia Pearson-Vogel" .
+
+g4:person_thibaut_arnoulx_de_pirey a foaf:Person ;
+    schema:identifier "0000-0001-7317-2063" ;
+    schema:name "Thibaut Arnoulx de Pirey" .
+
+g4:person_tobias_kreiman a foaf:Person ;
+    schema:affiliation g4:org_university_of_california_berkeley ;
+    schema:identifier "0009-0002-1142-5744" ;
+    schema:name "Tobias Kreiman" .
+
+g4:person_tomer_shabtay a foaf:Person ;
+    schema:name "Tomer Shabtay" .
+
+g4:person_tomer_ullman a foaf:Person ;
+    schema:name "Tomer Ullman" .
+
+g4:person_tong_wei a foaf:Person ;
+    schema:identifier "0000-0002-4587-5383" ;
+    schema:name "Tong Wei" .
+
+g4:person_tushar_shah a foaf:Person ;
+    schema:identifier "0000-0001-5539-6151" ;
+    schema:name "Tushar Shah" .
+
+g4:person_tyll_krueger a foaf:Person ;
+    schema:affiliation g4:org_politechnika_wroclawska ;
+    schema:identifier "0000-0001-6983-7413" ;
+    schema:name "Tyll Krueger" .
+
+g4:person_u_c_berkeley a foaf:Person ;
+    schema:name "U C Berkeley" .
+
+g4:person_urmish_thakker a foaf:Person ;
+    schema:affiliation g4:org_arm ;
+    schema:identifier "0000-0002-0515-9155" ;
+    schema:name "Urmish Thakker" .
+
+g4:person_vered_shwartz a foaf:Person ;
+    schema:identifier "0000-0002-1151-4379" ;
+    schema:name "Vered Shwartz" .
+
+g4:person_victor_godet a foaf:Person ;
+    schema:identifier "0000-0002-2057-0874" ;
+    schema:name "Victor Godet" .
+
+g4:person_viktor_bezborodov a foaf:Person ;
+    schema:affiliation g4:org_irkutsk_state_university ;
+    schema:identifier "0000-0002-8363-5698" ;
+    schema:name "Viktor Bezborodov" .
+
+g4:person_viola_priesemann a foaf:Person ;
+    schema:affiliation g4:org_georg-august-universität_göttingen ;
+    schema:identifier "0000-0001-8905-5873" ;
+    schema:name "Viola Priesemann" .
+
+g4:person_wentao_guo a foaf:Person ;
+    schema:identifier "0000-0001-9894-9115" ;
+    schema:name "Wentao Guo" .
+
+g4:person_william_bains a foaf:Person ;
+    schema:identifier "0000-0001-5503-3764" ;
+    schema:name "William Bains" .
+
+g4:person_wyatt_walls a foaf:Person ;
+    schema:name "Wyatt Walls" .
+
+g4:person_xingyu_zhou a foaf:Person ;
+    schema:identifier "0000-0001-8699-2140" ;
+    schema:name "Xingyu Zhou" .
+
+g4:person_xinjie_tong a foaf:Person ;
+    schema:identifier "0000-0003-0273-6444" ;
+    schema:name "Xinjie Tong" .
+
+g4:person_xlr8harder a foaf:Person ;
+    schema:name "xlr8harder" .
+
+g4:person_xuan_li a foaf:Person ;
+    schema:identifier "0000-0001-7255-7236" ;
+    schema:name "Xuan Li" .
+
+g4:person_yan-hong_qin a foaf:Person ;
+    schema:identifier "0000-0001-5245-9065" ;
+    schema:name "Yan-Hong Qin" .
+
+g4:person_yaning_cui a foaf:Person ;
+    schema:affiliation g4:org_swinburne_university_of_technology ;
+    schema:identifier "0009-0001-9153-4571" ;
+    schema:name "Yaning Cui" .
+
+g4:person_yaochen_zhu a foaf:Person ;
+    schema:affiliation g4:org_heilongjiang_university ;
+    schema:identifier "0009-0008-7973-3333" ;
+    schema:name "Yaochen Zhu" .
+
+g4:person_yiheng_du a foaf:Person ;
+    schema:identifier "0000-0002-2974-5917" ;
+    schema:name "Yiheng Du" .
+
+g4:person_yiquan_wang a foaf:Person ;
+    schema:identifier "0000-0002-5725-4744" ;
+    schema:name "Yiquan Wang" .
+
+g4:person_yitian_wang a foaf:Person ;
+    schema:identifier "0000-0001-6319-4541" ;
+    schema:name "Yitian Wang" .
+
+g4:person_yizhou_liu a foaf:Person ;
+    schema:identifier "0000-0002-3134-8603" ;
+    schema:name "Yizhou Liu" .
+
+g4:person_yoav_rotman a foaf:Person ;
+    schema:identifier "0000-0003-4459-9054" ;
+    schema:name "Yoav Rotman" .
+
+g4:person_yonatan_belinkov a foaf:Person ;
+    schema:name "Yonatan Belinkov" .
+
+g4:person_yotam_kaplan a foaf:Person ;
+    schema:affiliation g4:org_hebrew_university_of_jerusalem ;
+    schema:identifier "0000-0002-0285-3280" ;
+    schema:name "Yotam Kaplan" .
+
+g4:person_yu_rong a foaf:Person ;
+    schema:identifier "0000-0001-5121-1180" ;
+    schema:name "Yu Rong" .
+
+g4:person_yue_jian a foaf:Person ;
+    schema:identifier "0000-0002-0165-2364" ;
+    schema:name "Yue Jian" .
+
+g4:person_yuzhe_wang a foaf:Person ;
+    schema:identifier "0000-0001-9283-435X" ;
+    schema:name "Yuzhe Wang" .
+
+g4:person_zachary_w_ulissi a foaf:Person ;
+    schema:identifier "0000-0002-9401-4918" ;
+    schema:name "Zachary W Ulissi" .
+
+g4:person_zaki_alaoui a foaf:Person ;
+    schema:affiliation g4:org_stanford_university ;
+    schema:identifier "0009-0007-7900-6729" ;
+    schema:name "Zaki Alaoui" .
+
+g4:person_zhanke_zhou a foaf:Person ;
+    schema:affiliation g4:org_zhejiang_university ;
+    schema:identifier "0009-0008-1663-9358" ;
+    schema:name "Zhanke Zhou" .
+
+g4:person_zi-hao_zhou a foaf:Person ;
+    schema:affiliation g4:org_zhejiang_university ;
+    schema:identifier "0009-0008-1196-838X" ;
+    schema:name "Zi-Hao Zhou" .
+
+g4:person_ziv_katzir a foaf:Person ;
+    schema:identifier "0000-0002-6375-7882" ;
+    schema:name "Ziv Katzir" .
+
+g4:person_zongze_li a foaf:Person ;
+    schema:identifier "0000-0002-3600-2417" ;
+    schema:name "Zongze Li" .
+
+g4:country_q148 a schema:Country ;
+    schema:identifier "Q148" ;
+    schema:name "People's Republic of China" .
+
+g4:org_arnold_and_mabel_beckman_foundation a schema:Organization ;
+    schema:description "nonprofit organization in Irvine, United States" ;
+    schema:identifier "Q30296608" ;
+    schema:location g4:country_q30 ;
+    schema:name "Arnold and Mabel Beckman Foundation" .
+
+g4:org_czech_science_foundation a schema:Organization ;
+    schema:description "Czech independent public organisation" ;
+    schema:identifier "Q12018444" ;
+    schema:location g4:country_q213 ;
+    schema:name "Czech Science Foundation" .
+
+g4:org_deutsche_forschungsgemeinschaft a schema:Organization ;
+    schema:name "Deutsche Forschungsgemeinschaft" .
+
+g4:org_european_commission a schema:Organization ;
+    schema:name "European Commission" .
+
+g4:org_european_union a schema:Organization ;
+    schema:description "political and economic union of 27 European states" ;
+    schema:identifier "Q458" ;
+    schema:location g4:country_internationality ;
+    schema:name "European Union" .
+
+g4:org_hebrew_university_of_jerusalem a schema:Organization ;
+    schema:name "Hebrew University of Jerusalem" .
+
+g4:org_heising-simons_foundation a schema:Organization ;
+    schema:description "other organization in Los Altos, United States" ;
+    schema:identifier "Q30287747" ;
+    schema:location g4:country_q30 ;
+    schema:name "Heising-Simons Foundation" .
+
+g4:org_horizon_2020 a schema:Organization ;
+    schema:description "Framework Program for research funded by the European Commission for 2014-2020" ;
+    schema:identifier "Q13583472" ;
+    schema:name "Horizon 2020" .
+
+g4:org_icam a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q238126" ;
+    schema:name "ICAM" .
+
+g4:org_institute_for_complex_adaptive_matter a schema:Organization ;
+    schema:description "organization" ;
+    schema:identifier "Q6039231" ;
+    schema:name "Institute for Complex Adaptive Matter" .
+
+g4:org_lawrence_livermore_national_laboratory a schema:Organization ;
+    schema:description "federal research institute in Livermore, California, United States" ;
+    schema:identifier "Q519826" ;
+    schema:location g4:country_q30 ;
+    schema:name "Lawrence Livermore National Laboratory" .
+
+g4:org_nasa a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q355362" ;
+    schema:name "NASA" .
+
+g4:org_philippine_genome_center a schema:Organization ;
+    schema:description "Research facility in Quezon City, Philippines" ;
+    schema:identifier "Q55629856" ;
+    schema:location g4:country_q928 ;
+    schema:name "Philippine Genome Center" .
+
+g4:org_prime_intellect a schema:Organization ;
+    schema:name "Prime Intellect" .
+
+g4:org_research_computing_at_arizona_state_university a schema:Organization ;
+    schema:name "Research Computing at Arizona State University" .
+
+g4:org_research_corporation_for_science_advancement a schema:Organization ;
+    schema:name "Research Corporation for Science Advancement" .
+
+g4:org_scialog a schema:Organization ;
+    schema:name "Scialog" .
+
+g4:org_technion_israel_institute_of_technology a schema:Organization ;
+    schema:name "Technion – Israel Institute of Technology" .
+
+g4:org_uk_research_and_innovation a schema:Organization ;
+    schema:description "research funding body for the United Kingdom" ;
+    schema:identifier "Q38609561" ;
+    schema:location g4:country_q145 ;
+    schema:name "UK Research and Innovation" .
+
+g4:org_us_department_of_energy a schema:Organization ;
+    schema:name "U.S. Department of Energy" .
+
+g4:org_zhejiang_university a schema:Organization ;
+    schema:name "Zhejiang University" .
+
+g4:paper03 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "Align When They Want, Complement When They Need! Human-Centered Ensembles for Adaptive Human-AI Collaboration" ;
+    g4:acknowledges g4:org_national_science_foundation,
+        g4:project_iis-2229876,
+        g4:project_iis-2340209 ;
+    g4:fundedByProject g4:project_iis-2229876,
+        g4:project_iis-2340209 ;
+    schema:abstract "In human-AI decision making, designing AI that complements human expertise has been a natural strategy to enhance human-AI collaboration, yet it often comes at the cost of decreased AI performance in areas of human strengths. This can inadvertently erode human trust and cause them to ignore AI advice precisely when it is most needed. Conversely, an aligned AI fosters trust yet risks reinforcing suboptimal human behavior and lowering human-AI team performance. In this paper, we start by identifying this fundamental tension between performance-boosting (i.e., complementarity) and trust-building (i.e., alignment) as an inherent limitation of the traditional approach for training a single AI model to assist human decision making. To overcome this, we introduce a novel, human-centered adaptive AI ensemble that strategically toggles between two specialist AI models-the aligned model and the complementary model-based on contextual cues, using an elegantly simple yet provably near-optimal Rational Routing Shortcut mechanism. Comprehensive theoretical analyses elucidate why the adaptive AI ensemble is effective and when it yields maximum benefits. Moreover, experiments on both simulated and real-world data show that when humans are assisted by the adaptive AI ensemble in decision making, they can achieve significantly higher performance than when they are assisted by single AI models that are trained to either optimize for their independent performance or even the human-AI team performance." ;
+    schema:author g4:person_hasan_amin,
+        g4:person_ming_yin,
+        g4:person_rajiv_khanna .
+
+g4:paper12 a g4:Paper ;
+    dc:date "2026-02-13" ;
+    dc:title "MuCO: Generative Peptide Cyclization Empowered by Multi-stage Conformation Optimization" ;
+    schema:abstract "Modeling peptide cyclization is critical for the virtual screening of candidate peptides with desirable physical and pharmaceutical properties. This task is challenging because a cyclic peptide often exhibits diverse, ring-shaped conformations, which cannot be well captured by deterministic prediction models derived from linear peptide folding. In this study, we propose MuCO (Multi-stage Conformation Optimization), a generative peptide cyclization method that models the distribution of cyclic peptide conformations conditioned on the corresponding linear peptide. In principle, MuCO decouples the peptide cyclization task into three stages: topology-aware backbone design, generative side-chain packing, and physics-aware all-atom optimization, thereby generating and optimizing conformations of cyclic peptides in a coarse-to-fine manner. This multi-stage framework enables an efficient parallel sampling strategy for conformation generation and allows for rapid exploration of diverse, low-energy conformations. Experiments on the large-scale CPSea dataset demonstrate that MuCO significantly outperforms state-of-the-art methods in consistently in physical stability, structural diversity, secondary structure recovery, and computational efficiency, making it a promising computational tool for exploring and designing cyclic peptides." ;
+    schema:author g4:person_angxiao_yue,
+        g4:person_fanmeng_wang,
+        g4:person_hongteng_xu,
+        g4:person_wentao_guo,
+        g4:person_yaning_cui,
+        g4:person_yitian_wang .
+
+g4:paper15 a g4:Paper ;
+    dc:date "2026-02-16" ;
+    dc:title "Structural barriers of the discrete Hasimoto map applied to protein backbone geometry" ;
+    g4:acknowledges g4:org_xinjiang_university,
+        g4:person_yan-hong_qin ;
+    schema:abstract "Determining the three-dimensional structure of a protein from its amino-acid sequence remains a fundamental problem in biophysics. The discrete Frenet geometry of the C α backbone can be mapped, via a Hasimoto-type transform, onto a complex scalar field ψ = κ e i ∑ τ satisfying a discrete nonlinear Schrödinger equation (DNLS), whose soliton solutions reproduce observed secondary-structure motifs. Whether this mapping, which provides an elegant geometric description of folded states, can be extended to a predictive framework for protein folding remains an open question. We derive an exact closed-form decomposition of the DNLS effective potential V eff = V re + iV im in terms of curvature ratios and torsion angles, validating the result to machine precision across 856 non-redundant proteins. Our analysis identifies three structural barriers to forward prediction: (i) V im encodes chirality via the odd symmetry of sin τ, accounting for ∼31% of the total information and implying a 2 N degeneracy if neglected; (ii) V re is determined primarily (∼95%) by local geometry, rendering it effectively sequence-agnostic; and (iii) self-consistent field iterations fail to recover native structures (mean RMSD = 13.1 Å) even with hydrogen-bond terms, yielding torsion correlations indistinguishable from zero. Constructively, we demonstrate that the residual of the DNLS dispersion relation serves as a geometric order parameter for α-helices (ROC AUC = 0.72), defining them as regions of maximal integrability. These findings establish that the Hasimoto map functions as a kinematic identity rather than a dynamical governing equation, presenting fundamental obstacles to its use as a predictive framework for protein folding." ;
+    schema:author g4:person_yiquan_wang .
+
+g4:paper16 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "Spatiotemporal noise stabilizes unbounded diversity in strongly-competitive communities" ;
+    g4:acknowledges g4:org_icam,
+        g4:org_institute_for_complex_adaptive_matter,
+        g4:org_nsf,
+        g4:person_jiliang_hu,
+        g4:person_julien_tailleur,
+        g4:person_sarah_zion,
+        g4:person_thibaut_arnoulx_de_pirey,
+        g4:person_tushar_shah,
+        g4:person_yizhou_liu,
+        g4:project_dmr-2218849 ;
+    g4:fundedByProject g4:project_dmr-2218849 ;
+    schema:abstract "Classical ecological models predict that large, diverse communities should be unstable, presenting a central challenge to explaining the stable biodiversity seen in nature. We revisit this long-standing problem by extending the generalized Lotka-Volterra model to include both spatial structure and environmental fluctuations across space and time. We find that neither space nor environmental noise alone can resolve the tension between diversity and stability, but that their combined effects permit arbitrarily many species to stably coexist despite strongly disordered competitive interactions. We analytically characterize the noise-induced transition to coexistence, showing that spatiotemporal noise drives an anomalous scaling of abundance fluctuations, known empirically as Taylor's law. At the community level, this manifests as an effective sublinear self-inhibition that renders the community stable and asymptotically neutral in the high-diversity limit. Spatiotemporal noise thus provides a novel resolution to the diversity-stability paradox and a generic mechanism by which complex communities can persist." ;
+    schema:author g4:person_amer_al-hiyasat,
+        g4:person_daniel_w_swartz,
+        g4:person_jeff_gore,
+        g4:person_mehran_kardar .
+
+g4:paper17 a g4:Paper ;
+    dc:date "2026-02-16" ;
+    dc:title "INFECTION MODELS ON DENSE DYNAMIC RANDOM GRAPHS" ;
+    g4:acknowledges g4:org_european_union,
+        g4:org_gnampa-indam,
+        g4:org_gruppo_nazionale_per_lanalisi_matematica_la_probabilità_e_le_loro_applicazioni,
+        g4:org_horizon_2020,
+        g4:org_marie_skłodowska-curie,
+        g4:org_networks,
+        g4:org_nwo_gravitation,
+        g4:project_101034253 ;
+    g4:fundedByProject g4:project_101034253 ;
+    schema:abstract "We consider Susceptible-Infected-Recovered (SIR) models on dense dynamic random graphs, in which the joint dynamics of vertices and edges are co-evolutionary, i.e., they influence each other bidirectionally. In particular, edges appear and disappear over time depending on the states of the two connected vertices, on how long they have been infected, and on the total density of susceptible and infected vertices. Our main results establish functional laws of large numbers for the densities of susceptible, infected, and recovered vertices, jointly with the underlying evolving random graphs in the graphon space. Our results are supported by simulations, which characterize the limiting size of the epidemics, i.e., the limiting density of susceptible vertices, and how the peak of the epidemics depends on the rate of the evolution of the underlying graph. The proofs of our main results rely on the careful construction of a mimicking process, obtained by approximating the two-way feedback interaction between vertex and edge dynamics with a mean-field type interaction, acting only as one-way feedback, that remains sufficiently close to the original co-evolutionary process. To treat the more general setting in which edge dynamics are affected by the proportions of susceptible and infected individuals, we introduce a methodological extension of existing techniques. We thus show that our model exhibits multiple epidemic peaks -a phenomenon observed in real-world epidemics -which can emerge in models that incorporate mutual feedback between vertex and edge dynamics." ;
+    schema:author g4:person_michel_mandjes,
+        g4:person_peter_braunsteins,
+        g4:person_simone_baldassarri .
+
+g4:person_luis_welbanks a foaf:Person ;
+    schema:affiliation g4:org_arizona_state_university ;
+    schema:identifier "0000-0003-0156-4564" ;
+    schema:name "Luis Welbanks" .
+
+g4:project_101034253 a schema:Project ;
+    g4:fundingAmount 1029840.0 ;
+    schema:endDate "2026-08-31"^^xsd:date ;
+    schema:funder g4:org_european_commission ;
+    schema:identifier "101034253" ;
+    schema:name "101034253" ;
+    schema:startDate "2021-09-01"^^xsd:date .
+
+g4:project_26-23955s a schema:Project ;
+    schema:funder g4:org_czech_science_foundation,
+        g4:org_prime_intellect ;
+    schema:identifier "26-23955S" ;
+    schema:name "26-23955S" .
+
+g4:project_390729940 a schema:Project ;
+    g4:fundingAmount 0.0 ;
+    schema:funder g4:org_deutsche_forschungsgemeinschaft ;
+    schema:identifier "390729940" ;
+    schema:name "390729940" ;
+    schema:startDate "2019-01-01"^^xsd:date .
+
+g4:project_62306178 a schema:Project ;
+    schema:identifier "62306178" ;
+    schema:name "62306178" .
+
+g4:project_62376235 a schema:Project ;
+    schema:identifier "62376235" ;
+    schema:name "62376235" .
+
+g4:project_851173 a schema:Project ;
+    g4:fundingAmount 1498210.0 ;
+    schema:endDate "2026-02-28"^^xsd:date ;
+    schema:funder g4:org_european_commission ;
+    schema:identifier "851173" ;
+    schema:name "851173" ;
+    schema:startDate "2020-03-01"^^xsd:date .
+
+g4:project_ccf-1918770 a schema:Project ;
+    schema:identifier "CCF-1918770" ;
+    schema:name "CCF-1918770" .
+
+g4:project_de-ac52-07na27344 a schema:Project ;
+    schema:funder g4:org_arizona_state_university,
+        g4:org_heising-simons_foundation,
+        g4:org_lawrence_livermore_national_laboratory,
+        g4:org_nasa,
+        g4:org_research_computing_at_arizona_state_university,
+        g4:org_us_department_of_energy ;
+    schema:identifier "DE-AC52-07NA27344" ;
+    schema:name "DE-AC52-07NA27344" .
+
+g4:project_dmr-2218849 a schema:Project ;
+    schema:funder g4:org_icam,
+        g4:org_institute_for_complex_adaptive_matter,
+        g4:org_nsf ;
+    schema:identifier "DMR-2218849" ;
+    schema:name "DMR-2218849" .
+
+g4:project_eps0233561 a schema:Project ;
+    g4:fundingAmount 6898910.0 ;
+    schema:endDate "2027-09-29"^^xsd:date ;
+    schema:funder g4:org_uk_research_and_innovation ;
+    schema:identifier "EP/S023356/1" ;
+    schema:name "EP/S023356/1" ;
+    schema:startDate "2019-03-31"^^xsd:date .
+
+g4:project_iis-1955883 a schema:Project ;
+    schema:identifier "IIS-1955883" ;
+    schema:name "IIS-1955883" .
+
+g4:project_iis-2028586 a schema:Project ;
+    schema:identifier "IIS-2028586" ;
+    schema:name "IIS-2028586" .
+
+g4:project_iis-2106961 a schema:Project ;
+    schema:identifier "IIS-2106961" ;
+    schema:name "IIS-2106961" .
+
+g4:project_iis-2229876 a schema:Project ;
+    schema:funder g4:org_national_science_foundation ;
+    schema:identifier "IIS-2229876" ;
+    schema:name "IIS-2229876" .
+
+g4:project_iis-2340209 a schema:Project ;
+    schema:funder g4:org_national_science_foundation ;
+    schema:identifier "IIS-2340209" ;
+    schema:name "IIS-2340209" .
+
+g4:project_iis-2403240 a schema:Project ;
+    schema:identifier "IIS-2403240" ;
+    schema:name "IIS-2403240" .
+
+g4:project_sa-aut-2024-015b a schema:Project ;
+    schema:funder g4:org_arnold_and_mabel_beckman_foundation,
+        g4:org_research_corporation_for_science_advancement,
+        g4:org_scialog ;
+    schema:identifier "SA-AUT-2024-015b" ;
+    schema:name "SA-AUT-2024-015b" .
+
+g4:country_q183 a schema:Country ;
+    schema:identifier "Q183" ;
+    schema:name "Germany" .
+
+g4:org_arizona_state_university a schema:Organization ;
+    schema:description "public university in Tempe, Arizona, US" ;
+    schema:identifier "Q670897" ;
+    schema:location g4:country_q30 ;
+    schema:name "Arizona State University" .
+
+g4:org_massachusetts_institute_of_technology a schema:Organization ;
+    schema:name "Massachusetts Institute of Technology" .
+
+g4:org_national_science_foundation a schema:Organization ;
+    schema:description "United States government agency" ;
+    schema:identifier "Q304878" ;
+    schema:location g4:country_q30 ;
+    schema:name "National Science Foundation" .
+
+g4:org_nsf a schema:Organization ;
+    schema:description "Wikimedia disambiguation page" ;
+    schema:identifier "Q356798" ;
+    schema:name "NSF" .
+
+g4:org_university_of_california_berkeley a schema:Organization ;
+    schema:name "University of California Berkeley",
+        "University of California, Berkeley" .
+
+g4:paper19 a g4:Paper ;
+    dc:date "2026-02-17" ;
+    dc:title "Quasilocalization under coupled mutation-selection dynamics" ;
+    g4:acknowledges g4:org_department_of_health_-epidemiology_bureau,
+        g4:org_philippine_genome_center,
+        g4:person_f_tablizo ;
+    schema:abstract "When mutations are rampant, quasispecies theory or Eigen's model predicts that the fittest type in a population may not dominate. Beyond a critical mutation rate, the population may even be delocalized completely from the peak of the fitness landscape and the fittest is ironically lost. Extensive efforts have been made to understand this exceptional scenario. But in general, there is no simple prescription that predicts the eventual degree of localization for arbitrary fitness landscapes and mutation rates. Here, we derive a simple and general relation linking the quasispecies' Hill numbers, which are diversity metrics in ecology, and the ratio of an effective fitness variance to the mean mutation rate squared. This ratio, which we call the localization factor, emerges from mean approximations of decomposed surprisal or stochastic entropy change rates. On the side of application, the relation we obtained here defines a combination of Hill numbers that may complement other complexity or diversity measures for real viral quasispecies. Its advantage being that there is an underlying biological interpretation under Eigen's model." ;
+    schema:author g4:person_c_j_palpal-latoc,
+        g4:person_ian_vega .
+
+g4:paper28 a g4:Paper ;
+    dc:date "2026-03-09" ;
+    dc:title "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention" ;
+    g4:acknowledges g4:org_arnold_and_mabel_beckman_foundation,
+        g4:org_research_corporation_for_science_advancement,
+        g4:org_scialog,
+        g4:person_boyu_qie,
+        g4:person_c_lawrence_zitnick,
+        g4:person_daniel_s_levine,
+        g4:person_ishan_amin,
+        g4:person_kai_nelson,
+        g4:person_luis_barroso-luque,
+        g4:person_meng_gao,
+        g4:person_michael_psenka,
+        g4:person_misko_dzamba,
+        g4:person_muhammed_shuaibi,
+        g4:person_nithin_chalapathi,
+        g4:person_rasmus_hoegh,
+        g4:person_ritwik_gupta,
+        g4:person_ryan_liu,
+        g4:person_sam_blau,
+        g4:person_sanjeev_raja,
+        g4:person_tobias_kreiman,
+        g4:person_yiheng_du,
+        g4:person_yue_jian,
+        g4:project_sa-aut-2024-015b ;
+    g4:fundedByProject g4:project_sa-aut-2024-015b ;
+    schema:abstract "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions." ;
+    schema:author g4:person_aditi_s_krishnapriyan,
+        g4:person_brandon_m_wood,
+        g4:person_eric_qu,
+        g4:person_fair_at_meta,
+        g4:person_lbnl,
+        g4:person_u_c_berkeley,
+        g4:person_zachary_w_ulissi .
+
+g4:paper24 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "From Entropy to Calibrated Uncertainty: Training Language Models to Reason About Uncertainty" ;
+    schema:abstract "Large Language Models (LLMs) that can express interpretable and calibrated uncertainty are crucial in high-stakes domains. While methods to compute uncertainty posthoc exist, they are often sampling-based and therefore computationally expensive or lack calibration. We propose a three-stage pipeline to post-train LLMs to efficiently infer calibrated uncertainty estimates for their responses. First, we compute finegrained entropy-based uncertainty scores on the training data, capturing the distributional variability of model outputs in embedding space. Second, these scores are calibrated via Platt scaling, producing reliable and human-interpretable uncertainty signals. Finally, the target LLM is post-trained via reinforcement learning to align its policy with these calibrated signals through a verifiable reward function. Unlike post-hoc uncertainty estimation methods, our approach provides interpretable and computationally efficient uncertainty estimates at test time. Experiments show that models trained with our pipeline achieve better calibration than baselines and generalize to unseen tasks without further processing, suggesting that they learn a robust uncertainty reasoning behavior." ;
+    schema:author g4:person_azza_jenane,
+        g4:person_florian_buettner,
+        g4:person_lukas_kuhn,
+        g4:person_nassim_walha .
+
+g4:paper32 a g4:Paper ;
+    dc:date "2024-10-07" ;
+    dc:title "JWST/NIRISS reveals the water-rich \"steam world\" atmosphere of GJ 9827 d" ;
+    schema:abstract "With sizable volatile envelopes but smaller radii than the solar system ice giants, sub-Neptunes have been revealed as one of the most common types of planet in the galaxy. While the spectroscopic characterization of larger sub-Neptunes (2.5-4R ⊕ ) has revealed hydrogen-dominated atmospheres, smaller sub-Neptunes (1.6-2.5R ⊕ ) could either host thin, rapidly evaporating hydrogen-rich atmospheres or be stable metal-rich \"water worlds\" with high mean molecular weight atmospheres and a fundamentally different formation and evolutionary history. Here, we present the 0.6-2.8µm JWST NIRISS/SOSS transmission spectrum of GJ 9827 d, the smallest (1.98 R ⊕ ) warm (T eq,AB=0.3 ∼ 620 K) sub-Neptune where atmospheric absorbers have been detected to date. Our two transit observations with NIRISS/SOSS, combined with the existing HST /WFC3 spectrum, enable us to break the cloudsmetallicity degeneracy. We detect water in a highly metal-enriched \"steam world\" atmosphere (O/H of ∼ 4 by mass and H 2 O found to be the background gas with a volume mixing ratio (VMR) of > 31%). We further show that these results are robust to stellar contamination through the transit light source effect. We do not detect escaping metastable He, which, combined with previous nondetections of escaping He and H, supports the steam atmosphere scenario. In water-rich atmospheres, hydrogen loss driven by water photolysis happens predominantly in the ionized form which eludes observational constraints. We also detect several flares in the NIRISS/SOSS light-curves with far-UV energies of the order of 10 30 erg, highlighting the active nature of the star. Further atmospheric characterization of GJ 9827 d probing carbon or sulfur species could reveal the origin of its high metal enrichment." ;
+    schema:author g4:person_anna_gagnebin,
+        g4:person_cloutier,
+        g4:person_cyril_gapp,
+        g4:person_e-,
+        g4:person_gh,
+        g4:person_k-,
+        g4:person_lorena_acu,
+        g4:person_ma_ton,
+        g4:person_rené_doyon,
+        g4:person_schl .
+
+g4:paper34 a g4:Paper ;
+    dc:date "2025" ;
+    dc:title "NEAR-INSTANTANEOUS ATMOSPHERIC RETRIEVALS AND MODEL COMPARISON WITH FASTER" ;
+    schema:abstract "In the era of the James Webb Space Telescope (JWST), the dramatic improvement in the spectra of exoplanetary atmospheres demands a corresponding leap forward in our ability to analyze them: atmospheric retrievals need to be performed on thousands of spectra, applying to each large ensembles of models (that explore atmospheric chemistry, thermal profiles and cloud models) to identify the best one(s). In this limit, traditional Bayesian inference methods such as nested sampling become prohibitively expensive. We introduce FASTER (Fast Amortized Simulation-based Transiting Exoplanet Retrieval), a neural-network based method for performing atmospheric retrieval and Bayesian model comparison at a fraction of the computational cost of classical techniques. We demonstrate that the marginal posterior distributions of all parameters within a model as well as the posterior probabilities of the models we consider match those computed using nested sampling both on mock spectra, and for the real NIRSpec PRISM spectrum of WASP-39b. The true power of the FASTER framework comes from its amortized nature, which allows the trained networks to perform practically instantaneous Bayesian inference and model comparison over ensembles of spectra -real or simulated -at minimal additional computational cost. This offers valuable insight into the expected results of model comparison (e.g., distinguishing cloudy from cloud-free and isothermal from non-isothermal models), as well as their dependence on the underlying parameters, which is computationally unfeasible with nested sampling. This approach will constitute as large a leap in spectral analysis as the original retrieval methods based on Markov Chain Monte Carlo have proven to be." ;
+    schema:author g4:person_anna_lueber,
+        g4:person_chloe_fisher,
+        g4:person_kevin_heng,
+        g4:person_konstantin_karchev,
+        g4:person_matthias_heim,
+        g4:person_roberto_trotta .
+
+g4:topic_3 a g4:Topic ;
+    g4:keywordVector "[{\"word\": \"peptide\", \"score\": 0.05020854615524182}, {\"word\": \"protein\", \"score\": 0.04495096266698653}, {\"word\": \"instabilities\", \"score\": 0.03394209271843302}, {\"word\": \"peptide cyclization\", \"score\": 0.02812741050991165}, {\"word\": \"cyclization\", \"score\": 0.02812741050991165}, {\"word\": \"interface\", \"score\": 0.02812741050991165}, {\"word\": \"muco\", \"score\": 0.02812741050991165}, {\"word\": \"passive\", \"score\": 0.02812741050991165}, {\"word\": \"conformations\", \"score\": 0.02812741050991165}, {\"word\": \"field\", \"score\": 0.027153674174746418}]" ;
+    schema:keywords "peptide, protein, instabilities, peptide cyclization, cyclization, interface, muco, passive, conformations, field" ;
+    schema:name "3_peptide_protein_instabilities_peptide cyclization" .
+
+g4:paper10 a g4:Paper ;
+    dc:title "Watson & Holmes: A Naturalistic Benchmark for Comparing Human and LLM Reasoning" ;
+    schema:abstract "Existing benchmarks for AI reasoning provide limited insight into how closely these capabilities resemble human reasoning in naturalistic contexts. We present an adaptation of the Watson & Holmes detective tabletop game as a new benchmark designed to evaluate reasoning performance using incrementally presented narrative evidence, open-ended questions and unconstrained language responses. An automated grading system was developed and validated against human assessors to enable scalable and replicable performance evaluation. Results show a clear improvement in AI model performance over time. Over nine months of 2025, model performance rose from the lower quartile of the human comparison group to approximately the top 5%. Around half of this improvement reflects steady advancement across successive model releases, while the remainder corresponds to a marked step change associated with reasoningoriented model architectures. Systematic differences in the performance of AI models compared to humans, dependent on features of the specific detection puzzle, were mostly absent with the exception of a fall in performance for models when solving longer cases (case lengths being in the range of 1900-4000 words), and an advantage at inductive reasoning for reasoning models at early stages of case solving when evidence was scant. Background This section outlines key perspectives and developments in reasoning and its evaluation. It reviews major theoretical accounts of human and machine reasoning, surveys existing reasoning benchmarks used to assess AI models' reasoning capabilities across domains, examines approaches to autograding open-ended reasoning performance, and concludes with a discussion of current benchmark limitations and gaps. Background on Reasoning Human reasoning has been a central focus of inquiry across philosophy, psychology, mathematics, and artificial intelligence. In these disciplines and in specific domains, researchers have proposed diverse theories to understand how people draw conclusions, solve problems, and make decisions. Philosophical perspectives Philosophical approaches to reasoning typically present idealized accounts of how reasoning should operate to draw conclusions. A standard account is the classification of reasoning modes into deduction, induction and abduction. Deduction and induction were already recognized and distinguished in ancient Greek philosophy, particularly in Aristotle's logic [6] . Much later in the 19th century Charles Sanders Peirce [7] added abduction to this framework. The modes can defined as follows: -Deduction: Reasoning following established canonical logical patterns. -Induction: Inferences based on generalization from previous, ideally repeated, observations. -Abduction: The best possible explanation for the given facts. Psychological perspective From a psychological standpoint, reasoning is concerned with how people actually think and make decisions. In contrast to philosophical accounts of idealized reasoning, psychological theories emphasize that human reasoning is shaped by cognitive processes, heuristics, mental models, and social dynamics rather than being purely logical." ;
+    schema:author g4:person_lewis_d_griffin,
+        g4:person_thatchawin_leelawat .
+
+g4:paper31 a g4:Paper ;
+    dc:title "Transiting Exoplanet Atmospheres in the Era of JWST" ;
+    schema:abstract "The *ield of exoplanet atmospheric characterization has recently made considerable advances with the advent of high-resolution spectroscopy from large ground-based telescopes and the commissioning of the James Webb Space Telescope (JWST). We have entered an era in which atmospheric compositions, aerosol properties, thermal structures, mass loss, and three-dimensional effects can be reliably constrained. While the challenges of remote sensing techniques imply that individual exoplanet atmospheres will likely never be characterized to the degree of detail that is possible for solar system bodies, exoplanets present an exciting opportunity to characterize a diverse array of worlds with properties that are not represented in our solar system. This review article summarizes the current state of exoplanet atmospheric studies for transiting planets. We focus on how observational results inform our understanding of exoplanet properties and ultimately address broad questions about planetary formation, evolution, and diversity. This review is meant to provide an overview of the exoplanet atmospheres *ield for planetary-and geo-scientists without astronomy backgrounds, and exoplanet specialists, alike. We give special attention to the *irst year of JWST data and recent results in high-resolution spectroscopy that have not been summarized by previous review articles." ;
+    schema:author g4:person_heather_a_knutson,
+        g4:person_m-r_kempton .
+
+g4:paper33 a g4:Paper ;
+    dc:date "2025-08-13" ;
+    dc:title "Enabling Robust Exoplanet Atmospheric Retrievals with Gaussian Processes" ;
+    g4:acknowledges g4:org_arizona_state_university,
+        g4:org_heising-simons_foundation,
+        g4:org_lawrence_livermore_national_laboratory,
+        g4:org_nasa,
+        g4:org_research_computing_at_arizona_state_university,
+        g4:org_us_department_of_energy,
+        g4:person_aish-warya_iyer,
+        g4:project_de-ac52-07na27344 ;
+    g4:fundedByProject g4:project_de-ac52-07na27344 ;
+    schema:abstract "Atmospheric retrievals are essential tools for interpreting exoplanet transmission and eclipse spectra, enabling quantitative constraints on the chemical composition, aerosol properties, and thermal structure of planetary atmospheres. The James Webb Space Telescope (JWST) offers unprecedented spectral precision, resolution, and wavelength coverage, unlocking transformative insights into the formation, evolution, climate, and potential habitability of planetary systems. However, this opportunity is accompanied by challenges: modeling assumptions and unaccounted-for noise or signal sources can bias retrieval outcomes and their interpretation. To address these limitations, we introduce a Gaussian Process (GP)-aided atmospheric retrieval framework that flexibly accounts for unmodeled features and correlated noise in exoplanet spectra. We validate this method on synthetic JWST observations and show that GP-aided retrievals reduce bias in inferred abundances and better capture model-data mismatches than traditional approaches. We also introduce the concept of mean squared error to quantify the trade-off between bias and variance, arguing that this metric more accurately reflects retrieval performance than bias alone. We then reanalyze the NIRISS/SOSS JWST transmission spectrum of WASP-96 b, finding that GP-aided retrievals yield broader constraints on CO 2 and H 2 O, possibly alleviating tension between previous retrieval results and equilibrium predictions. Our GP framework provides precise and accurate constraints while highlighting regions where models fail to explain the data. As JWST matures and future facilities come online, a deeper understanding of the limitations of both data and models will be essential, and GP-enabled retrievals like the one presented here offer a principled path forward." ;
+    schema:author g4:person_luis_welbanks,
+        g4:person_michael_r_line,
+        g4:person_michael_radica,
+        g4:person_peter_mcgill,
+        g4:person_yoav_rotman .
+
+g4:paper35 a g4:Paper ;
+    dc:title "Main Manuscript for Prospects for Detecting Signs of Life on Exoplanets in the JWST Era" ;
+    g4:acknowledges g4:person_julien_de_wit,
+        g4:person_renyu_hu ;
+    schema:abstract "The search for signs of life in the Universe has entered a new phase with the advent of the James Webb Space Telescope (JWST). Detecting biosignature gases via exoplanet atmosphere transmission spectroscopy is in principle within JWST's reach. We reflect on JWST's early results in the context of the potential search for biological activity on exoplanets. The results confront us with a complex reality. Established inverse methods to interpret observed spectra-already known to be highly averaged representations of intricate 3D atmospheric processes-can lead to disparate interpretations even with JWST's quality of data. Characterizing rocky or sub-Neptune-size exoplanets with JWST is an intricate task, and moves us away from the notion of finding a definitive \"silver bullet\" biosignature gas. Indeed, JWST results necessitate us to allow 'parallel interpretations' that will perhaps not be resolved until the next generation of observatories. Nonetheless, with a handful of habitable-zone planet atmospheres accessible given the anticipated noise floor, JWST may continue to contribute to this journey by designating a planet as biosignature gas candidate. To do this we will need to sufficiently refine our inverse methods and physical models for confidently quantifying specific gas abundances and constraining the atmosphere context. Looking ahead, future telescopes and innovative observational strategies will be essential for the reliable detection of biosignature gases." ;
+    schema:author g4:person_janusz_j_petkowski,
+        g4:person_lucas_ellerbroek,
+        g4:person_luis_welbanks,
+        g4:person_sara_seager,
+        g4:person_william_bains .
+
+g4:topic_2 a g4:Topic ;
+    g4:keywordVector "[{\"word\": \"jwst\", \"score\": 0.058522447299370284}, {\"word\": \"atmospheric\", \"score\": 0.04580153969569277}, {\"word\": \"exoplanet\", \"score\": 0.04313454668399484}, {\"word\": \"atmospheres\", \"score\": 0.04313454668399484}, {\"word\": \"retrievals\", \"score\": 0.02594960936296068}, {\"word\": \"spectra\", \"score\": 0.02594960936296068}, {\"word\": \"planetary\", \"score\": 0.02594960936296068}, {\"word\": \"results\", \"score\": 0.025198391864549013}, {\"word\": \"retrieval\", \"score\": 0.024379698032176714}, {\"word\": \"exoplanets\", \"score\": 0.022824539864841023}]" ;
+    schema:keywords "jwst, atmospheric, exoplanet, atmospheres, retrievals, spectra, planetary, results, retrieval, exoplanets" ;
+    schema:name "2_jwst_atmospheric_exoplanet_atmospheres" .
+
+g4:paper04 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "CausalFlip: A Benchmark for LLM Causal Judgment Beyond Semantic Matching" ;
+    schema:abstract "As large language models (LLMs) witness increasing deployment in complex, high-stakes decision-making scenarios, it becomes imperative to ground their reasoning in causality rather than spurious correlations. However, strong performance on traditional reasoning benchmarks does not guarantee true causal reasoning ability of LLMs, as high accuracy may still arise from memorizing semantic patterns instead of analyzing the underlying true causal structures. To bridge this critical gap, we propose a new causal reasoning benchmark, CausalFlip, designed to encourage the development of new LLM paradigm or training algorithms that ground LLM reasoning in causality rather than semantic correlation. CausalFlip consists of causal judgment questions built over event triples that could form different confounder, chain, and collider relations. Based on this, for each event triple, we construct pairs of semantically similar questions that reuse the same events but yield opposite causal answers, where models that rely heavily on semantic matching are systematically driven toward incorrect predictions. To further probe models' reliance on semantic patterns, we introduce a noisy-prefix evaluation that prepends causally irrelevant text before intermediate causal reasoning steps without altering the underlying causal relations or the logic of the reasoning process. We evaluate LLMs under multiple training paradigms, including answer-only training, explicit Chain-of-Thought (CoT) supervision, and a proposed internalized causal reasoning approach that aims to mitigate explicit reliance on correlation in the reasoning process. Our results show that explicit CoT can still be misled by spurious semantic correlations, where internalizing reasoning steps yields substantially improved causal grounding, suggesting that it is promising to better elicit the latent causal reasoning capabilities of base LLMs. The code and benchmark is available at https://github.com/Yuzhe-W/CausalFlip. CCS Concepts • Computing methodologies → Natural language processing; Causal reasoning and diagnostics." ;
+    schema:author g4:person_jundong_li,
+        g4:person_yaochen_zhu,
+        g4:person_yuzhe_wang .
+
+g4:paper29 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "TEST-TIME ADAPTATION VIA MANY-SHOT PROMPT-ING: BENEFITS, LIMITS, AND PITFALLS" ;
+    schema:abstract "Test-time adaptation enables large language models (LLMs) to modify their behavior at inference without updating model parameters. A common approach is many-shot prompting, where large numbers of in-context learning (ICL) examples are injected as an input-space test-time update. Although performance can improve as more demonstrations are added, the reliability and limits of this update mechanism remain poorly understood, particularly for open-source models. We present an empirical study of many-shot prompting across tasks and model backbones, analyzing how performance varies with update magnitude, example ordering, and selection policy. We further study Dynamic and Reinforced ICL as alternative test-time update strategies that control which information is injected and how it constrains model behavior. We find that many-shot prompting is effective for structured tasks where demonstrations provide high information gain, but is highly sensitive to selection strategy and often shows limited benefits for openended generation tasks. Overall, we characterize the practical limits of promptbased test-time adaptation and outline when input-space updates are beneficial versus harmful." ;
+    schema:author g4:person_bo_li,
+        g4:person_changran_hu,
+        g4:person_chen_wu,
+        g4:person_jay_rainton,
+        g4:person_qizheng_zhang,
+        g4:person_shubhangi_upasani,
+        g4:person_urmish_thakker .
+
+g4:topic_1 a g4:Topic ;
+    g4:keywordVector "[{\"word\": \"dynamics\", \"score\": 0.03857528107624515}, {\"word\": \"antimicrobial\", \"score\": 0.03744158087371333}, {\"word\": \"household\", \"score\": 0.03352088903039338}, {\"word\": \"selection\", \"score\": 0.02958249405773148}, {\"word\": \"susceptible\", \"score\": 0.029484022563792192}, {\"word\": \"size\", \"score\": 0.028081185655285}, {\"word\": \"diversity\", \"score\": 0.02750718900808361}, {\"word\": \"infected\", \"score\": 0.025311340535750786}, {\"word\": \"bacterial\", \"score\": 0.025311340535750786}, {\"word\": \"households\", \"score\": 0.025311340535750786}]" ;
+    schema:keywords "dynamics, antimicrobial, household, selection, susceptible, size, diversity, infected, bacterial, households" ;
+    schema:name "1_dynamics_antimicrobial_household_selection" .
+
+g4:org_northeastern_university a schema:Organization ;
+    schema:name "Northeastern University" .
+
+g4:paper02 a g4:Paper ;
+    dc:date "2026-02-23" ;
+    dc:title "RESYN: AUTONOMOUSLY SCALING SYNTHETIC ENVIRONMENTS FOR REASONING MODELS" ;
+    schema:abstract "Reinforcement learning with verifiable rewards (RLVR) has emerged as a promising approach for training reasoning language models (RLMs) by leveraging supervision from verifiers. Although verifier implementation is easier than solution annotation for many tasks, existing synthetic data generation methods remain largely solution-centric, while verifier-based methods rely on a few hand-crafted procedural environments. In this work, we scale RLVR by introducing RESYN, a pipeline that generates diverse reasoning environments equipped with instance generators and verifiers, covering tasks such as constraint satisfaction, algorithmic puzzles, and spatial reasoning. A Qwen2.5-7B-Instruct model trained with RL on RESYN data achieves consistent gains across reasoning benchmarks and out-of-domain math benchmarks, including a 27% relative improvement on the challenging BBEH benchmark. Ablations show that verifier-based supervision and increased task diversity both contribute significantly, providing empirical evidence that generating reasoning environments at scale can enhance reasoning abilities in RLMs." ;
+    schema:author g4:person_allen_nie,
+        g4:person_andre_he,
+        g4:person_darion_cassel,
+        g4:person_huzefa_rangwala,
+        g4:person_kaj_bostrom,
+        g4:person_nathaniel_weir,
+        g4:person_sam_bayless .
+
+g4:paper21 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "REFERENCE-GUIDED POLICY OPTIMIZATION FOR MOLECULAR OPTIMIZATION VIA LLM REASONING" ;
+    g4:acknowledges g4:org_guangdong_basic_and_applied_basic_research_foundation,
+        g4:org_hkbu_csd_departmental_incentive_scheme,
+        g4:org_national_natural_science_foundation_of_china,
+        g4:org_nsfc,
+        g4:org_stcsm,
+        g4:project_62306178,
+        g4:project_62376235 ;
+    g4:fundedByProject g4:project_62306178,
+        g4:project_62376235 ;
+    schema:abstract "Large language models (LLMs) benefit substantially from supervised fine-tuning (SFT) and reinforcement learning with verifiable rewards (RLVR) in reasoning tasks. However, these recipes perform poorly in instruction-based molecular optimization, where each data point typically provides only a single optimized reference molecule and no step-by-step optimization trajectory. We reveal that answer-only SFT on the reference molecules collapses reasoning, and RLVR provides sparse feedback under similarity constraints due to the model's lack of effective exploration, which slows learning and limits optimization. To encourage the exploration of new molecules while balancing the exploitation of the reference molecules, we introduce Reference-guided Policy Optimization (RePO), an optimization approach that learns from reference molecules without requiring trajectory data. At each update, RePO samples candidate molecules with their intermediate reasoning trajectories from the model and trains the model using verifiable rewards that measure property satisfaction under similarity constraints in an RL manner. Meanwhile, it applies reference guidance by keeping the policy's intermediate reasoning trajectory as context and training only the answer in a supervised manner. Together, the RL term promotes exploration, while the guidance term mitigates reward sparsity and stabilizes training by grounding outputs to references when many valid molecular edits exist. Across molecular optimization benchmarks, RePO consistently outperforms SFT and RLVR baselines (e.g., GRPO), achieving improvements on the optimization metric (Success Rate × Similarity), improving balance across competing objectives, and generalizing better to unseen instruction styles. Our code is publicly available at https://github.com/tmlr-group/RePO." ;
+    schema:author g4:person_bo_han,
+        g4:person_jiangchao_yao,
+        g4:person_lu_zhang,
+        g4:person_xuan_li,
+        g4:person_yu_rong,
+        g4:person_zhanke_zhou,
+        g4:person_zongze_li .
+
+g4:paper25 a g4:Paper ;
+    dc:date "2026-03-06" ;
+    dc:title "COLD-STEER: STEERING LARGE LANGUAGE MODELS VIA IN-CONTEXT ONE-STEP LEARNING DYNAMICS" ;
+    schema:abstract "Activation steering methods enable inference-time control of large language model (LLM) behavior without retraining, but current approaches face a fundamental trade-off: sample-efficient methods suboptimally capture steering signals from labeled examples, while methods that better extract these signals require hundreds to thousands of examples. We introduce COLD-Steer 1 , a training-free framework that steers LLM activations by approximating the representational changes that would result from gradient descent on in-context examples. Our key insight is that the effect of fine-tuning on a small set of examples can be efficiently approximated at inference time without actual parameter updates. We formalize this through two complementary approaches: (i) a unit kernel approximation method that updates the activations directly using gradients with respect to them, normalized across examples, and (ii) a finite-difference approximation requiring only two forward passes regardless of example count. Experiments across a variety of steering tasks and benchmarks demonstrate that COLD-Steer achieves upto 95% steering effectiveness while using 50 times fewer samples compared to the best baseline. COLD-Steer facilitates accommodating diverse perspectives without extensive demonstration data, which we validate through our experiments on pluralistic alignment tasks. Our framework opens new possibilities for adaptive, context-aware model control that can flexibly address varying loss-driven human preferences through principled approximation of learning dynamics rather than specialized training procedures." ;
+    schema:author g4:person_kartik_sharma,
+        g4:person_rakshit_s_trivedi .
+
+g4:Topic a owl:Class ;
+    rdfs:label "Topic" .
+
+g4:country_q30 a schema:Country ;
+    schema:identifier "Q30" ;
+    schema:name "United States" .
+
+schema:Country a owl:Class ;
+    rdfs:label "Country" .
+
+g4:topic_0 a g4:Topic ;
+    g4:keywordVector "[{\"word\": \"reasoning\", \"score\": 0.031084974739572096}, {\"word\": \"model\", \"score\": 0.02363701060368068}, {\"word\": \"models\", \"score\": 0.022723311999704367}, {\"word\": \"ai\", \"score\": 0.01794071382276665}, {\"word\": \"human\", \"score\": 0.017349060886115358}, {\"word\": \"performance\", \"score\": 0.016594753891066863}, {\"word\": \"learning\", \"score\": 0.01553161814693555}, {\"word\": \"based\", \"score\": 0.014820635597877795}, {\"word\": \"llm\", \"score\": 0.012995098072186448}, {\"word\": \"causal\", \"score\": 0.012995098072186448}]" ;
+    schema:keywords "reasoning, model, models, ai, human, performance, learning, based, llm, causal" ;
+    schema:name "0_reasoning_model_models_ai" .
+
+schema:Project a owl:Class ;
+    rdfs:label "Project" .
+
+g4:PaperSimilarity a owl:Class ;
+    rdfs:label "Paper Similarity" .
+
+g4:PaperTopicSimilarity a owl:Class ;
+    rdfs:label "Paper Topic Similarity" .
+
+g4:Paper a owl:Class ;
+    rdfs:label "Paper" .
+
+schema:Organization a owl:Class ;
+    rdfs:label "Organization" .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person" .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( g4:Topic foaf:Person schema:Organization schema:Country g4:Paper schema:Project ) .
+
