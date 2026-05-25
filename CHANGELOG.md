@@ -51,24 +51,23 @@
 
 
 
-## Próximas integraciones
-- Generación de TopicModeling mediante Transformers (BERTopic) Estos resultados se utilizarán para nutrir el KG con:
+## TOPIC MODELING  + PAPER SIMILARITIES
+- Generación de TopicModeling mediante `BERTopic` y embeddings para nutrir el KG con topics, pertenencia paper-topic y similaridades entre papers.
 
-    - instancias de `Topic`
-    - keyword strings representativos
-    - relación entre papers y topics
-    - puntuación de pertenencia paper-topic
+## Generación de KG local
+- Enriquecimiento de los jsons con fuentes externas:
+    - **OpenAIRE**: proyectos de investigación, fechas y financiación.
+    - **ORCID**: identificadores y afiliaciones públicas de autores.
+    - **Wikidata**: información de organizaciones, países e identificadores externos.
+
+- Creación del KG local en formato `.ttl` a partir de los datos extraídos del XML, entidades reconocidas mediante IA, topics y relaciones de similaridad.
 
 
+## Workflow n8n
+Integración del workflow con `n8n`, `python_runner`, `Fuseki` y `research_api` para automatizar la generación del KG a partir de los papers seleccionados.
 
-- Creación del KG a partir de:
-    - datos estructurados extraídos directamente del XML
-    - entidades extraídas mediante IA
-    - topics generados mediante topic modeling
+## Creación app RESEARCH
+Realizado backend y frontend de una aplicación usando `FASTAPI` y `Streamlit` que realiza consultas SPARQL al KG desplegado con ``fuseki`` visualizando los resultados de manera estructurada con el objetivo marcado en `/assigment_2/step_1`
 
-- Nutrir el KG con información procedente de fuentes externas:
 
-    - **OpenAIRE**: proyectos de investigación, identificadores, acrónimos, convocatorias, financiadores, fechas y financiación cuando esté disponible.
-    - **ORCID**: identificadores y metadatos públicos de autores.
-    - **Wikidata**: información sobre organizaciones, países, identificadores externos y enlaces semánticos.
 

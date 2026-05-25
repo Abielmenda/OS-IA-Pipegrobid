@@ -105,6 +105,23 @@ services:
     networks:
       - net
     restart: unless-stopped
+
+  research_frontend:
+    build:
+      context: ./research_frontend
+      dockerfile: Dockerfile
+    container_name: research_frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - RESEARCH_API_URL=http://research_api:8000
+    depends_on:
+      - research_api
+    volumes:
+      - ./research_frontend:/app
+    networks:
+      - net
+    restart: unless-stopped
     
 networks:
   net:

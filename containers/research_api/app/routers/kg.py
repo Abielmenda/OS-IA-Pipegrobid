@@ -1,63 +1,16 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
-from core.kg import execute_sparql_query
-from schemas.fuseki import FusekiQueryRequest, FusekiQueryResponse
-import requests
+from routers import funding, overview, papers, projects, query, similarities, topics
 
 
 router = APIRouter()
 
-
-
-
-
-@router.get("/info")
-def kg_info():
-    """
-    Devuelve información básica sobre el Knowledge Graph.
-    """
-
-    return {
-        "name": "Research Funding Knowledge Graph",
-        "description": "KG sobre papers, autores, organizaciones, proyectos, topics y similitudes.",
-        "backend": "FastAPI",
-        "kg_store": "Apache Jena Fuseki",
-        "status": "ready"
-    }
-
-
-@router.post("/query", response_model=FusekiQueryResponse)
-def send_query_to_fuseki(query_request: FusekiQueryRequest):
-    """
-    Recibe una consulta SPARQL y la envía a Fuseki.
-    """
-
-    try:
-        return execute_sparql_query(
-            query=query_request.query,
-            query_type=query_request.query_type
-        )
-
-    except requests.exceptions.HTTPError as error:
-        raise HTTPException(
-            status_code=502,
-            detail=f"Fuseki returned an HTTP error: {str(error)}"
-        )
-
-    except requests.exceptions.ConnectionError:
-        raise HTTPException(
-            status_code=503,
-            detail="Could not connect to Fuseki. Check that Fuseki is running."
-        )
-
-    except requests.exceptions.Timeout:
-        raise HTTPException(
-            status_code=504,
-            detail="Fuseki query timeout."
-        )
-
-    except Exception as error:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Unexpected error while querying Fuseki: {str(error)}"
-        )
+# Este archivo solo agrega routers tematicos. `main.py` mantiene el prefijo /kg,
+# por eso las URLs publicas no cambian aunque el codigo este separado.
+router.include_router(overview.router, tags=["kg-overview"])
+router.include_router(papers.router, tags=["kg-papers"])
+router.include_router(funding.router, tags=["kg-funding"])
+router.include_router(projects.router, tags=["kg-projects"])
+router.include_router(topics.router, tags=["kg-topics"])
+router.include_router(similarities.router, tags=["kg-similarities"])
+router.include_router(query.router, tags=["kg-query"])

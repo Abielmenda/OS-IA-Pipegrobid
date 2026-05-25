@@ -18,7 +18,7 @@
       "paper_id": "paper03",
       "topic_id": 0,
       "topic_name": "0_reasoning_model_models_ai",
-      "probability": 1.0,
+      "probability": 0.9043939506048907,
       "representative_document": false
     },
     {
@@ -72,72 +72,72 @@
     },
     {
       "paper_id": "paper11",
-      "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "topic_id": 3,
+      "topic_name": "3_peptide_protein_instabilities_peptide cyclization",
       "probability": 1.0,
-      "representative_document": false
+      "representative_document": true
     },
     {
       "paper_id": "paper12",
-      "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "topic_id": 3,
+      "topic_name": "3_peptide_protein_instabilities_peptide cyclization",
       "probability": 1.0,
-      "representative_document": false
+      "representative_document": true
     },
     {
       "paper_id": "paper13",
-      "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "topic_id": 3,
+      "topic_name": "3_peptide_protein_instabilities_peptide cyclization",
       "probability": 1.0,
       "representative_document": false
     },
     {
       "paper_id": "paper14",
       "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
-      "probability": 0.9176482909088747,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.6171747791127401,
       "representative_document": false
     },
     {
       "paper_id": "paper15",
-      "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "topic_id": 3,
+      "topic_name": "3_peptide_protein_instabilities_peptide cyclization",
       "probability": 1.0,
       "representative_document": true
     },
     {
       "paper_id": "paper16",
       "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
       "probability": 1.0,
       "representative_document": false
     },
     {
       "paper_id": "paper17",
       "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
       "probability": 1.0,
       "representative_document": true
     },
     {
       "paper_id": "paper18",
       "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
-      "probability": 1.0,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.9804908006367874,
       "representative_document": true
     },
     {
       "paper_id": "paper19",
       "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
       "probability": 1.0,
-      "representative_document": false
+      "representative_document": true
     },
     {
       "paper_id": "paper20",
       "topic_id": 1,
-      "topic_name": "1_selection_dynamics_antimicrobial_peptide",
-      "probability": 1.0,
+      "topic_name": "1_dynamics_antimicrobial_household_selection",
+      "probability": 0.9804908006367874,
       "representative_document": false
     },
     {
@@ -151,7 +151,7 @@
       "paper_id": "paper22",
       "topic_id": 0,
       "topic_name": "0_reasoning_model_models_ai",
-      "probability": 1.0,
+      "probability": 0.8156166963550332,
       "representative_document": false
     },
     {
@@ -179,7 +179,7 @@
       "paper_id": "paper26",
       "topic_id": 0,
       "topic_name": "0_reasoning_model_models_ai",
-      "probability": 1.0,
+      "probability": 0.8156166963550332,
       "representative_document": false
     },
     {
@@ -209,6 +209,41 @@
       "topic_name": "0_reasoning_model_models_ai",
       "probability": 1.0,
       "representative_document": false
+    },
+    {
+      "paper_id": "paper31",
+      "topic_id": 2,
+      "topic_name": "2_jwst_atmospheric_exoplanet_atmospheres",
+      "probability": 1.0,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper32",
+      "topic_id": 2,
+      "topic_name": "2_jwst_atmospheric_exoplanet_atmospheres",
+      "probability": 0.8484947417188626,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper33",
+      "topic_id": 2,
+      "topic_name": "2_jwst_atmospheric_exoplanet_atmospheres",
+      "probability": 1.0,
+      "representative_document": true
+    },
+    {
+      "paper_id": "paper34",
+      "topic_id": 2,
+      "topic_name": "2_jwst_atmospheric_exoplanet_atmospheres",
+      "probability": 0.9339344635015655,
+      "representative_document": false
+    },
+    {
+      "paper_id": "paper35",
+      "topic_id": 2,
+      "topic_name": "2_jwst_atmospheric_exoplanet_atmospheres",
+      "probability": 1.0,
+      "representative_document": true
     }
   ]
 }

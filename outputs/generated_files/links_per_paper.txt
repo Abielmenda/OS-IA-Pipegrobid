@@ -341,3 +341,48 @@ paper30:
   - https://github.com/tsly123/SEA_PEFT
 -------------------------------------------------------------------------------------------------
 
+paper31:
+
+  - https://exoplanetarchive.ipac.caltech.edu/.
+  - https://archive.stsci.edu/hlsp/jwst-ero
+  - https://www.planetary.org/articles/0324-clouds-and-haze-and-dust-oh-my.
+-------------------------------------------------------------------------------------------------
+
+paper32:
+
+  - http://adsabs.harvard.edu/abs/2015arXiv150407655B
+  - http://arxiv.org/abs/2403.03325
+  - http://adsabs.harvard.edu/abs/2021arXiv210411631B
+  - http://arxiv.org/abs/2310.07714
+  - http://arxiv.org/abs/2402.10690
+  - http://arxiv.org/abs/2110.15069
+  - http://arxiv.org/abs/2401.12378
+  - https://ui.adsabs.harvard.edu/abs/2021arXiv211105161L
+  - http://arxiv.org/abs/2401.16394
+  - http://arxiv.org/abs/2401.06276
+  - http://arxiv.org/abs/2301.04321
+  - https://ui.adsabs.harvard.edu/abs/2021arXiv210710405S
+  - http://arxiv.org/abs/2404.01967
+  - http://arxiv.org/abs/2404.01264
+  - http://arxiv.org/abs/2406.01955
+-------------------------------------------------------------------------------------------------
+
+paper33:
+
+  - http://arxiv.org/abs/2402.15204
+  - http://arxiv.org/abs/2401.15548
+  - https://osf.io/pksnq/
+-------------------------------------------------------------------------------------------------
+
+paper34:
+
+  - https://newstrangeworlds.github.io/BeAR
+  - https://dace.unige.ch
+  - https://www.ariel-datachallenge.space/adc2023/
+-------------------------------------------------------------------------------------------------
+
+paper35:
+
+  No links found.
+-------------------------------------------------------------------------------------------------
+

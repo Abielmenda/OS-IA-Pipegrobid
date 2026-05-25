@@ -2,7 +2,11 @@
 /ignore
 /.vscode
 
+
 AGENTS.md
+graphify-out
+.graphifyignore
+.codex
 
 .env
 .env.*

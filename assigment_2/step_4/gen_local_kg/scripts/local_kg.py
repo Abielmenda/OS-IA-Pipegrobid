@@ -15,6 +15,13 @@ def slugify(text: str) -> str:
     return text
 
 
+def normalized_name(text: str | None) -> str:
+    if not text:
+        return ""
+
+    return slugify(text)
+
+
 def obtain_json_files():
     return list(INPUT_DIR.glob("*.json"))
 
@@ -237,7 +244,7 @@ def add_project(g: Graph, project_data: dict) -> URIRef | None:
     if end_date:
         g.add((project, SCHEMA.endDate, Literal(end_date, datatype=XSD.date)))
 
-    if funding_amount:
+    if funding_amount not in (None, ""):
         g.add((project, BASE.fundingAmount, Literal(float(funding_amount), datatype=XSD.decimal)))
 
     return project
@@ -329,6 +336,39 @@ def link_project_funder(g: Graph, project: URIRef, org: URIRef):
 
 def link_organization_country(g: Graph, org: URIRef, country: URIRef):
     g.add((org, SCHEMA.location, country))
+
+
+def infer_project_funders(
+    project_data: dict,
+    projects_count: int,
+    org_by_name: dict[str, URIRef],
+) -> list[URIRef]:
+    """
+    Evita enlazar todos los proyectos con todas las organizaciones del paper.
+
+    - Si el proyecto trae `funder`, esa fuente manda sobre la inferencia.
+    - Sin funder explicito, una sola organizacion puede aplicarse a varios grants.
+    - Sin funder explicito, un solo proyecto puede recibir las organizaciones del paper.
+    - Varios proyectos y varias organizaciones no se enlazan all-to-all.
+    """
+    explicit_funder = project_data.get("funder")
+
+    if explicit_funder:
+        normalized_funder = normalized_name(explicit_funder)
+
+        for org_name, org in org_by_name.items():
+            if normalized_name(org_name) == normalized_funder:
+                return [org]
+
+        return []
+
+    if len(org_by_name) == 1:
+        return list(org_by_name.values())
+
+    if projects_count == 1:
+        return list(org_by_name.values())
+
+    return []
 
 
 def add_paper_topic_similarity(g: Graph, paper: URIRef, paper_id: str, topic_data: dict):
@@ -438,6 +478,7 @@ def build_kg_from_jsons(json_files):
         # -----------------------------
         organizations = data.get("organizations", [])
         acknowledged_organizations = []
+        org_by_name = {}
 
         for org_data in organizations:
             org_name = org_data.get("name")
@@ -456,6 +497,7 @@ def build_kg_from_jsons(json_files):
                 continue
 
             acknowledged_organizations.append(org)
+            org_by_name[org_name] = org
             link_acknowledged_entity(g, paper, org)
 
             # País de la organización
@@ -475,6 +517,7 @@ def build_kg_from_jsons(json_files):
         # Proyectos
         # -----------------------------
         projects = data.get("projects", [])
+        projects_count = len(projects)
 
         for project_data in projects:
             project = add_project(g, project_data)
@@ -485,10 +528,19 @@ def build_kg_from_jsons(json_files):
             link_paper_project(g, paper, project)
             link_acknowledged_entity(g, paper, project)
 
-            # Si el paper tiene organizaciones reconocidas y proyectos,
-            # asumimos que esas organizaciones son funders de esos proyectos.
-            # Esto permite completar schema:funder con la información disponible.
-            for org in acknowledged_organizations:
+            # Preferimos el funder explicito del proyecto. Cuando no existe,
+            # solo inferimos relaciones en casos simples para evitar all-to-all.
+            explicit_funder = project_data.get("funder")
+
+            if explicit_funder:
+                explicit_funder_org = add_organization(g, explicit_funder)
+
+                if explicit_funder_org:
+                    link_project_funder(g, project, explicit_funder_org)
+
+                continue
+
+            for org in infer_project_funders(project_data, projects_count, org_by_name):
                 link_project_funder(g, project, org)
 
         # -----------------------------

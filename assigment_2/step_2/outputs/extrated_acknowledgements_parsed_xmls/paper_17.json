@@ -39,23 +39,27 @@
       "type": "acknowledged_organization"
     },
     {
-      "name": "Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "GNAMPA-INdAM",
-      "type": "acknowledged_organization"
-    },
-    {
-      "name": "NWO Gravitation project NETWORKS",
-      "type": "acknowledged_organization"
-    },
-    {
       "name": "Horizon 2020",
       "type": "acknowledged_organization"
     },
     {
       "name": "Marie Skłodowska-Curie",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "NWO Gravitation",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "NETWORKS",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "Gruppo Nazionale per l'Analisi Matematica, la Probabilità e le loro Applicazioni",
+      "type": "acknowledged_organization"
+    },
+    {
+      "name": "GNAMPA-INdAM",
       "type": "acknowledged_organization"
     }
   ],

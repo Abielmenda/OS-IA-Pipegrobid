@@ -1,4 +1,4 @@
 {
-  "query": "PREFIX g4: <https://g4.org/ontology/research-funding#> PREFIX dc: <http://purl.org/dc/elements/1.1/> SELECT ?paper ?title WHERE { ?paper a g4:Paper ; dc:title ?title . } LIMIT 10",
+  "query": "SELECT ?paper ?title WHERE { ?paper a g4:Paper ; dc:title ?title . } LIMIT 10",
   "query_type": "SELECT"
 }

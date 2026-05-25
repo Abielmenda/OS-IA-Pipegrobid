@@ -3,12 +3,20 @@ site_description: Research Software Engineering project using GROBID
 site_author: Sergio Zaballos Herrera
 nav:
   - Home: index.md
-  - Instalacion: INSTALATION.md
-  - Descripcion: DESCRIPCION.md
-  - Uso: USO.md
-  - Validaciones: VALIDACION.md
-  - Limitaciones: LIMITACIONES.md
-  - Changelog: CHANGELOG.md
+  - FASE 1 - PipeGrobid:
+      - Instalacion: INSTALATION.md
+      - Descripcion: DESCRIPCION.md
+      - Uso: USO.md
+      - Validaciones: VALIDACION.md
+      - Limitaciones: LIMITACIONES.md
+      - Changelog: CHANGELOG.md
+  - FASE 2 - Knowledge Graph:
+      - Inicio: fase_2/index.md
+      - Caso de uso y ontologia: fase_2/caso_uso_ontologia.md
+      - Pipeline de datos: fase_2/pipeline_datos.md
+      - Knowledge Graph: fase_2/knowledge_graph.md
+      - Stack Docker y workflow: fase_2/stack_workflow_app.md
+      - Backend y frontend: fase_2/backend_frontend.md
 
 theme:
   name: readthedocs

@@ -1,31 +1,36 @@
-paper_id  Topic                                       Name  Probability  Representative_document
- paper01      0                0_reasoning_model_models_ai     1.000000                     True
- paper02      0                0_reasoning_model_models_ai     1.000000                    False
- paper03      0                0_reasoning_model_models_ai     1.000000                    False
- paper04      0                0_reasoning_model_models_ai     1.000000                     True
- paper05      0                0_reasoning_model_models_ai     1.000000                    False
- paper06      0                0_reasoning_model_models_ai     1.000000                    False
- paper07      0                0_reasoning_model_models_ai     1.000000                    False
- paper08      0                0_reasoning_model_models_ai     1.000000                    False
- paper09      0                0_reasoning_model_models_ai     1.000000                    False
- paper10      0                0_reasoning_model_models_ai     1.000000                     True
- paper11      1 1_selection_dynamics_antimicrobial_peptide     1.000000                    False
- paper12      1 1_selection_dynamics_antimicrobial_peptide     1.000000                    False
- paper13      1 1_selection_dynamics_antimicrobial_peptide     1.000000                    False
- paper14      1 1_selection_dynamics_antimicrobial_peptide     0.917648                    False
- paper15      1 1_selection_dynamics_antimicrobial_peptide     1.000000                     True
- paper16      1 1_selection_dynamics_antimicrobial_peptide     1.000000                    False
- paper17      1 1_selection_dynamics_antimicrobial_peptide     1.000000                     True
- paper18      1 1_selection_dynamics_antimicrobial_peptide     1.000000                     True
- paper19      1 1_selection_dynamics_antimicrobial_peptide     1.000000                    False
- paper20      1 1_selection_dynamics_antimicrobial_peptide     1.000000                    False
- paper21      0                0_reasoning_model_models_ai     1.000000                    False
- paper22      0                0_reasoning_model_models_ai     1.000000                    False
- paper23      0                0_reasoning_model_models_ai     1.000000                    False
- paper24      0                0_reasoning_model_models_ai     1.000000                    False
- paper25      0                0_reasoning_model_models_ai     1.000000                    False
- paper26      0                0_reasoning_model_models_ai     1.000000                    False
- paper27      0                0_reasoning_model_models_ai     1.000000                    False
- paper28      0                0_reasoning_model_models_ai     1.000000                    False
- paper29      0                0_reasoning_model_models_ai     1.000000                    False
- paper30      0                0_reasoning_model_models_ai     1.000000                    False
+paper_id  Topic                                                Name  Probability  Representative_document
+ paper01      0                         0_reasoning_model_models_ai     1.000000                     True
+ paper02      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper03      0                         0_reasoning_model_models_ai     0.904394                    False
+ paper04      0                         0_reasoning_model_models_ai     1.000000                     True
+ paper05      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper06      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper07      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper08      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper09      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper10      0                         0_reasoning_model_models_ai     1.000000                     True
+ paper11      3 3_peptide_protein_instabilities_peptide cyclization     1.000000                     True
+ paper12      3 3_peptide_protein_instabilities_peptide cyclization     1.000000                     True
+ paper13      3 3_peptide_protein_instabilities_peptide cyclization     1.000000                    False
+ paper14      1        1_dynamics_antimicrobial_household_selection     0.617175                    False
+ paper15      3 3_peptide_protein_instabilities_peptide cyclization     1.000000                     True
+ paper16      1        1_dynamics_antimicrobial_household_selection     1.000000                    False
+ paper17      1        1_dynamics_antimicrobial_household_selection     1.000000                     True
+ paper18      1        1_dynamics_antimicrobial_household_selection     0.980491                     True
+ paper19      1        1_dynamics_antimicrobial_household_selection     1.000000                     True
+ paper20      1        1_dynamics_antimicrobial_household_selection     0.980491                    False
+ paper21      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper22      0                         0_reasoning_model_models_ai     0.815617                    False
+ paper23      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper24      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper25      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper26      0                         0_reasoning_model_models_ai     0.815617                    False
+ paper27      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper28      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper29      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper30      0                         0_reasoning_model_models_ai     1.000000                    False
+ paper31      2            2_jwst_atmospheric_exoplanet_atmospheres     1.000000                    False
+ paper32      2            2_jwst_atmospheric_exoplanet_atmospheres     0.848495                     True
+ paper33      2            2_jwst_atmospheric_exoplanet_atmospheres     1.000000                     True
+ paper34      2            2_jwst_atmospheric_exoplanet_atmospheres     0.933934                    False
+ paper35      2            2_jwst_atmospheric_exoplanet_atmospheres     1.000000                     True

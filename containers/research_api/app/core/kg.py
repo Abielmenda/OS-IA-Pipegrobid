@@ -65,7 +65,7 @@ def execute_sparql_query(query: str, query_type: str = "SELECT") -> dict[str, An
         settings.FUSEKI_QUERY_URL,
         data=data,
         headers=headers,
-        timeout=30
+        timeout=settings.FUSEKI_TIMEOUT_SECONDS
     )
 
     response.raise_for_status()

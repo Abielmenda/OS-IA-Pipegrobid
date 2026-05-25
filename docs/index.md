@@ -2,6 +2,13 @@
 ![GitHub License](https://img.shields.io/github/license/SergioZSZ/Artificial-Intelligence-And-Open-Science-In-Research-Software-Engineering)
 [![GitHub release](https://img.shields.io/github/v/release/SergioZSZ/Artificial-Intelligence-And-Open-Science-In-Research-Software-Engineering?include_prereleases)](https://github.com/SergioZSZ/Artificial-Intelligence-And-Open-Science-In-Research-Software-Engineering/releases)
 # Software para procesamiento de documentos científicos mediante el software GROBID
+Esta documentacion esta organizada en dos fases:
+
+- **FASE 1**: pipeline original PipeGrobid para convertir PDFs en XML TEI, extraer abstracts, figuras y enlaces, y generar salidas visuales.
+- **FASE 2**: aplicacion basada en Knowledge Graph para analizar financiacion cientifica con n8n, Fuseki, `research_api` y Streamlit.
+
+La FASE 2 se documenta en [Aplicacion sobre Knowledge Graph](fase_2/index.md).
+
 ## Objetivo del proyecto
 
 El objetivo de este proyecto es construir un pipeline automatizado para:

@@ -1,6 +1,6 @@
 [project]
 name = "pipegrobid"
-version = "1.3.8"
+version = "1.4.0"
 description = "Data Extraction using GROBID"
 authors = [
     {name = "SergioZSZ",email = "s.zaballosh@gmail.com"}
@@ -28,3 +28,6 @@ build-backend = "poetry.core.masonry.api"
 [project.scripts]
 pipegrobid = "pipegrobid.__main__:main"
 dw-stopwords = "pipegrobid.flow.auxiliar.dw_stopwords:dw_stopwords"
+
+[tool.pytest.ini_options]
+testpaths = ["test"]

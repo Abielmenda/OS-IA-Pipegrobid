@@ -20,6 +20,7 @@ Con estas instancias se generan relaciones como:
 - persona-organización mediante `schema:affiliation`
 - paper-entidad reconocida mediante `acknowledges`
 - paper-proyecto mediante `fundedByProject`
+- proyecto-organizacion financiadora mediante `schema:funder`, priorizando el `funder` explicito del proyecto
 - organización-país mediante `schema:location`
 - paper-topic y paper-paper usando los scores obtenidos en el topic modeling
 
@@ -40,10 +41,8 @@ Por pantalla se mostrará el número de jsons encontrados, la ruta donde se guar
 ## Problemas encontrados
 1. Algunos campos no están presentes en todos los jsons, por lo que se comprueba su existencia antes de generar cada triple.
 2. Algunas afiliaciones pueden venir como string o como diccionario, por lo que se añadió una función auxiliar para leer ambos casos.
-3. La relación entre proyectos y funders se ha inferido con la información disponible de las organizaciones reconocidas en el paper, por lo que puede no ser exacta en todos los casos.
-4. Se eliminan los posibles `schema:sameAs` cargados desde la ontología porque no se querían incluir en el KG local final.
+3. La relación entre proyectos y funders se trata de forma conservadora: si el proyecto trae `funder`, se usa ese valor; si no lo trae, solo se infiere en casos simples. Cuando hay varios proyectos y varias organizaciones reconocidas, no se crea una relación all-to-all para evitar asignar financiadores incorrectos.
 
 ## Declaración de uso de IA
 Se usó IA generativa para:
 -  estructurar parte del método `build_kg_from_jsons()` del script `local_kg.py` para cerciorarse de la total incorporación de propiedades y relaciones de las clases que se pueden incorporar con los datos contenidos en `/assigment_2/step_4/outputs` al KG local.
-
